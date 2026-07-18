@@ -171,7 +171,6 @@
         phone: phone,
         first_name: first,
         last_name: last,
-        email: (form.email.value || "").trim(),
         consent_sms: !!(sms && sms.checked),
         consent_contact: true,
         source: "sunnycoastac.com/book",
