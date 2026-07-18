@@ -1,0 +1,53 @@
+/* Sunny Coast AC — design tokens ONLY. Every color/size on the site references these. */
+:root {
+  /* Palette */
+  --sun-gold: #ffc93c;
+  --sun-orange: #f7941d;
+  --sunset: #f26522;
+  --surf-blue: #29abe2;
+  --deep-blue: #1b75bc;
+  --navy: #0d3b66;
+  --navy-deep: #1b2a4a;
+  --teal: #2bb6a3;
+  --foam: #f7f9fb;
+  --white: #ffffff;
+
+  /* Semantic */
+  --color-bg: var(--foam);
+  --color-text: var(--navy);
+  --color-text-muted: #3a5a7a;
+  --color-action: var(--sun-orange);
+  --color-action-hover: var(--sunset);
+  --color-link: var(--surf-blue);
+  --color-accent: var(--teal);
+  --color-footer-bg: var(--navy);
+  --color-footer-text: #d6e4f0;
+
+  /* Type */
+  --font-display: "Baloo 2", system-ui, sans-serif;
+  --font-body: "Figtree", system-ui, sans-serif;
+  --font-script: "Caveat", cursive;
+
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.125rem; /* 18px */
+  --text-md: 1.25rem;
+  --text-lg: 1.75rem;
+  --text-xl: 2.25rem;
+  --text-2xl: clamp(2.25rem, 6vw, 3.125rem); /* ~50px desktop */
+
+  --leading-tight: 1.15;
+  --leading-body: 1.65;
+
+  /* Layout */
+  --container: 1170px;
+  --gutter: 1.25rem;
+  --section-y: clamp(3rem, 8vw, 5.5rem);
+  --header-h: 4.25rem;
+  --radius-pill: 50px;
+  --tap: 48px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 0.55s;
+}

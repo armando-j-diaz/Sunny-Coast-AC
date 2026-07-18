@@ -1,0 +1,20 @@
+# Local Cursor / Claude bridge (not part of the public site)
+.cursor/
+claude-plugins
+cowork-sessions
+onedrive
+project-memory/
+README-CLAUDE-BRIDGE.md
+.DS_Store
+*.DS_Store
+Thumbs.db
+
+# Editor / OS
+.vscode/
+.idea/
+*.swp
+*~
+
+# Keep WebP in repo for Pages weight; originals stay in OneDrive sunnycoast/assets/
+assets/logo.png
+assets/van.png
