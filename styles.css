@@ -488,6 +488,13 @@ a:hover {
   white-space: nowrap;
 }
 
+.trust-lic {
+  margin-left: 0.4em;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+}
+
 .trust-list li:not(:last-child)::after {
   content: "•";
   margin: 0 0.55rem;
