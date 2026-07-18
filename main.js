@@ -1,9 +1,10 @@
 /**
  * Sunny Coast AC — site behavior
- * Placeholders: {{PHONE}}, {{MAKE_WEBHOOK_URL}}
+ * Placeholders left: {{MAKE_WEBHOOK_URL}}
+ * Phone set: 7866671180 / (786) 667-1180
  * Optional override:
  *   window.SUNNYCOAST = {
- *     phone: "3055551234",
+ *     phone: "7866671180",
  *     makeWebhook: "https://hook...",
  *     vslSrc: "assets/vsl.mp4"
  *   }
@@ -13,7 +14,7 @@
 
   var cfg = Object.assign(
     {
-      phone: "{{PHONE}}",
+      phone: "7866671180",
       makeWebhook: "{{MAKE_WEBHOOK_URL}}",
       vslSrc: "assets/vsl.mp4",
     },
