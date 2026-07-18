@@ -311,10 +311,47 @@
     window.__sunnyVsl = { video: video, unlock: unlockWithSound };
   }
 
+  function navMenu() {
+    var header = document.querySelector(".site-header");
+    var toggle = document.querySelector(".nav-toggle");
+    var drawer = document.getElementById("nav-drawer");
+    if (!header || !toggle || !drawer) return;
+
+    function setOpen(open) {
+      header.classList.toggle("is-nav-open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      if (open) {
+        drawer.removeAttribute("hidden");
+      } else {
+        drawer.setAttribute("hidden", "");
+      }
+    }
+
+    toggle.addEventListener("click", function () {
+      setOpen(!header.classList.contains("is-nav-open"));
+    });
+
+    drawer.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        setOpen(false);
+      });
+    });
+
+    document.addEventListener("keydown", function (ev) {
+      if (ev.key === "Escape") setOpen(false);
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.matchMedia("(min-width: 900px)").matches) setOpen(false);
+    });
+  }
+
   applyPhoneLinks();
   heroLoad();
   revealOnScroll();
   guideForm();
   bookForm();
   vslPlayer();
+  navMenu();
 })();

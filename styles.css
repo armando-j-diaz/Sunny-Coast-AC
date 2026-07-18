@@ -229,22 +229,127 @@ a:hover {
   color: var(--deep-blue);
 }
 
-.header-actions {
-  display: flex;
-  gap: 0.5rem;
+.nav-desktop {
+  display: none;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-desktop a {
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--text-sm);
+}
+
+.nav-desktop a:hover {
+  color: var(--sun-orange);
+}
+
+.nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  color: var(--navy);
   flex-shrink: 0;
 }
 
-.btn-header {
-  min-height: 2.75rem;
-  padding-inline: 1rem;
+.nav-toggle:hover {
+  background: rgba(13, 59, 102, 0.06);
+}
+
+.nav-toggle-bars,
+.nav-toggle-bars::before,
+.nav-toggle-bars::after {
+  display: block;
+  width: 1.35rem;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+  position: relative;
+  transition: transform 0.2s var(--ease), opacity 0.2s var(--ease);
+}
+
+.nav-toggle-bars::before,
+.nav-toggle-bars::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle-bars::before {
+  top: -6px;
+}
+
+.nav-toggle-bars::after {
+  top: 6px;
+}
+
+.site-header.is-nav-open .nav-toggle-bars {
+  background: transparent;
+}
+
+.site-header.is-nav-open .nav-toggle-bars::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.site-header.is-nav-open .nav-toggle-bars::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.nav-drawer {
+  border-top: 1px solid rgba(13, 59, 102, 0.08);
+  background: var(--foam);
+}
+
+.nav-drawer[hidden] {
+  display: none;
+}
+
+.nav-drawer-inner {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0 1rem;
+}
+
+.nav-drawer-inner a {
+  display: flex;
+  align-items: center;
+  min-height: var(--tap);
+  padding: 0.85rem var(--gutter);
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  border-bottom: 1px solid rgba(13, 59, 102, 0.06);
+}
+
+.nav-drawer-inner a:hover {
+  color: var(--sun-orange);
+  background: rgba(247, 148, 29, 0.06);
+}
+
+@media (min-width: 900px) {
+  .nav-desktop {
+    display: flex;
+  }
+  .nav-toggle,
+  .nav-drawer {
+    display: none !important;
+  }
 }
 
 @media (max-width: 420px) {
   .brand-text {
-    display: none;
-  }
-  .header-actions .btn-outline {
     display: none;
   }
 }
@@ -855,9 +960,6 @@ body.is-ready .hero .risk-line {
 @media (min-width: 900px) {
   .wave svg {
     height: 72px;
-  }
-  .btn-header {
-    min-height: var(--tap);
   }
 }
 
