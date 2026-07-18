@@ -38,7 +38,7 @@ python3 -m http.server 8080
 | Token | Where |
 |-------|--------|
 | `{{PHONE}}` | All pages + optional `window.SUNNYCOAST.phone` in console/config |
-| `{{LICENSE}}` | Footer / legal |
+| ~~`{{LICENSE}}`~~ | **CAC1825130** (set) |
 | `{{MAKE_WEBHOOK_URL}}` | Guide form (`guide.html`) |
 | `{{OFFERS}}` | Offers section (hidden until real offers) |
 

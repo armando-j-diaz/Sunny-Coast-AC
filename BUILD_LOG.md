@@ -95,7 +95,7 @@ Armando direction after reviewing live site + acquisition.com screenshots:
 | Named satisfaction guarantee | Stay-Cool Guarantee section |
 | Reviews with real names | Component built, flagged off |
 | Google/BBB badges | Omitted until real (never fake) |
-| License in footer | `{{LICENSE}}` placeholder |
+| License in footer | **CAC1825130** |
 | Service area | Footer + FAQ |
 | Financing mention | Services section |
 | Offers section | Built, flagged off + DRAFT cards |
