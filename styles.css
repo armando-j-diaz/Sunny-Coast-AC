@@ -259,11 +259,11 @@ a:hover {
 
 .nav-desktop a.nav-cta {
   font-weight: 700;
-  color: var(--sun-orange) !important;
+  color: var(--action) !important;
 }
 
 .nav-desktop a.nav-cta:hover {
-  color: var(--sunset) !important;
+  color: var(--color-action-hover) !important;
 }
 
 .nav-desktop a[aria-current="page"] {
@@ -940,23 +940,19 @@ a:hover {
 /* Motion */
 .reveal {
   opacity: 0;
-  transform: translateY(14px);
-  transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease);
+  transition: opacity var(--dur) var(--ease);
 }
 
 .reveal.is-in {
   opacity: 1;
-  transform: none;
 }
 
 body:not(.is-ready) .hero .reveal {
   opacity: 0;
-  transform: translateY(18px);
 }
 
 body.is-ready .hero .reveal {
   opacity: 1;
-  transform: none;
 }
 
 body.is-ready .hero .eyebrow {

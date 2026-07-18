@@ -4,6 +4,7 @@
   --sun-gold: #ffc93c;
   --sun-orange: #f7941d;
   --sunset: #f26522;
+  --action: #c2410c; /* darker orange — WCAG AA white text on buttons */
   --surf-blue: #29abe2;
   --deep-blue: #1b75bc;
   --navy: #0d3b66;
@@ -16,8 +17,8 @@
   --color-bg: var(--foam);
   --color-text: var(--navy);
   --color-text-muted: #3a5a7a;
-  --color-action: var(--sun-orange);
-  --color-action-hover: var(--sunset);
+  --color-action: var(--action);
+  --color-action-hover: #9a3412;
   --color-link: var(--surf-blue);
   --color-accent: var(--teal);
   --color-footer-bg: var(--navy);
