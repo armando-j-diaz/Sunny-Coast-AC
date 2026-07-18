@@ -74,3 +74,23 @@ GitHub Pages at repo root (`armando-j-diaz/Sunny-Coast-AC`). Domain: sunnycoasta
 ## L1–L5 progress
 
 - 2026-07-18: Repo created. Assets copied + WebP compressed (logo ~130KB, van ~219KB). Site files authored at repo root for Pages. Placeholders `{{PHONE}}`, `{{LICENSE}}`, `{{MAKE_WEBHOOK_URL}}` left intentional. Offers + reviews + before/after built but `hidden` / `data-flag="off"`.
+- 2026-07-18: Pushed to https://github.com/armando-j-diaz/Sunny-Coast-AC. Pages = main/root, CNAME = sunnycoastac.com (HTTPS pending DNS). Type: Baloo 2 / Figtree / Caveat.
+
+### §2.2 checklist (v1)
+
+| Item | Status |
+|------|--------|
+| Phone sticky + tap-to-call | Built (awaits `{{PHONE}}`) |
+| Book/Schedule CTA after sections | Text Us CTAs throughout |
+| Risk reversal up top | Hero risk line |
+| Named satisfaction guarantee | Stay-Cool Guarantee section |
+| Reviews with real names | Component built, flagged off |
+| Google/BBB badges | Omitted until real (never fake) |
+| License in footer | `{{LICENSE}}` placeholder |
+| Service area | Footer + FAQ |
+| Financing mention | Services section |
+| Offers section | Built, flagged off + DRAFT cards |
+| Brand character | Sunny hero + guarantee peek |
+| Real van photos | van.webp in trust section |
+| Before/after gallery | Built, flagged off |
+| Maintenance membership | Deferred (roadmap) |
