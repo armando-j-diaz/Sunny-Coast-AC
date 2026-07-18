@@ -79,11 +79,18 @@ a:hover {
   font-weight: 800;
   font-size: var(--text-2xl);
   line-height: var(--leading-tight);
-  letter-spacing: -0.02em;
+  letter-spacing: 0.01em;
   text-transform: uppercase;
   text-align: center;
   margin: 0 0 0.75rem;
   color: var(--navy);
+}
+
+/* Sharp Acquisition-style hero / VSL headlines only */
+.hero .display,
+.vsl-hero .display {
+  font-family: var(--font-hero);
+  letter-spacing: -0.02em;
 }
 
 .eyebrow {
@@ -233,17 +240,37 @@ a:hover {
 .nav-desktop {
   display: none;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.75rem;
 }
 
 .nav-desktop a {
-  color: var(--navy);
-  text-decoration: none;
+  color: var(--navy) !important;
+  text-decoration: none !important;
+  font-family: var(--font-body);
   font-weight: 600;
-  font-size: var(--text-sm);
+  font-size: 0.9375rem;
+  letter-spacing: 0.01em;
+  opacity: 1;
 }
 
 .nav-desktop a:hover {
+  color: var(--sun-orange) !important;
+}
+
+.nav-desktop a.nav-cta {
+  font-weight: 700;
+  color: var(--sun-orange) !important;
+}
+
+.nav-desktop a.nav-cta:hover {
+  color: var(--sunset) !important;
+}
+
+.nav-desktop a[aria-current="page"] {
+  color: var(--deep-blue) !important;
+}
+
+.nav-drawer-inner a[aria-current="page"] {
   color: var(--sun-orange);
 }
 
