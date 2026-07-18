@@ -1140,7 +1140,7 @@ body.is-ready .hero .risk-line {
 }
 
 .vsl-hero .btn-primary:hover {
-  color: var(--white);
+  color: var(--color-action-text);
 }
 
 /* Field proof stats */
