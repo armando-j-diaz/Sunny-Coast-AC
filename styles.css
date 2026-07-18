@@ -147,14 +147,14 @@ a:hover {
 
 .btn-primary {
   background: var(--color-action);
-  color: var(--white);
+  color: var(--color-action-text);
   border-color: var(--color-action);
 }
 
 .btn-primary:hover {
   background: var(--color-action-hover);
   border-color: var(--color-action-hover);
-  color: var(--white);
+  color: var(--color-action-text);
 }
 
 .btn-outline {
@@ -434,9 +434,16 @@ a:hover {
 }
 
 .wave-invert {
+  /* legacy — prefer wave-join-* helpers */
   color: #eef6fb;
-  transform: scaleY(-1);
-  margin-bottom: -1px;
+  background: var(--foam);
+}
+
+.wave-join-tint {
+  background: var(--foam);
+  color: #eef6fb;
+  line-height: 0;
+  margin: 0;
 }
 
 /* Trust band: double-sided wave, no white gap */
