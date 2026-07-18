@@ -28,8 +28,8 @@ Mirror of the jet-mes playbook. Point these at your registrar (wherever sunnycoa
 ## Repo
 
 - GitHub: https://github.com/armando-j-diaz/Sunny-Coast-AC
-- Pages URL (before custom domain): https://armando-j-diaz.github.io/Sunny-Coast-AC/
-- Custom domain file: `CNAME` in repo root (`sunnycoastac.com`)
+- Preview (until custom domain is live): https://armando-j-diaz.github.io/Sunny-Coast-AC/ (or via user Pages domain if configured)
+- When DNS is ready: add a `CNAME` file containing `sunnycoastac.com` at repo root, then Settings → Pages → Custom domain = `sunnycoastac.com` → **Enforce HTTPS**
 
 ## Notes
 
