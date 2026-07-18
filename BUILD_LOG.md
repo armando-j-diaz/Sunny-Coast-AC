@@ -84,7 +84,7 @@ Armando direction after reviewing live site + acquisition.com screenshots:
 - New `book.html` VSL page: muted autoplay video → click restarts with sound; rapport (review layout + install photo slots); lead form (phone, first, last, optional email, SMS checkbox); Hormozi-style dark FAQ bars; final CTA scrolls back to form.
 - Drop `assets/vsl.mp4` (pitch video) when ready, or set `window.SUNNYCOAST.vslSrc`.
 - Sample review cards are labeled as layout-only — replace with real Google reviews; do not invent testimonials.
-- 2026-07-18: Crew rapport added (40+ years / hundreds of installs). Internal notes in Cursor `project-memory/COMPANY.md` (not in public repo).
+- 2026-07-18: Mobile PageSpeed pass — perf **92**, a11y/best/seo **100**. Responsive WebPs, async fonts, AA button contrast (`#c2410c`), opacity-only reveals (CLS 0), favicon, robots/sitemap.
 
 ### §2.2 checklist (v1)
 
