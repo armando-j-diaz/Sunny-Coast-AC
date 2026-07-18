@@ -336,25 +336,38 @@ a:hover {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
+  gap: 0.35rem 0;
   text-align: center;
-  font-size: var(--text-sm);
+  font-size: 0.8125rem;
   font-weight: 600;
   color: var(--navy);
+  line-height: 1.45;
+}
+
+.trust-list li {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.trust-list li:not(:last-child)::after {
+  content: "•";
+  margin: 0 0.55rem;
+  color: var(--surf-blue);
+  font-weight: 400;
 }
 
 @media (min-width: 720px) {
   .trust-list {
-    flex-direction: row;
-    justify-content: center;
-    gap: 1.75rem;
+    font-size: var(--text-sm);
+    gap: 0;
   }
   .trust-list li:not(:last-child)::after {
-    content: "•";
-    margin-left: 1.75rem;
-    color: var(--surf-blue);
+    margin: 0 0.85rem;
   }
 }
 
