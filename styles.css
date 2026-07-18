@@ -974,6 +974,59 @@ body.is-ready .hero .risk-line {
   color: var(--white);
 }
 
+/* Field proof stats */
+.field-proof {
+  text-align: center;
+  background: var(--foam);
+}
+
+.proof-stats {
+  list-style: none;
+  margin: 0 auto 1.5rem;
+  padding: 0;
+  display: grid;
+  gap: 1.25rem;
+  max-width: 36rem;
+  text-align: left;
+}
+
+@media (min-width: 700px) {
+  .proof-stats {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: none;
+    gap: 1.5rem;
+    text-align: center;
+  }
+}
+
+.proof-stats li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.proof-num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2.25rem;
+  line-height: 1;
+  color: var(--sun-orange);
+}
+
+.proof-label {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.proof-note {
+  margin: 0 auto 1.5rem;
+  max-width: 32rem;
+  color: var(--navy);
+  font-weight: 600;
+}
+
 /* Rapport */
 .rapport {
   background: #f0f2f4;
