@@ -196,7 +196,7 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(247, 249, 251, 0.92);
+  background: rgba(233, 235, 238, 0.94);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(13, 59, 102, 0.08);
 }
@@ -396,6 +396,7 @@ a:hover {
   padding-top: 2rem;
   padding-bottom: 1rem;
   text-align: center;
+  background: #e9ebee;
 }
 
 .hero-tight {
