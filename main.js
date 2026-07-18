@@ -101,27 +101,17 @@
         return;
       }
 
-      // If webhook not wired yet, fall back to mailto
+      // If webhook not wired yet, prompt to text (do not invent an email)
       if (!action || action.indexOf("{{") !== -1) {
         ev.preventDefault();
-        var name = (form.name.value || "").trim();
-        var email = (form.email.value || "").trim();
-        var phone = (form.phone.value || "").trim();
-        var body =
-          "Name: " +
-          name +
-          "\nEmail: " +
-          email +
-          "\nPhone: " +
-          phone +
-          "\nGuide consent: yes\nMarketing opt-in: " +
-          (marketing && marketing.checked ? "yes" : "no");
-        window.location.href =
-          "mailto:hello@sunnycoastac.com?subject=" +
-          encodeURIComponent("AC Survival Guide request") +
-          "&body=" +
-          encodeURIComponent(body);
-        showStatus("Opening your email app… If nothing opens, text us and ask for the guide.", false);
+        showStatus(
+          "Guide delivery isn't wired yet. Text us and ask for the Survival Guide — we'll send it.",
+          false
+        );
+        var smsLink = document.querySelector("[data-sms]");
+        if (smsLink && phoneReady(cfg.phone)) {
+          window.location.href = smsLink.getAttribute("href");
+        }
         return;
       }
 
