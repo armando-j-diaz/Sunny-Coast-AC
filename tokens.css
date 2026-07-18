@@ -24,9 +24,9 @@
   --color-footer-text: #d6e4f0;
 
   /* Type */
-  --font-display: "Baloo 2", system-ui, sans-serif;
-  --font-body: "Figtree", system-ui, sans-serif;
-  --font-script: "Caveat", cursive;
+  --font-display: "Poppins", system-ui, sans-serif;
+  --font-body: "Poppins", system-ui, sans-serif;
+  --font-script: "Poppins", system-ui, sans-serif;
 
   --text-xs: 0.8125rem;
   --text-sm: 0.9375rem;

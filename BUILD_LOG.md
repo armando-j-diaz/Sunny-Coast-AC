@@ -74,7 +74,7 @@ GitHub Pages at repo root (`armando-j-diaz/Sunny-Coast-AC`). Domain: sunnycoasta
 ## L1–L5 progress
 
 - 2026-07-18: Repo created. Assets copied + WebP compressed (logo ~130KB, van ~219KB). Site files authored at repo root for Pages. Placeholders `{{PHONE}}`, `{{LICENSE}}`, `{{MAKE_WEBHOOK_URL}}` left intentional. Offers + reviews + before/after built but `hidden` / `data-flag="off"`.
-- 2026-07-18: Pushed to https://github.com/armando-j-diaz/Sunny-Coast-AC. Pages = main/root, CNAME = sunnycoastac.com (HTTPS pending DNS). Type: Baloo 2 / Figtree / Caveat.
+- 2026-07-18: Pushed to https://github.com/armando-j-diaz/Sunny-Coast-AC. Pages = main/root, CNAME = sunnycoastac.com (HTTPS pending DNS). Type: Poppins (Acquisition-style; was Baloo/Figtree/Caveat). Tagline “Stay cool. We got you.” removed from UI.
 
 ### Pass 2 — VSL funnel (2026-07-18)
 
