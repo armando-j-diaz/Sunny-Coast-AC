@@ -433,20 +433,7 @@ a:hover {
   color: #eef6fb;
 }
 
-.wave-invert {
-  /* legacy — prefer wave-join-* helpers */
-  color: #eef6fb;
-  background: var(--foam);
-}
-
-.wave-join-tint {
-  background: var(--foam);
-  color: #eef6fb;
-  line-height: 0;
-  margin: 0;
-}
-
-/* Trust band: double-sided wave, no white gap */
+/* Trust band: only wave on the site (by hero) */
 .trust-band {
   margin: 0;
   padding: 0;

@@ -17,9 +17,9 @@
   --color-bg: var(--foam);
   --color-text: var(--navy);
   --color-text-muted: #3a5a7a;
-  --color-action: var(--sun-gold);
-  --color-action-hover: #e5b020;
-  --color-action-text: var(--navy);
+  --color-action: #e8910f; /* warm mid-orange — between gold and burnt */
+  --color-action-hover: #d97706;
+  --color-action-text: #ffffff;
   --color-link: var(--surf-blue);
   --color-accent: var(--teal);
   --color-footer-bg: var(--navy);
