@@ -76,6 +76,15 @@ GitHub Pages at repo root (`armando-j-diaz/Sunny-Coast-AC`). Domain: sunnycoasta
 - 2026-07-18: Repo created. Assets copied + WebP compressed (logo ~130KB, van ~219KB). Site files authored at repo root for Pages. Placeholders `{{PHONE}}`, `{{LICENSE}}`, `{{MAKE_WEBHOOK_URL}}` left intentional. Offers + reviews + before/after built but `hidden` / `data-flag="off"`.
 - 2026-07-18: Pushed to https://github.com/armando-j-diaz/Sunny-Coast-AC. Pages = main/root, CNAME = sunnycoastac.com (HTTPS pending DNS). Type: Baloo 2 / Figtree / Caveat.
 
+### Pass 2 — VSL funnel (2026-07-18)
+
+Armando direction after reviewing live site + acquisition.com screenshots:
+- Business = **AC installers** (not repair shop). Funnel = **schedule appointment** → call back (not “text for price”).
+- Shorter homepage: no hero mascot art (logo stays in header only).
+- New `book.html` VSL page: muted autoplay video → click restarts with sound; rapport (review layout + install photo slots); lead form (phone, first, last, optional email, SMS checkbox); Hormozi-style dark FAQ bars; final CTA scrolls back to form.
+- Drop `assets/vsl.mp4` (pitch video) when ready, or set `window.SUNNYCOAST.vslSrc`.
+- Sample review cards are labeled as layout-only — replace with real Google reviews; do not invent testimonials.
+
 ### §2.2 checklist (v1)
 
 | Item | Status |

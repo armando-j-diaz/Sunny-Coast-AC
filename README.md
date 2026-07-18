@@ -2,11 +2,28 @@
 
 Public site for **sunnycoastac.com** — Cool Now South Florida LLC d/b/a Sunny Coast AC.
 
-**Conversion goal:** get the visitor to text or call. Nothing else competes.
+**Conversion goal:** schedule an in-home install visit (lead form on `book.html`). We call them back.
 
 ## Stack
 
 Plain HTML + CSS + vanilla JS. No build step. GitHub Pages from `main` (repo root).
+
+| Page | Job |
+|------|-----|
+| `index.html` | Short landing → Schedule |
+| `book.html` | VSL + rapport + lead form + FAQ |
+| `guide.html` | Optional lead magnet (secondary) |
+| `legal.html` | Privacy / consent |
+
+## VSL video
+
+Drop your pitch file at `assets/vsl.mp4`. Behavior: autoplays muted; click/tap restarts from the beginning **with sound**.
+
+```html
+<script>
+  window.SUNNYCOAST = { vslSrc: "assets/vsl.mp4", makeWebhook: "https://hook..." };
+</script>
+```
 
 ## Local preview
 
