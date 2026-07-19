@@ -1,6 +1,6 @@
 # Sunny Coast AC
 
-Public site for **sunnycoastac.com** — Cool Now South Florida LLC d/b/a Sunny Coast AC.
+Public site for **sunnycoastac.com** — Cool Now South Florida LLC DBA Sunny Coast AC.
 
 **Conversion goal:** schedule an in-home install visit (lead form on `book.html`). We call them back.
 
@@ -62,4 +62,4 @@ See [DNS-records.md](./DNS-records.md). Custom domain file: `CNAME` → `sunnyco
 ## Brand-legal
 
 Never mention JET AC, AHS/American Home Shield, Frontdoor, warranty work, or 911 Cooling on this site.
-Footer legal name: Cool Now South Florida LLC d/b/a Sunny Coast AC.
+Footer legal name: Cool Now South Florida LLC DBA Sunny Coast AC.

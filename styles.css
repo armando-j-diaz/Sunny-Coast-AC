@@ -1372,28 +1372,169 @@ body.is-ready .hero .risk-line {
   margin-bottom: 2rem;
 }
 
-.install-slots {
-  display: grid;
-  gap: 0.75rem;
-  margin-top: 1rem;
+/* ── Install photo album (focus + side peeks) ── */
+.album {
+  position: relative;
+  margin-top: 1.25rem;
+  --album-side: clamp(4rem, 16vw, 9rem);
 }
 
-@media (min-width: 640px) {
-  .install-slots {
-    grid-template-columns: repeat(3, 1fr);
+.album:focus {
+  outline: none;
+}
+
+.album:focus-visible {
+  outline: 2px solid var(--color-action);
+  outline-offset: 4px;
+  border-radius: 0.85rem;
+}
+
+.album-viewport {
+  overflow: hidden;
+  border-radius: 0.85rem;
+  touch-action: pan-y;
+  container-type: inline-size;
+  container-name: album;
+}
+
+.album-track {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  will-change: transform;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.album-slide {
+  /* Size against the viewport (cqi), not the growing track */
+  flex: 0 0 calc(100cqi - (var(--album-side) * 2) - 1.7rem);
+  width: calc(100cqi - (var(--album-side) * 2) - 1.7rem);
+  margin: 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: #d5dbe3;
+  opacity: 0.45;
+  transform: scale(0.88);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+  cursor: pointer;
+}
+
+.album-slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+  cursor: default;
+  box-shadow: 0 12px 28px rgba(13, 59, 102, 0.18);
+}
+
+.album-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.album-arrow {
+  position: absolute;
+  top: 42%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.97);
+  color: var(--navy);
+  font-size: 1.85rem;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(13, 59, 102, 0.22);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.album-arrow:hover,
+.album-arrow:focus-visible {
+  background: #fff;
+  outline: 2px solid var(--color-action);
+  outline-offset: 2px;
+}
+
+.album-arrow:active {
+  transform: translateY(-50%) scale(0.94);
+}
+
+.album-prev {
+  left: max(0.35rem, calc(var(--album-side) - 0.35rem));
+}
+
+.album-next {
+  right: max(0.35rem, calc(var(--album-side) - 0.35rem));
+}
+
+.album-caption {
+  margin: 0.85rem 0 0;
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  font-weight: 600;
+  min-height: 1.4em;
+}
+
+.album-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.45rem;
+  margin-top: 0.75rem;
+}
+
+.album-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(13, 59, 102, 0.28);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.album-dot[aria-selected="true"] {
+  background: var(--navy);
+  transform: scale(1.35);
+}
+
+.album-dot:focus-visible {
+  outline: 2px solid var(--color-action);
+  outline-offset: 2px;
+}
+
+@media (max-width: 639px) {
+  .album {
+    --album-side: 2.75rem;
+  }
+
+  .album-arrow {
+    width: 2.35rem;
+    height: 2.35rem;
+    font-size: 1.55rem;
+  }
+
+  .album-prev {
+    left: 0.2rem;
+  }
+
+  .album-next {
+    right: 0.2rem;
   }
 }
 
-.install-slot {
-  min-height: 7rem;
-  border: 2px dashed rgba(13, 59, 102, 0.2);
-  border-radius: 0.65rem;
-  display: grid;
-  place-items: center;
-  color: var(--color-text-muted);
-  font-size: var(--text-sm);
-  font-weight: 600;
-  background: rgba(255, 255, 255, 0.5);
+@media (prefers-reduced-motion: reduce) {
+  .album-track,
+  .album-slide {
+    transition: none;
+  }
 }
 
 /* What you get columns */

@@ -347,6 +347,223 @@
     });
   }
 
+  /**
+   * Install photo album: focused center slide, dimmed side peeks,
+   * arrows + dots + swipe, auto-rotate (respects reduced motion).
+   */
+  function installAlbum() {
+    var roots = document.querySelectorAll("[data-album]");
+    if (!roots.length) return;
+
+    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var AUTO_MS = 4500;
+
+    roots.forEach(function (root) {
+      var track = root.querySelector("[data-album-track]");
+      var slides = Array.prototype.slice.call(root.querySelectorAll("[data-album-slide]"));
+      var prevBtn = root.querySelector("[data-album-prev]");
+      var nextBtn = root.querySelector("[data-album-next]");
+      var caption = root.querySelector("[data-album-caption]");
+      var dotsWrap = root.querySelector("[data-album-dots]");
+      if (!track || slides.length < 2) return;
+
+      var index = Math.max(
+        0,
+        slides.findIndex(function (s) {
+          return s.classList.contains("is-active");
+        })
+      );
+      if (index < 0) index = 0;
+
+      var timer = null;
+      var touchX = null;
+      var dots = [];
+
+      if (dotsWrap) {
+        dotsWrap.innerHTML = "";
+        slides.forEach(function (_, i) {
+          var dot = document.createElement("button");
+          dot.type = "button";
+          dot.className = "album-dot";
+          dot.setAttribute("role", "tab");
+          dot.setAttribute("aria-label", "Photo " + (i + 1));
+          dot.addEventListener("click", function () {
+            goTo(i, true);
+          });
+          dotsWrap.appendChild(dot);
+          dots.push(dot);
+        });
+      }
+
+      function slideStride() {
+        // Use layout width (offsetWidth), not getBoundingClientRect —
+        // inactive slides are CSS-scaled and would shrink the stride.
+        var style = window.getComputedStyle(track);
+        var gap = parseFloat(style.columnGap || style.gap) || 0;
+        return slides[0].offsetWidth + gap;
+      }
+
+      function centerOffset() {
+        var viewport = root.querySelector(".album-viewport");
+        if (!viewport) return 0;
+        return (viewport.clientWidth - slides[0].offsetWidth) / 2;
+      }
+
+      function render() {
+        var x = -index * slideStride() + centerOffset();
+        track.style.transform = "translate3d(" + x + "px, 0, 0)";
+
+        slides.forEach(function (slide, i) {
+          var on = i === index;
+          slide.classList.toggle("is-active", on);
+          slide.setAttribute("aria-hidden", on ? "false" : "true");
+        });
+
+        dots.forEach(function (dot, i) {
+          dot.setAttribute("aria-selected", i === index ? "true" : "false");
+        });
+
+        if (caption) {
+          var text = slides[index].getAttribute("data-caption") || "";
+          caption.textContent = text;
+        }
+      }
+
+      function goTo(next, userDriven) {
+        var n = slides.length;
+        index = ((next % n) + n) % n;
+        render();
+        if (userDriven) restartAuto();
+      }
+
+      function next(userDriven) {
+        goTo(index + 1, userDriven);
+      }
+
+      function prev(userDriven) {
+        goTo(index - 1, userDriven);
+      }
+
+      function stopAuto() {
+        if (timer) {
+          clearInterval(timer);
+          timer = null;
+        }
+      }
+
+      function startAuto() {
+        stopAuto();
+        if (reduceMotion) return;
+        timer = setInterval(function () {
+          next(false);
+        }, AUTO_MS);
+      }
+
+      function restartAuto() {
+        stopAuto();
+        startAuto();
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener("click", function () {
+          prev(true);
+        });
+      }
+      if (nextBtn) {
+        nextBtn.addEventListener("click", function () {
+          next(true);
+        });
+      }
+
+      slides.forEach(function (slide, i) {
+        slide.addEventListener("click", function () {
+          if (i !== index) goTo(i, true);
+        });
+      });
+
+      root.addEventListener(
+        "keydown",
+        function (ev) {
+          if (ev.key === "ArrowLeft") {
+            ev.preventDefault();
+            prev(true);
+          } else if (ev.key === "ArrowRight") {
+            ev.preventDefault();
+            next(true);
+          }
+        },
+        true
+      );
+
+      root.addEventListener(
+        "touchstart",
+        function (ev) {
+          if (!ev.changedTouches || !ev.changedTouches.length) return;
+          touchX = ev.changedTouches[0].clientX;
+          stopAuto();
+        },
+        { passive: true }
+      );
+
+      root.addEventListener(
+        "touchend",
+        function (ev) {
+          if (touchX == null || !ev.changedTouches || !ev.changedTouches.length) return;
+          var dx = ev.changedTouches[0].clientX - touchX;
+          touchX = null;
+          if (Math.abs(dx) < 40) {
+            startAuto();
+            return;
+          }
+          if (dx < 0) next(true);
+          else prev(true);
+        },
+        { passive: true }
+      );
+
+      root.addEventListener("mouseenter", stopAuto);
+      root.addEventListener("mouseleave", startAuto);
+      root.addEventListener("focusin", stopAuto);
+      root.addEventListener("focusout", function (ev) {
+        if (!root.contains(ev.relatedTarget)) startAuto();
+      });
+
+      window.addEventListener("resize", function () {
+        render();
+      });
+
+      if ("IntersectionObserver" in window) {
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) startAuto();
+              else stopAuto();
+            });
+          },
+          { threshold: 0.35 }
+        );
+        io.observe(root);
+      } else {
+        startAuto();
+      }
+
+      render();
+    });
+  }
+
+  function backToTop() {
+    document.querySelectorAll('a[href="#top"]').forEach(function (link) {
+      link.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+        if (history.replaceState) {
+          history.replaceState(null, "", "#top");
+        }
+      });
+    });
+  }
+
   applyPhoneLinks();
   heroLoad();
   revealOnScroll();
@@ -354,4 +571,6 @@
   bookForm();
   vslPlayer();
   navMenu();
+  installAlbum();
+  backToTop();
 })();
