@@ -136,8 +136,8 @@
         },
         form,
         status,
-        "Got it — check your email for the guide. Stay cool.",
-        "Something glitched. Call us and we'll send the guide."
+        "Got it. Check your email for the guide.",
+        "Something went wrong. Call us and we will send the guide."
       );
     });
   }
@@ -153,16 +153,18 @@
       var consent = form.querySelector('[name="consent_contact"]');
       if (!consent || !consent.checked) {
         ev.preventDefault();
-        showStatus(status, "Check the contact agreement box to continue.", true);
+        showStatus(status, "Please check the contact agreement box to continue.", true);
         return;
       }
 
       var phone = (form.phone.value || "").trim();
       var first = (form.first_name.value || "").trim();
       var last = (form.last_name.value || "").trim();
-      if (!phone || !first || !last) {
+      var email = (form.email && form.email.value ? form.email.value : "").trim();
+      var projectInfo = (form.project_info && form.project_info.value ? form.project_info.value : "").trim();
+      if (!phone || !first || !last || !email) {
         ev.preventDefault();
-        showStatus(status, "Phone, first name, and last name are required.", true);
+        showStatus(status, "Phone, first name, last name, and email are required.", true);
         return;
       }
 
@@ -171,9 +173,11 @@
         phone: phone,
         first_name: first,
         last_name: last,
+        email: email,
+        project_info: projectInfo,
         consent_sms: !!(sms && sms.checked),
         consent_contact: true,
-        source: "sunnycoastac.com/book",
+        source: window.location.pathname.indexOf("reviews") !== -1 ? "sunnycoastac.com/reviews" : "sunnycoastac.com/book",
         intent: "schedule_appointment",
       };
 
@@ -181,7 +185,7 @@
         ev.preventDefault();
         showStatus(
           status,
-          "Got it locally — webhook isn't wired yet. We'll still call once Make is connected. For now, call us if it's urgent.",
+          "Thank you. Your request was saved locally. We will call once the form connection is live. Call us if you need help sooner.",
           false
         );
         try {
@@ -200,8 +204,8 @@
         payload,
         form,
         status,
-        "You're in — we'll call you soon to lock in a time. Stay cool.",
-        "Something glitched. Call us and we'll get you on the calendar."
+        "Thank you. We will call soon to schedule your free in-home visit.",
+        "Something went wrong. Please call us and we will get you on the calendar."
       );
     });
   }
@@ -564,6 +568,41 @@
     });
   }
 
+  function reviewCarousel() {
+    var roots = document.querySelectorAll("[data-reviews]");
+    if (!roots.length) return;
+
+    roots.forEach(function (root) {
+      var track = root.querySelector("[data-review-track]");
+      var slides = Array.prototype.slice.call(root.querySelectorAll("[data-review-slide]"));
+      var prevBtn = root.querySelector("[data-review-prev]");
+      var nextBtn = root.querySelector("[data-review-next]");
+      if (!track || slides.length < 2) return;
+
+      var index = 0;
+
+      function stride() {
+        var style = window.getComputedStyle(track);
+        var gap = parseFloat(style.columnGap || style.gap) || 0;
+        return slides[0].offsetWidth + gap;
+      }
+
+      function render() {
+        track.style.transform = "translate3d(" + -index * stride() + "px, 0, 0)";
+      }
+
+      function go(delta) {
+        index = (index + delta + slides.length) % slides.length;
+        render();
+      }
+
+      if (prevBtn) prevBtn.addEventListener("click", function () { go(-1); });
+      if (nextBtn) nextBtn.addEventListener("click", function () { go(1); });
+      window.addEventListener("resize", render);
+      render();
+    });
+  }
+
   applyPhoneLinks();
   heroLoad();
   revealOnScroll();
@@ -572,5 +611,6 @@
   vslPlayer();
   navMenu();
   installAlbum();
+  reviewCarousel();
   backToTop();
 })();

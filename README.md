@@ -1,8 +1,8 @@
 # Sunny Coast AC
 
-Public site for **sunnycoastac.com** — Cool Now South Florida LLC DBA Sunny Coast AC.
+Public site for **sunnycoastac.com**. Cool Now South Florida LLC DBA Sunny Coast AC.
 
-**Conversion goal:** schedule an in-home install visit (lead form on `book.html`). We call them back.
+**Conversion goal:** schedule an in-home install visit (lead form on `book.html` / `reviews.html`). Primary CTA: **Get a Free Quote**.
 
 ## Stack
 
@@ -10,10 +10,17 @@ Plain HTML + CSS + vanilla JS. No build step. GitHub Pages from `main` (repo roo
 
 | Page | Job |
 |------|-----|
-| `index.html` | Short landing → Schedule |
-| `book.html` | VSL + rapport + lead form + FAQ |
-| `guide.html` | Optional lead magnet (secondary) |
+| `index.html` | Home landing |
+| `book.html` | VSL + collage + reviews + lead form + FAQ |
+| `services.html` | Install-first services + repair vs replace |
+| `our-work.html` | Gallery |
+| `about.html` | About |
+| `reviews.html` | Reviews carousel + lead form |
+| `contact.html` | Phone, email, hours, service area |
+| `guide.html` | Optional lead magnet |
 | `legal.html` | Privacy / consent |
+
+Fill-in checklist: `project-memory/CONTENT_NEEDED.md`
 
 ## VSL video
 
