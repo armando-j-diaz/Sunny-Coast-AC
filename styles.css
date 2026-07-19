@@ -1059,7 +1059,11 @@ body.is-ready .hero .risk-line {
 
 /* ========== VSL / book page ========== */
 .page-book {
-  padding-bottom: calc(var(--tap) + 1.5rem);
+  padding-bottom: 0;
+}
+
+.page-book .mobile-cta {
+  display: none !important;
 }
 
 .display-light {
@@ -1560,12 +1564,6 @@ body.is-ready .hero .risk-line {
 }
 
 @media (min-width: 900px) {
-  .page-book .mobile-cta {
-    display: none;
-  }
-  .page-book {
-    padding-bottom: 0;
-  }
   .vsl-player {
     aspect-ratio: 16 / 9;
   }
