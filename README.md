@@ -2,23 +2,23 @@
 
 Public site for **sunnycoastac.com**. Cool Now South Florida LLC DBA Sunny Coast AC.
 
-**Conversion goal:** schedule an in-home install visit (lead form on `book.html` / `reviews.html`). Primary CTA: **Get a Free Quote**.
+**Conversion goal:** schedule an in-home install visit (lead form on `/book/` / `/reviews/`). Primary CTA: **Get a Free Quote**.
 
 ## Stack
 
-Plain HTML + CSS + vanilla JS. No build step. GitHub Pages from `main` (repo root).
+Plain HTML + CSS + vanilla JS. No build step. GitHub Pages from `main` (repo root). Clean URLs use folder `index.html` paths (e.g. `/services/`). Old `*.html` URLs redirect to the new paths.
 
-| Page | Job |
+| URL | Job |
 |------|-----|
-| `index.html` | Home landing |
-| `book.html` | VSL + collage + reviews + lead form + FAQ |
-| `services.html` | Install-first services + repair vs replace |
-| `our-work.html` | Gallery |
-| `about.html` | About |
-| `reviews.html` | Reviews carousel + lead form |
-| `contact.html` | Phone, email, hours, service area |
-| `guide.html` | Optional lead magnet |
-| `legal.html` | Privacy / consent |
+| `/` | Home landing |
+| `/book/` | VSL + collage + reviews + lead form + FAQ |
+| `/services/` | Install-first services + repair vs replace |
+| `/our-work/` | Gallery |
+| `/about/` | About |
+| `/reviews/` | Reviews carousel + lead form |
+| `/contact/` | Phone, email, hours, service area |
+| `/guide/` | Optional lead magnet |
+| `/legal/` | Privacy / consent |
 
 Fill-in checklist: `project-memory/CONTENT_NEEDED.md`
 

@@ -6,7 +6,7 @@
  *   window.SUNNYCOAST = {
  *     phone: "7866671180",
  *     makeWebhook: "https://hook...",
- *     vslSrc: "assets/vsl.mp4"
+ *     vslSrc: "/assets/vsl.mp4"
  *   }
  */
 (function () {
@@ -16,7 +16,7 @@
     {
       phone: "7866671180",
       makeWebhook: "{{MAKE_WEBHOOK_URL}}",
-      vslSrc: "assets/vsl.mp4",
+      vslSrc: "/assets/vsl.mp4",
     },
     window.SUNNYCOAST || {}
   );
