@@ -177,7 +177,9 @@
         project_info: projectInfo,
         consent_sms: !!(sms && sms.checked),
         consent_contact: true,
-        source: window.location.pathname.indexOf("reviews") !== -1 ? "sunnycoastac.com/reviews" : "sunnycoastac.com/book",
+        source:
+          form.getAttribute("data-source") ||
+          (window.location.pathname.indexOf("reviews") !== -1 ? "sunnycoastac.com/reviews" : "sunnycoastac.com/book"),
         intent: "schedule_appointment",
       };
 
@@ -247,7 +249,7 @@
     var video = document.getElementById("vsl-video");
     var tap = document.getElementById("vsl-tap");
     var player = document.getElementById("vsl-player");
-    var fallback = document.getElementById("vsl-fallback");
+    var sub = document.getElementById("vsl-sub");
     if (!video || !player) return;
 
     if (cfg.vslSrc) {
@@ -269,15 +271,21 @@
       }
     }
 
-    video.addEventListener("error", function () {
-      if (fallback) fallback.hidden = false;
+    // Player stays visible at all times (poster shows until vsl.mp4 is uploaded).
+    // If the file is missing, just hide the dead "Tap for sound" button.
+    function onVideoError() {
       if (tap) tap.hidden = true;
-      video.style.display = "none";
-    });
+    }
+    video.addEventListener("error", onVideoError, true);
+    var srcEl = video.querySelector("source");
+    if (srcEl) srcEl.addEventListener("error", onVideoError);
 
-    // If source 404s, some browsers fire error on source; check after load attempt
+    // Video loaded: enable the tap button and switch the subhead to the watch-this copy
     video.addEventListener("loadeddata", function () {
-      if (fallback) fallback.hidden = true;
+      if (tap) tap.hidden = false;
+      if (sub && sub.getAttribute("data-video-copy")) {
+        sub.textContent = sub.getAttribute("data-video-copy");
+      }
       tryMuteAutoplay();
     });
 

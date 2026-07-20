@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <script>document.documentElement.classList.add("js");</script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sunny Coast AC | New AC Installation in South Florida</title>
   <meta name="description" content="Sunny Coast AC installs new air conditioning systems across South Florida. Schedule a free in-home visit. We inspect, then walk you through clear options." />
@@ -53,7 +54,7 @@
         <a href="reviews.html">Reviews</a>
         <a href="contact.html">Contact</a>
         <a data-tel href="tel:+17866671180">Call (786) 667-1180</a>
-        <a href="book.html">I'm Ready to Sleep Cool</a>
+        <a href="#book">Book My Free Visit</a>
         <a href="legal.html">Privacy &amp; Terms</a>
       </nav>
     </div>
@@ -62,12 +63,14 @@
   <main id="main">
     <section class="hero section hero-tall" aria-labelledby="hero-heading">
       <div class="container hero-inner">
-        <h1 id="hero-heading" class="display reveal">Do you want to sleep cool again?</h1>
-        <p class="lede reveal">We show up, check your system, and lay out your options.<br />You decide.</p>
+        <p class="eyebrow reveal">New AC Installations · South Florida</p>
+        <h1 id="hero-heading" class="display reveal">A new AC, installed right.</h1>
+        <p class="lede reveal">Free in-home visit. We inspect your home and your current system, then walk you through clear options with upfront pricing. You decide.</p>
         <div class="cta-row reveal">
-          <a class="btn btn-primary btn-lg" href="book.html">I'm Ready to Sleep Cool</a>
-          <a class="btn btn-outline btn-lg" data-tel href="tel:+17866671180">Call Us</a>
+          <a class="btn btn-primary btn-lg" href="#book">Book My Free Visit</a>
+          <a class="btn btn-outline btn-lg" data-tel href="tel:+17866671180">Call (786) 667-1180</a>
         </div>
+        <p class="risk-line reveal">Free in-home visit. No obligation.</p>
       </div>
     </section>
 
@@ -82,7 +85,7 @@
         <div class="container">
           <ul class="trust-list">
             <li>Licensed &amp; insured (CAC1825130)</li>
-            <li>New AC Installations</li>
+            <li>40+ years combined field experience</li>
             <li>Serving South Florida</li>
           </ul>
         </div>
@@ -126,7 +129,7 @@
           </li>
         </ol>
         <div class="cta-row reveal">
-          <a class="btn btn-primary" href="book.html">I'm Ready to Sleep Cool</a>
+          <a class="btn btn-primary" href="#book">Book My Free Visit</a>
         </div>
       </div>
     </section>
@@ -174,19 +177,66 @@
           <div class="about-copy">
             <p>Sunny Coast AC is a South Florida installation company (Cool Now South Florida LLC DBA Sunny Coast AC). We are licensed (CAC1825130) and focused on new AC systems built for the heat.</p>
             <p>Our lead crew brings <strong>40+ years of combined</strong> field experience, including commercial work and advanced diagnostics.</p>
-            <p>That experience shows up on every install: right-sized equipment, careful workmanship, and clear options at your home. Hundreds of installations have been completed by our lead installer.</p>
+            <p>That experience is our edge. We know where corners get cut, and we do not cut them. Our lead installer has hundreds of installations behind him, and you always get clear options at your home. The decision stays yours.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section final-cta" aria-labelledby="final-heading">
+    <section class="section book-form-section" id="book" aria-labelledby="book-heading">
       <div class="container narrow">
-        <h2 id="final-heading" class="display reveal">Ready for a system that holds up?</h2>
+        <h2 id="book-heading" class="display reveal">Ready to sleep cool again?</h2>
         <p class="lede reveal">A new AC starts with one free in-home visit.</p>
-        <div class="cta-row reveal">
-          <a class="btn btn-primary btn-lg" href="book.html">I'm Ready to Sleep Cool</a>
-          <a class="btn btn-outline-light btn-lg" data-tel href="tel:+17866671180">Call (786) 667-1180</a>
+        <div class="book-form-card">
+          <h3 class="form-title">Book your free in-home visit</h3>
+          <p class="form-lede">Enter your info and we will call to confirm a time. It takes less than a minute.</p>
+          <form
+            class="book-form"
+            id="appointment-form"
+            method="post"
+            action="{{MAKE_WEBHOOK_URL}}"
+            data-source="sunnycoastac.com/home"
+            novalidate
+          >
+            <div class="field-row">
+              <div class="field">
+                <label for="first_name">First name <span class="req">*</span></label>
+                <input id="first_name" name="first_name" type="text" autocomplete="given-name" required maxlength="60" />
+              </div>
+              <div class="field">
+                <label for="last_name">Last name <span class="req">*</span></label>
+                <input id="last_name" name="last_name" type="text" autocomplete="family-name" required maxlength="60" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="phone">Phone <span class="req">*</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required maxlength="20" placeholder="+1" />
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" required maxlength="120" />
+            </div>
+            <div class="field">
+              <label for="project_info">Additional project info <span class="opt">(optional)</span></label>
+              <textarea id="project_info" name="project_info" rows="4" maxlength="2000" placeholder="Tell us about your home, system age, or what you need help with."></textarea>
+            </div>
+            <label class="check">
+              <input type="checkbox" name="consent_sms" value="yes" />
+              <span>Yes, you can text me about this appointment. Msg &amp; data rates may apply. Reply STOP to opt out.</span>
+            </label>
+            <label class="check">
+              <input type="checkbox" name="consent_contact" value="yes" required />
+              <span>I agree to be contacted about scheduling. Calls and texts may be recorded or AI-assisted. See our <a href="legal.html">Terms &amp; Privacy</a>.</span>
+            </label>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Book My Free Visit</button>
+            <p class="form-note">We only use your number to schedule your visit.</p>
+            <p class="form-status" id="book-status" role="status" aria-live="polite" hidden></p>
+          </form>
+        </div>
+        <div class="form-after reveal" id="not-sure">
+          <p class="form-after-title">Not sure yet?</p>
+          <p class="form-after-copy">We put together a short video on repair versus replace and how our free visit works.</p>
+          <a class="btn btn-outline" href="book.html">Watch the Video</a>
         </div>
       </div>
     </section>
@@ -213,7 +263,7 @@
           <li><a href="our-work.html">Gallery</a></li>
           <li><a href="reviews.html">Reviews</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="book.html">I'm Ready to Sleep Cool</a></li>
+          <li><a href="#book">Book My Free Visit</a></li>
           <li><a href="legal.html">Privacy &amp; Terms</a></li>
         </ul>
       </div>
@@ -237,7 +287,7 @@
   </footer>
 
   <div class="mobile-cta" role="region" aria-label="Quick contact">
-    <a class="btn btn-primary" href="book.html">Get Cool</a>
+    <a class="btn btn-primary" href="#book">Book Visit</a>
     <a class="btn btn-outline" data-tel href="tel:+17866671180">Call</a>
   </div>
 

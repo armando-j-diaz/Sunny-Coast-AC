@@ -1125,6 +1125,25 @@ a.nav-cta-phone:hover,
   font-size: var(--text-sm);
   color: var(--color-text-muted);
   margin: 1rem 0 0;
+  text-align: center;
+}
+
+/* "Not sure yet?" block under the homepage form */
+.form-after {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.form-after-title {
+  font-weight: 700;
+  font-size: var(--text-lg, 1.15rem);
+  margin: 0 0 0.35rem;
+}
+
+.form-after-copy {
+  color: var(--color-text-muted);
+  margin: 0 auto 1.1rem;
+  max-width: 32rem;
 }
 
 .form-status {
@@ -1168,48 +1187,66 @@ a.nav-cta-phone:hover,
   padding-left: 0.85rem;
 }
 
-/* Motion */
+/* Motion.
+   Scroll reveals are gated behind html.js (set by an inline script in <head>)
+   so content is never invisible when JS is slow or blocked.
+   The hero never waits on JS: it renders instantly with a CSS-only staged fade. */
 .reveal {
-  opacity: 0;
   transition: opacity var(--dur) var(--ease);
 }
 
-.reveal.is-in {
-  opacity: 1;
-}
-
-body:not(.is-ready) .hero .reveal {
+html.js .reveal {
   opacity: 0;
 }
 
-body.is-ready .hero .reveal {
+.reveal.is-in,
+html.js .reveal.is-in {
   opacity: 1;
 }
 
-body.is-ready .hero .eyebrow {
-  transition-delay: 0.05s;
+.hero .reveal {
+  opacity: 1;
+  animation: hero-fade 0.6s var(--ease) both;
 }
-body.is-ready .hero .display {
-  transition-delay: 0.12s;
+
+html.js .hero .reveal {
+  opacity: 1;
 }
-body.is-ready .hero .hero-art {
-  transition-delay: 0.22s;
+
+.hero .reveal.eyebrow {
+  animation-delay: 0.05s;
 }
-body.is-ready .hero .lede {
-  transition-delay: 0.32s;
+.hero .reveal.display {
+  animation-delay: 0.12s;
 }
-body.is-ready .hero .cta-row {
-  transition-delay: 0.4s;
+.hero .reveal.lede {
+  animation-delay: 0.22s;
 }
-body.is-ready .hero .risk-line {
-  transition-delay: 0.48s;
+.hero .cta-row.reveal {
+  animation-delay: 0.32s;
+}
+.hero .risk-line.reveal {
+  animation-delay: 0.4s;
+}
+
+@keyframes hero-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  .reveal,
+  html.js .reveal {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+  .hero .reveal {
+    animation: none;
   }
 }
 

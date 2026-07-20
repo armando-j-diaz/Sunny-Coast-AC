@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <script>document.documentElement.classList.add("js");</script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Repair or Replace? What to Know | Sunny Coast AC</title>
-  <meta name="description" content="Watch Sunny Coast AC on repair versus replace, then schedule a free in-home visit in South Florida." />
+  <title>Free In-Home AC Visit | Sunny Coast AC</title>
+  <meta name="description" content="Is your old AC costing you more than a new one would? Schedule a free in-home visit in South Florida. We inspect, then walk you through clear options." />
   <meta name="theme-color" content="#0D3B66" />
   <link rel="canonical" href="https://sunnycoastac.com/book.html" />
   <link rel="icon" href="/favicon.ico" sizes="32x32" />
@@ -62,8 +63,8 @@
   <main id="main">
     <section class="vsl-hero" aria-labelledby="vsl-heading">
       <div class="container vsl-hero-inner">
-        <h1 id="vsl-heading" class="display display-light">Repair or replace? What to know</h1>
-        <p class="vsl-sub">Watch this, then schedule a free in-home visit.</p>
+        <h1 id="vsl-heading" class="display display-light">Is your old AC costing you more than a new one would?</h1>
+        <p class="vsl-sub" id="vsl-sub" data-video-copy="Watch this, then schedule a free in-home visit.">Schedule a free in-home visit. We inspect your home and your system, then walk you through your options. You decide.</p>
 
         <div class="vsl-player" id="vsl-player">
           <video
@@ -83,9 +84,6 @@
             <span class="vsl-tap-icon" aria-hidden="true"></span>
             <span class="vsl-tap-label">Tap for sound</span>
           </button>
-          <p class="vsl-video-fallback" id="vsl-fallback" hidden>
-            Video coming soon. Schedule below and we will walk you through everything on the call.
-          </p>
         </div>
 
         <p class="vsl-pitch">One visit. Clear options. Your decision.</p>
@@ -95,10 +93,11 @@
       </div>
     </section>
 
-    <section class="section work-collage" aria-labelledby="collage-heading">
+    <!-- TODO: remove `hidden` once real job photos are in assets/installs (placeholder slides hurt trust with ad traffic) -->
+    <section class="section work-collage" aria-labelledby="collage-heading" hidden>
       <div class="container narrow">
         <h2 id="collage-heading" class="display reveal">Recent installs</h2>
-        <p class="lede reveal">Use the arrows or swipe to browse. Real job photos replace these slides as they arrive.</p>
+        <p class="lede reveal">Use the arrows or swipe to browse.</p>
       </div>
 
       <div class="album album--compact reveal" data-album tabindex="0" aria-roledescription="carousel" aria-label="Recent install photos">
@@ -145,12 +144,17 @@
             <span class="proof-num">100s</span>
             <span class="proof-label">of installations by our lead installer</span>
           </li>
+          <li>
+            <span class="proof-num">Fast</span>
+            <span class="proof-label">root-cause diagnosis, so the new system goes in right</span>
+          </li>
         </ul>
         <p class="proof-note reveal">We understand how systems fail. We install to prevent those failures from the start.</p>
       </div>
     </section>
 
-    <section class="section rapport" aria-labelledby="rapport-heading">
+    <!-- TODO: remove `hidden` and swap in real Google reviews once they exist (sample cards hurt trust with ad traffic) -->
+    <section class="section rapport" aria-labelledby="rapport-heading" hidden>
       <div class="container">
         <h2 id="rapport-heading" class="section-label">What people are saying</h2>
 
@@ -254,12 +258,13 @@
       <div class="container narrow">
         <div class="book-form-card">
           <h2 id="form-heading" class="form-title">Request your free quote</h2>
-          <p class="form-lede">Share your details. We will call to schedule your free in-home visit.</p>
+          <p class="form-lede">Share your details and we will call to schedule your free in-home visit. It takes less than a minute.</p>
           <form
             class="book-form"
             id="appointment-form"
             method="post"
             action="{{MAKE_WEBHOOK_URL}}"
+            data-source="sunnycoastac.com/book"
             novalidate
           >
             <div class="field-row">
@@ -293,6 +298,7 @@
               <span>I agree to be contacted about scheduling. Calls and texts may be recorded or AI-assisted. See our <a href="legal.html">Terms &amp; Privacy</a>.</span>
             </label>
             <button type="submit" class="btn btn-primary btn-lg btn-block">Request Free Quote</button>
+            <p class="form-note">We only use your number to schedule your visit.</p>
             <p class="form-status" id="book-status" role="status" aria-live="polite" hidden></p>
           </form>
         </div>
