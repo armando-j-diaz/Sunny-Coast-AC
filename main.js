@@ -1,10 +1,10 @@
 /**
  * Sunny Coast AC — site behavior
  * Lead webhook wired to Make (admin@sunnycoastac.com)
- * Phone set: 7866671180 / (786) 667-1180
+ * Phone set: 7868226861 / (786) 822-6861
  * Optional override:
  *   window.SUNNYCOAST = {
- *     phone: "7866671180",
+ *     phone: "7868226861",
  *     makeWebhook: "https://hook...",
  *     vslSrc: "/assets/vsl.mp4"
  *   }
@@ -14,7 +14,7 @@
 
   var cfg = Object.assign(
     {
-      phone: "7866671180",
+      phone: "7868226861",
       makeWebhook: "https://hook.us2.make.com/63uin847wuepry4ayvilwkxf6wh9ok6s",
       vslSrc: "/assets/vsl.mp4",
     },

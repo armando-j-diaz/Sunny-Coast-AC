@@ -90,7 +90,7 @@ Armando direction after reviewing live site + acquisition.com screenshots:
 
 | Item | Status |
 |------|--------|
-| Phone sticky + tap-to-call | **(786) 667-1180** |
+| Phone sticky + tap-to-call | **(786) 822-6861** |
 | Book/Schedule CTA after sections | Text Us CTAs throughout |
 | Risk reversal up top | Hero risk line |
 | Named satisfaction guarantee | Stay-Cool Guarantee section |
