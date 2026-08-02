@@ -46,7 +46,7 @@ python3 -m http.server 8080
 |-------|--------|
 | `{{PHONE}}` | **(786) 667-1180** (set) |
 | ~~`{{LICENSE}}`~~ | **CAC1825130** (set) |
-| `{{MAKE_WEBHOOK_URL}}` | Guide form (`guide.html`) |
+| Make webhook | Live on book/home/reviews/guide forms → email `admin@sunnycoastac.com` |
 | `{{OFFERS}}` | Offers section (hidden until real offers) |
 
 Optional runtime override (before `main.js`):
