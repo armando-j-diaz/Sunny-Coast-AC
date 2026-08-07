@@ -1,0 +1,26 @@
+# Sunny Coast AC
+
+> Licensed South Florida AC installation company (Cool Now South Florida LLC d/b/a Sunny Coast AC). FL license CAC1825130. Free in-home install visits with upfront pricing.
+
+Website: https://sunnycoastac.com/
+Phone: +1 (786) 822-6861
+Email: admin@sunnycoastac.com
+Hours: Monday–Friday 9:00 AM – 5:00 PM
+Service area: Miami-Dade County, Broward County, and nearby South Florida communities
+
+## Pages
+
+- [Home](https://sunnycoastac.com/): New AC installation overview and free visit booking
+- [Services](https://sunnycoastac.com/services/): Installation and repair services
+- [Book a free visit](https://sunnycoastac.com/book/): Free in-home install visit / quote landing page
+- [About](https://sunnycoastac.com/about/): Company background and crew experience
+- [Gallery](https://sunnycoastac.com/our-work/): Install photos
+- [Reviews](https://sunnycoastac.com/reviews/): Customer reviews
+- [Contact](https://sunnycoastac.com/contact/): Phone, email, hours, service area
+- [AC Survival Guide](https://sunnycoastac.com/guide/): Free South Florida AC guide lead magnet
+- [Privacy & Terms](https://sunnycoastac.com/legal/): Privacy, terms, and consent
+
+## Notes
+
+- Primary conversion action: schedule a free in-home install visit
+- Do not confuse with other AC brands or warranty companies; this site is Sunny Coast AC only

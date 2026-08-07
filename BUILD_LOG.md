@@ -86,6 +86,13 @@ Armando direction after reviewing live site + acquisition.com screenshots:
 - Sample review cards are labeled as layout-only — replace with real Google reviews; do not invent testimonials.
 - 2026-07-18: Mobile PageSpeed pass — perf **92**, a11y/best/seo **100**. Responsive WebPs, async fonts, AA button contrast (`#c2410c`), opacity-only reveals (CLS 0), favicon, robots/sitemap.
 
+### Technical SEO gaps (2026-08-05)
+
+No content rewrites. Added only discoverability markup:
+- Open Graph + Twitter cards on all real pages (image: `assets/van-1200.webp`)
+- JSON-LD `@graph`: `HVACBusiness` sitewide; homepage also `WebSite`. Service-area business (no street address — not published yet). License CAC1825130, phone, email, Mon–Fri 09:00–17:00, Miami-Dade + Broward.
+- Root `llms.txt` (page map). Low expected citation lift; cheap hedge.
+
 ### §2.2 checklist (v1)
 
 | Item | Status |
