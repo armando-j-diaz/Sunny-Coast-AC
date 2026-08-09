@@ -104,13 +104,7 @@
     var action = webhookAction(form);
 
     form.addEventListener("submit", function (ev) {
-      var marketing = form.querySelector('[name="consent_marketing"]');
       var guideConsent = form.querySelector('[name="consent_guide"]');
-      if (!guideConsent || !guideConsent.checked) {
-        ev.preventDefault();
-        showStatus(status, "Check the box to receive your guide.", true);
-        return;
-      }
 
       if (!action || action.indexOf("{{") !== -1) {
         ev.preventDefault();
@@ -130,8 +124,7 @@
           name: (form.name.value || "").trim(),
           email: (form.email.value || "").trim(),
           phone: (form.phone.value || "").trim(),
-          consent_guide: true,
-          consent_marketing: !!(marketing && marketing.checked),
+          consent_guide: !!(guideConsent && guideConsent.checked),
           source: "sunnycoastac.com/guide",
         },
         form,

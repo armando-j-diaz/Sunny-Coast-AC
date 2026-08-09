@@ -1121,11 +1121,17 @@ a.nav-cta-phone:hover,
 }
 
 .form-note,
+.form-legal,
 .fallback-note {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
   margin: 1rem 0 0;
   text-align: center;
+}
+
+.consent-block .form-legal {
+  text-align: left;
+  margin-top: 0;
 }
 
 /* "Not sure yet?" block under the homepage form */
