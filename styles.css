@@ -290,6 +290,42 @@ a.nav-cta-phone:hover,
   color: var(--color-action-text) !important;
 }
 
+.header-contact {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  justify-self: end;
+  grid-column: 3;
+}
+
+a.nav-cta-text {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--tap);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  border: 2px solid var(--white);
+  color: var(--white) !important;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none !important;
+  white-space: nowrap;
+  transition: background-color var(--dur) var(--ease),
+              color var(--dur) var(--ease),
+              border-color var(--dur) var(--ease);
+}
+
+a.nav-cta-text:hover,
+a.nav-cta-text:focus-visible {
+  background: var(--white);
+  color: var(--navy) !important;
+  border-color: var(--white);
+}
+
 .nav-phone-icon {
   display: inline-block;
   width: 0.95rem;
@@ -412,11 +448,19 @@ a.nav-cta-phone:hover,
     grid-column: 2;
   }
 
+  .header-contact {
+    display: flex;
+  }
+
   .header-phone,
   a.nav-cta-phone.header-phone {
     display: inline-flex;
-    justify-self: end;
-    grid-column: 3;
+    justify-self: unset;
+    grid-column: unset;
+  }
+
+  a.nav-cta-text {
+    display: inline-flex;
   }
 
   .nav-toggle,
@@ -1030,7 +1074,7 @@ a.nav-cta-phone:hover,
   bottom: 0;
   z-index: 60;
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-template-columns: 1.4fr 1fr;
   gap: 0.5rem;
   padding: 0.55rem 0.75rem calc(0.55rem + env(safe-area-inset-bottom));
   background: rgba(247, 249, 251, 0.96);
