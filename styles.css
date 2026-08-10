@@ -1181,10 +1181,25 @@ a.nav-cta-text:hover,
 
 .hp-field {
   position: absolute !important;
-  left: -9999px !important;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+  left: -10000px !important;
+  top: auto !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.guide-form,
+.book-form,
+#appointment-form {
+  position: relative;
 }
 
 /* "Not sure yet?" block under the homepage form */
