@@ -1577,6 +1577,20 @@ html.js .hero .reveal {
   border: 1px solid rgba(13, 59, 102, 0.06);
 }
 
+.reviews-coming-soon {
+  max-width: 28rem;
+  margin: 2rem auto 0;
+  text-align: center;
+}
+
+.reviews-coming-soon p {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--navy);
+}
+
 @media (min-width: 800px) {
   .review-card--tilt-a,
   .review-card--tilt-b,
