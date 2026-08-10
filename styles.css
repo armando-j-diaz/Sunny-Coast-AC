@@ -290,6 +290,34 @@ a.nav-cta-phone:hover,
   color: var(--color-action-text) !important;
 }
 
+a.nav-cta-text,
+.header-text {
+  display: none;
+  align-items: center;
+  padding: 0.55rem 0.85rem;
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--color-action);
+  background: transparent;
+  color: var(--color-action) !important;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+a.nav-cta-text:hover,
+.header-text:hover {
+  background: rgba(232, 145, 15, 0.08);
+  color: var(--color-action) !important;
+}
+
+@media (min-width: 900px) {
+  a.nav-cta-text,
+  .header-text {
+    display: inline-flex;
+  }
+}
+
 .nav-phone-icon {
   display: inline-block;
   width: 0.95rem;
@@ -412,11 +440,19 @@ a.nav-cta-phone:hover,
     grid-column: 2;
   }
 
+  .header-contact {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-self: end;
+    grid-column: 3;
+  }
+
   .header-phone,
   a.nav-cta-phone.header-phone {
     display: inline-flex;
-    justify-self: end;
-    grid-column: 3;
+    justify-self: unset;
+    grid-column: unset;
   }
 
   .nav-toggle,
@@ -1030,7 +1066,7 @@ a.nav-cta-phone:hover,
   bottom: 0;
   z-index: 60;
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
+  grid-template-columns: 1.2fr 1fr 1fr;
   gap: 0.5rem;
   padding: 0.55rem 0.75rem calc(0.55rem + env(safe-area-inset-bottom));
   background: rgba(247, 249, 251, 0.96);
@@ -1063,6 +1099,15 @@ a.nav-cta-phone:hover,
   border-radius: 1rem;
   padding: 1.5rem;
   text-align: left;
+}
+
+.guide-form-actions {
+  text-align: center;
+  margin-top: 1.25rem;
+}
+
+.guide-form .form-legal {
+  text-align: center;
 }
 
 .field {
@@ -1132,6 +1177,14 @@ a.nav-cta-phone:hover,
 .consent-block .form-legal {
   text-align: left;
   margin-top: 0;
+}
+
+.hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 /* "Not sure yet?" block under the homepage form */

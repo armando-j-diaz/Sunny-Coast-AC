@@ -96,6 +96,27 @@
     return action;
   }
 
+  function initFormAntiSpam() {
+    document.querySelectorAll("form").forEach(function (form) {
+      if (!form.querySelector('[name="form_loaded_at"]')) {
+        var loadedAt = document.createElement("input");
+        loadedAt.type = "hidden";
+        loadedAt.name = "form_loaded_at";
+        loadedAt.value = String(Date.now());
+        form.appendChild(loadedAt);
+      }
+    });
+  }
+
+  function spamPayload(form) {
+    var honeypot = form.querySelector('[name="company_website"]');
+    var loadedAt = form.querySelector('[name="form_loaded_at"]');
+    return {
+      company_website: honeypot ? honeypot.value : "",
+      form_loaded_at: loadedAt ? loadedAt.value : "",
+    };
+  }
+
   function guideForm() {
     var form = document.getElementById("guide-form");
     if (!form) return;
@@ -104,8 +125,6 @@
     var action = webhookAction(form);
 
     form.addEventListener("submit", function (ev) {
-      var guideConsent = form.querySelector('[name="consent_guide"]');
-
       if (!action || action.indexOf("{{") !== -1) {
         ev.preventDefault();
         showStatus(
@@ -120,13 +139,15 @@
       ev.preventDefault();
       postJSON(
         action,
-        {
-          name: (form.name.value || "").trim(),
-          email: (form.email.value || "").trim(),
-          phone: (form.phone.value || "").trim(),
-          consent_guide: !!(guideConsent && guideConsent.checked),
-          source: "sunnycoastac.com/guide",
-        },
+        Object.assign(
+          {
+            name: (form.name.value || "").trim(),
+            email: (form.email.value || "").trim(),
+            source: "sunnycoastac.com/guide",
+            intent: "guide_download",
+          },
+          spamPayload(form)
+        ),
         form,
         status,
         "Got it. Check your email for the guide.",
@@ -162,19 +183,24 @@
       }
 
       var sms = form.querySelector('[name="consent_sms"]');
-      var payload = {
-        phone: phone,
-        first_name: first,
-        last_name: last,
-        email: email,
-        project_info: projectInfo,
-        consent_sms: !!(sms && sms.checked),
-        consent_contact: true,
-        source:
-          form.getAttribute("data-source") ||
-          (window.location.pathname.indexOf("reviews") !== -1 ? "sunnycoastac.com/reviews" : "sunnycoastac.com/book"),
-        intent: "schedule_appointment",
-      };
+      var payload = Object.assign(
+        {
+          phone: phone,
+          first_name: first,
+          last_name: last,
+          email: email,
+          project_info: projectInfo,
+          consent_sms: !!(sms && sms.checked),
+          consent_contact: true,
+          source:
+            form.getAttribute("data-source") ||
+            (window.location.pathname.indexOf("reviews") !== -1
+              ? "sunnycoastac.com/reviews"
+              : "sunnycoastac.com/book"),
+          intent: "schedule_appointment",
+        },
+        spamPayload(form)
+      );
 
       if (!action || action.indexOf("{{") !== -1) {
         ev.preventDefault();
@@ -605,6 +631,7 @@
   }
 
   applyPhoneLinks();
+  initFormAntiSpam();
   heroLoad();
   revealOnScroll();
   guideForm();

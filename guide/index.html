@@ -127,10 +127,13 @@
         <a href="/reviews/">Reviews</a>
         <a href="/contact/">Contact</a>
       </nav>
-      <a class="nav-cta nav-cta-phone header-phone" data-tel href="tel:+17868226861">
-        <span class="nav-phone-icon" aria-hidden="true"></span>
-        (786) 822-6861
-      </a>
+      <div class="header-contact">
+        <a class="nav-cta nav-cta-phone header-phone" data-tel href="tel:+17868226861">
+          <span class="nav-phone-icon" aria-hidden="true"></span>
+          (786) 822-6861
+        </a>
+        <a class="nav-cta nav-cta-text header-text" data-sms href="sms:+17868226861">Text</a>
+      </div>
       <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-drawer" aria-label="Open menu">
         <span class="nav-toggle-bars" aria-hidden="true"></span>
       </button>
@@ -144,6 +147,7 @@
         <a href="/reviews/">Reviews</a>
         <a href="/contact/">Contact</a>
         <a data-tel href="tel:+17868226861">Call (786) 822-6861</a>
+        <a data-sms href="sms:+17868226861">Text (786) 822-6861</a>
         <a href="/book/">Get a Free Quote</a>
         <a href="/legal/">Privacy &amp; Terms</a>
       </nav>
@@ -177,34 +181,27 @@
           <label for="email">Email</label>
           <input id="email" name="email" type="email" autocomplete="email" required maxlength="120" />
         </div>
-        <div class="field">
-          <label for="phone">Phone <span class="optional">(optional)</span></label>
-          <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="20" />
+
+        <div class="hp-field" aria-hidden="true">
+          <label for="company_website_guide">Company website</label>
+          <input type="text" id="company_website_guide" name="company_website"
+                 tabindex="-1" autocomplete="off" />
         </div>
 
-        <div class="consent-block">
-          <label class="check">
-            <input type="checkbox" name="consent_guide" value="yes" />
-            <span>I agree to receive my guide and service-related messages from
-            <strong>Sunny Coast AC</strong> — scheduling, technician arrival, and quotes.
-            Up to 6 msgs/month. Msg &amp; data rates may apply.
-            Reply HELP for help, STOP to opt out.</span>
-          </label>
-          <p class="form-legal">
-            Texting is optional — you'll get your guide either way, and we may still
-            call you about your request.
-            See our <a href="/legal/">Privacy &amp; SMS Terms</a>.
-          </p>
+        <div class="guide-form-actions">
+          <button type="submit" class="btn btn-primary btn-lg">Send me the guide</button>
         </div>
-
-        <button type="submit" class="btn btn-primary btn-lg">Send me the guide</button>
-        <p class="form-note">We will email the download. If you opted in, we may text you about scheduling. Opt out anytime.</p>
+        <p class="form-note">We will email the download to the address you provide.</p>
+        <p class="form-legal">
+          See our <a href="/legal/">Privacy Policy</a>.
+        </p>
         <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
       </form>
 
       <p class="fallback-note">
         Prefer not to use the form?
-        <a data-sms href="sms:+17868226861">Text us</a> and ask for the guide. We will send it.
+        <a href="mailto:admin@sunnycoastac.com?subject=AC%20Survival%20Guide%20request">Email us</a>
+        and ask for the guide. We will send it.
       </p>
 
       <p class="back-link"><a href="/">← Back to Sunny Coast AC</a></p>
@@ -236,6 +233,7 @@
         <h3 class="footer-heading">Contact us</h3>
         <ul class="footer-contact">
           <li><a data-tel href="tel:+17868226861">(786) 822-6861</a></li>
+          <li><a data-sms href="sms:+17868226861">Text (786) 822-6861</a></li>
           <li><a href="mailto:admin@sunnycoastac.com">admin@sunnycoastac.com</a></li>
           <li>Mon–Fri 9:00 AM – 5:00 PM</li>
           <li>Serving Miami-Dade, Broward, and South Florida</li>
@@ -254,6 +252,7 @@
   <div class="mobile-cta" role="region" aria-label="Quick contact">
     <a class="btn btn-primary" href="/book/">Free Quote</a>
     <a class="btn btn-outline" data-tel href="tel:+17868226861">Call</a>
+    <a class="btn btn-outline" data-sms href="sms:+17868226861">Text</a>
   </div>
 
   <script src="/main.js" defer></script>
