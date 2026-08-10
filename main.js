@@ -105,6 +105,30 @@
         loadedAt.value = String(Date.now());
         form.appendChild(loadedAt);
       }
+
+      if (!form.querySelector('[name="company_website"]')) {
+        var wrap = document.createElement("div");
+        wrap.className = "hp-field";
+        wrap.setAttribute("aria-hidden", "true");
+        wrap.setAttribute("tabindex", "-1");
+
+        var hpId =
+          "company_website_" + (form.id || "form_" + Math.random().toString(36).slice(2, 8));
+        var label = document.createElement("label");
+        label.setAttribute("for", hpId);
+        label.textContent = "Company website";
+
+        var input = document.createElement("input");
+        input.type = "text";
+        input.name = "company_website";
+        input.id = hpId;
+        input.tabIndex = -1;
+        input.autocomplete = "off";
+
+        wrap.appendChild(label);
+        wrap.appendChild(input);
+        form.appendChild(wrap);
+      }
     });
   }
 
