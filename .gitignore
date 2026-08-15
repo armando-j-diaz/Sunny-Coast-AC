@@ -1,5 +1,8 @@
 # Local Cursor / Claude bridge (not part of the public site)
 .cursor/
+.agents/
+skills-lock.json
+.scratch/
 claude-plugins
 cowork-sessions
 onedrive

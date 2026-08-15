@@ -6,7 +6,7 @@ Website: https://sunnycoastac.com/
 Phone: +1 (786) 822-6861
 Email: admin@sunnycoastac.com
 Hours: Monday–Friday 9:00 AM – 5:00 PM
-Service area: Miami-Dade County, Broward County, and nearby South Florida communities
+Service area: Miami-Dade County and nearby South Florida communities
 
 ## Pages
 
@@ -17,6 +17,7 @@ Service area: Miami-Dade County, Broward County, and nearby South Florida commun
 - [Gallery](https://sunnycoastac.com/our-work/): Install photos
 - [Reviews](https://sunnycoastac.com/reviews/): Customer reviews
 - [Contact](https://sunnycoastac.com/contact/): Phone, email, hours, service area
+- [Areas we serve](https://sunnycoastac.com/areas/): South Dade and Upper Keys install cities
 - [AC Survival Guide](https://sunnycoastac.com/guide/): Free South Florida AC guide lead magnet
 - [Privacy & Terms](https://sunnycoastac.com/legal/): Privacy, terms, and consent
 

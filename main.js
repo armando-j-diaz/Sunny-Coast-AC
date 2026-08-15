@@ -407,7 +407,7 @@
    * arrows + dots + swipe, auto-rotate (respects reduced motion).
    */
   function installAlbum() {
-    var roots = document.querySelectorAll("[data-album]");
+    var roots = document.querySelectorAll("[data-album]:not([data-album-ready])");
     if (!roots.length) return;
 
     var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -421,6 +421,7 @@
       var caption = root.querySelector("[data-album-caption]");
       var dotsWrap = root.querySelector("[data-album-dots]");
       if (!track || slides.length < 2) return;
+      root.setAttribute("data-album-ready", "");
 
       var index = Math.max(
         0,
@@ -620,7 +621,7 @@
   }
 
   function reviewCarousel() {
-    var roots = document.querySelectorAll("[data-reviews]");
+    var roots = document.querySelectorAll("[data-reviews]:not([data-reviews-ready])");
     if (!roots.length) return;
 
     roots.forEach(function (root) {
@@ -629,6 +630,7 @@
       var prevBtn = root.querySelector("[data-review-prev]");
       var nextBtn = root.querySelector("[data-review-next]");
       if (!track || slides.length < 2) return;
+      root.setAttribute("data-reviews-ready", "");
 
       var index = 0;
 
@@ -654,6 +656,142 @@
     });
   }
 
+  function pickBankItems(bank, place, limit) {
+    var tagged = place
+      ? bank.filter(function (item) {
+          return item && item.place === place;
+        })
+      : [];
+    var featured = bank.filter(function (item) {
+      return item && item.featured;
+    });
+    var items = tagged.length ? tagged.concat(
+      featured.filter(function (item) {
+        return tagged.indexOf(item) === -1;
+      })
+    ) : featured;
+    if (limit > 0) items = items.slice(0, limit);
+    return items;
+  }
+
+  function photoBank() {
+    var slots = document.querySelectorAll("[data-photo-bank]");
+    if (!slots.length) return;
+
+    fetch("/assets/installs/bank.json")
+      .then(function (res) {
+        return res.ok ? res.json() : [];
+      })
+      .then(function (bank) {
+        if (!Array.isArray(bank) || !bank.length) return;
+        slots.forEach(function (slot) {
+          var place = slot.getAttribute("data-photo-place") || "";
+          var limit = parseInt(slot.getAttribute("data-photo-limit") || "5", 10);
+          var items = pickBankItems(bank, place, isNaN(limit) ? 5 : limit);
+          if (!items.length) return;
+
+          var slides = items
+            .map(function (item, i) {
+              var src = item.src || "";
+              var srcset = item.srcset ? ' srcset="' + item.srcset + '"' : "";
+              var alt = (item.alt || "Install photo").replace(/"/g, "&quot;");
+              var caption = (item.caption || "").replace(/"/g, "&quot;");
+              var w = item.width || 1200;
+              var h = item.height || 800;
+              var active = i === 0 ? " is-active" : "";
+              var lazy = i === 0 ? "" : ' loading="lazy"';
+              return (
+                '<figure class="album-slide' +
+                active +
+                '" data-album-slide data-caption="' +
+                caption +
+                '">' +
+                '<img src="' +
+                src +
+                '"' +
+                srcset +
+                ' sizes="(max-width: 800px) 100vw, 480px" alt="' +
+                alt +
+                '" width="' +
+                w +
+                '" height="' +
+                h +
+                '"' +
+                lazy +
+                ' decoding="async" />' +
+                "</figure>"
+              );
+            })
+            .join("");
+
+          slot.innerHTML =
+            '<section class="section" aria-labelledby="photo-bank-heading">' +
+            '<div class="container">' +
+            '<h2 id="photo-bank-heading" class="display">Recent installs</h2>' +
+            '<div class="album album--compact" data-album tabindex="0" aria-roledescription="carousel" aria-label="Recent install photos">' +
+            '<button type="button" class="album-arrow album-prev" data-album-prev aria-label="Previous photo"></button>' +
+            '<div class="album-viewport"><div class="album-track" data-album-track>' +
+            slides +
+            "</div></div>" +
+            '<button type="button" class="album-arrow album-next" data-album-next aria-label="Next photo"></button>' +
+            '<p class="album-caption" data-album-caption></p>' +
+            '<div class="album-dots" data-album-dots role="tablist" aria-label="Choose a photo"></div>' +
+            "</div></div></section>";
+          slot.removeAttribute("hidden");
+        });
+        installAlbum();
+      })
+      .catch(function () {});
+  }
+
+  function reviewBank() {
+    var slots = document.querySelectorAll("[data-review-bank]");
+    if (!slots.length) return;
+
+    fetch("/assets/reviews/bank.json")
+      .then(function (res) {
+        return res.ok ? res.json() : [];
+      })
+      .then(function (bank) {
+        if (!Array.isArray(bank) || !bank.length) return;
+        slots.forEach(function (slot) {
+          var place = slot.getAttribute("data-review-place") || "";
+          var limit = parseInt(slot.getAttribute("data-review-limit") || "3", 10);
+          var items = pickBankItems(bank, place, isNaN(limit) ? 3 : limit);
+          if (!items.length) return;
+
+          var cards = items
+            .map(function (item) {
+              var quote = item.quote || "";
+              var name = item.name || "";
+              var loc = item.place_label || item.place || "";
+              return (
+                '<blockquote class="review-card" data-review-slide>' +
+                "<p>" +
+                quote.replace(/</g, "&lt;") +
+                "</p>" +
+                '<p class="review-name">' +
+                name.replace(/</g, "&lt;") +
+                (loc ? " · " + String(loc).replace(/</g, "&lt;") : "") +
+                "</p></blockquote>"
+              );
+            })
+            .join("");
+
+          slot.innerHTML =
+            '<section class="section" aria-labelledby="review-bank-heading">' +
+            '<div class="container narrow">' +
+            '<h2 id="review-bank-heading" class="display">Reviews</h2>' +
+            '<div data-reviews><div data-review-track>' +
+            cards +
+            "</div></div></div></section>";
+          slot.removeAttribute("hidden");
+        });
+        reviewCarousel();
+      })
+      .catch(function () {});
+  }
+
   applyPhoneLinks();
   initFormAntiSpam();
   heroLoad();
@@ -664,5 +802,7 @@
   navMenu();
   installAlbum();
   reviewCarousel();
+  photoBank();
+  reviewBank();
   backToTop();
 })();
