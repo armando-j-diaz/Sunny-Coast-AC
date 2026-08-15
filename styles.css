@@ -2145,7 +2145,7 @@ textarea {
   gap: 2.75rem;
   list-style: none;
   margin: 0;
-  padding: 0 2.75rem;
+  padding: 0 2.75rem 0 0; /* one gap at the loop seam, not two */
   align-items: center;
 }
 
