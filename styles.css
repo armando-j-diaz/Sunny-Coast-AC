@@ -2392,21 +2392,24 @@ textarea {
   }
 }
 
-.area-card {
+a.area-card {
   display: block;
-  background: var(--white);
-  border: 1px solid rgba(13, 59, 102, 0.12);
+  background: var(--navy);
+  border: 1px solid var(--navy);
   border-radius: 0.85rem;
   padding: 1rem 1.1rem;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--white);
   text-decoration: none;
   text-align: center;
 }
 
-.area-card:hover {
-  color: var(--navy);
-  border-color: var(--sun-orange);
+a.area-card:hover,
+a.area-card:focus-visible {
+  color: var(--white);
+  background: var(--navy-deep);
+  border-color: var(--navy-deep);
+  text-decoration: none;
 }
 
 .other-areas {
