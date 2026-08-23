@@ -9,7 +9,7 @@
   --deep-blue: #1b75bc;
   --navy: #0d3b66;
   --navy-deep: #1b2a4a;
-  --teal: #2bb6a3;
+  --teal: var(--navy); /* was #2bb6a3 turquoise; retired in favor of navy */
   --foam: #f7f9fb;
   --white: #ffffff;
 
@@ -21,7 +21,7 @@
   --color-action-hover: #d97706;
   --color-action-text: #ffffff;
   --color-link: var(--surf-blue);
-  --color-accent: var(--teal);
+  --color-accent: var(--navy);
   --color-footer-bg: var(--navy);
   --color-footer-text: #d6e4f0;
 
