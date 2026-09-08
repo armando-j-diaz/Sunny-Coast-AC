@@ -1,0 +1,4 @@
+/* Existing Google Fonts, self-hosted Latin subsets. Licenses: assets/fonts/*-OFL.txt. */
+@font-face { font-family: "Figtree"; font-style: normal; font-weight: 300 900; font-display: swap; src: url("/assets/fonts/figtree-latin-variable.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 800; font-display: swap; src: url("/assets/fonts/poppins-latin-800.woff2") format("woff2"); }
+@font-face { font-family: "Baloo 2"; font-style: normal; font-weight: 800; font-display: swap; src: url("/assets/fonts/baloo2-latin-800.woff2") format("woff2"); }

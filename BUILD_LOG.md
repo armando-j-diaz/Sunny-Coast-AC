@@ -111,3 +111,44 @@ No content rewrites. Added only discoverability markup:
 | Real van photos | van.webp in trust section |
 | Before/after gallery | Built, flagged off |
 | Maintenance membership | Deferred (roadmap) |
+
+## 2026-09-07 — Mobile Lighthouse fixes (prepared locally)
+
+Preserved the existing navy/foam layout, Poppins hero, Baloo headings, Figtree body,
+wave divider and business copy. Darkened orange actions and blue links/eyebrows,
+and removed faded brand text, to keep white/button and small-text contrast at AA.
+This is a performance/accessibility pass; the existing Sunny Coast visual identity
+already supplies the design direction required by the master brief.
+
+- Self-host the existing Latin font subsets with their OFL licenses; preload the
+  body and hero fonts, removing the Google Fonts stylesheet/connection chain.
+- Serve one committed, minified stylesheet. Editable sources remain fonts.css,
+  tokens.css and styles.css; rebuild using `node scripts/build-css.mjs`.
+- Add responsive compressed logo and van derivatives, preserving original files.
+- Render first-screen text immediately. Below-fold fades initialize only when the
+  observer is available, and all content remains visible if JavaScript fails.
+- Analytics and lead submission behavior are unchanged.
+
+Original supplied PageSpeed report: 89 performance / 96 accessibility / 100 best
+practices / 100 SEO, FCP 2.6s, LCP 3.3s, CLS 0. Local equivalent baseline: 97/96/100/100,
+FCP 1.5s, LCP 2.5s. Optimized local Lighthouse 13.4.0: 100/100/100/100,
+FCP 1.1s, LCP 1.4s, TBT 10ms, CLS 0. Local and Google-hosted scores are not directly
+interchangeable. Live retest is required after publication.
+
+20 HTML routes checked at mobile width; desktop/mobile screenshots reviewed;
+menu, Escape, no-JS content and form validation checked without sending leads.
+The booking page's missing vsl.mp4 is pre-existing and has its existing poster fallback.
+Hosting-controlled cache lifetime and Google Analytics unused-JS diagnostics remain;
+do not disable analytics or change DNS just to remove unscored suggestions.
+
+Armando approved publication on 2026-09-07 after restoring the original orange
+and adjusting the booking anchor. This release includes those approved fixes.
+Detailed reports are outside this public repo, in OneDrive
+sunnycoast/2026-09-07/website-lighthouse/.
+
+### Owner correction — original orange and booking anchor
+
+Restored the original action orange #e8910f and hover #d97706 with the original
+white text at Armando's request. This supersedes the darker action color above;
+the prior 100 accessibility result does not describe the restored color palette.
+Added sticky-header clearance plus 1rem to the #book anchor using scroll-margin-top.

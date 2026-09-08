@@ -51,7 +51,7 @@
 
   function revealOnScroll() {
     var nodes = document.querySelectorAll(".reveal");
-    if (!nodes.length) return;
+    if (!nodes.length || !("IntersectionObserver" in window)) return;
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       nodes.forEach(function (n) {
@@ -72,7 +72,12 @@
       { rootMargin: "0px 0px -8% 0px", threshold: 0.12 }
     );
 
-    nodes.forEach(function (n) {
+    // Measure before changing classes to avoid repeated layout work.
+    var belowFold = Array.from(nodes).filter(function (n) {
+      return !n.closest(".hero, .vsl-hero") && n.getBoundingClientRect().top >= window.innerHeight;
+    });
+    belowFold.forEach(function (n) {
+      n.classList.add("reveal-pending");
       io.observe(n);
     });
   }

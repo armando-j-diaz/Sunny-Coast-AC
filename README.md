@@ -70,3 +70,17 @@ See [DNS-records.md](./DNS-records.md). Custom domain file: `CNAME` → `sunnyco
 
 Never mention JET AC, AHS/American Home Shield, Frontdoor, warranty work, or 911 Cooling on this site.
 Footer legal name: Cool Now South Florida LLC DBA Sunny Coast AC.
+
+## Editing styles
+
+Edit `fonts.css`, `tokens.css`, or `styles.css`, then run:
+
+```bash
+node scripts/build-css.mjs
+```
+
+Commit the regenerated `site.min.css` with the source changes. Pages serves this
+combined, minified file directly; no hosting build or framework is needed. The
+script uses a pinned esbuild version through npx (Node.js and network access on
+first run). The existing fonts are self-hosted under `assets/fonts/`, with their
+licenses. Keep the responsive logo and van image variants in the HTML when editing.

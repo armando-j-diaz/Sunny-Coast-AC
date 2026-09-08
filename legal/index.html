@@ -36,14 +36,10 @@
   <link rel="icon" href="/favicon.ico" sizes="32x32" />
   <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="32x32" />
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
-  <link rel="preload" as="image" href="/assets/logo-112.webp" fetchpriority="high" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Figtree:wght@400;600;700&family=Poppins:wght@800&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Figtree:wght@400;600;700&family=Poppins:wght@800&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Figtree:wght@400;600;700&family=Poppins:wght@800&display=swap" /></noscript>
-  <link rel="stylesheet" href="/tokens.css" />
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preload" as="image" href="/assets/logo-56-optimized.webp" imagesrcset="/assets/logo-56-optimized.webp 1x, /assets/logo-112-optimized.webp 2x, /assets/logo-168-optimized.webp 3x" fetchpriority="high" />
+  <link rel="preload" href="/assets/fonts/figtree-latin-variable.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/poppins-latin-800.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/site.min.css" />
   <!-- structured-data -->
   <script type="application/ld+json">
   {
@@ -112,7 +108,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="/" aria-label="Sunny Coast AC home">
-        <img src="/assets/logo-112.webp" alt="Sunny Coast AC" width="56" height="56" class="brand-mark" decoding="async" />
+        <img src="/assets/logo-56-optimized.webp" srcset="/assets/logo-56-optimized.webp 1x, /assets/logo-112-optimized.webp 2x, /assets/logo-168-optimized.webp 3x" alt="Sunny Coast AC" width="56" height="56" class="brand-mark" decoding="async" />
         <span class="brand-text">Sunny Coast <span>AC</span></span>
       </a>
       <nav class="nav-desktop" aria-label="Primary">
@@ -280,7 +276,7 @@
     <div class="container footer-grid">
       <div class="footer-col footer-brand-col">
         <a class="footer-brand-link" href="/">
-          <img src="/assets/logo-112.webp" alt="" width="48" height="48" decoding="async" />
+          <img src="/assets/logo-56-optimized.webp" srcset="/assets/logo-56-optimized.webp 1x, /assets/logo-112-optimized.webp 2x, /assets/logo-168-optimized.webp 3x" alt="" width="48" height="48" decoding="async" />
           <span>Sunny Coast AC</span>
         </a>
         <p class="footer-tagline">New AC installation across South Florida.</p>

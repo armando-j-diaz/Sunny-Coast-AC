@@ -17,10 +17,10 @@
   --color-bg: var(--foam);
   --color-text: var(--navy);
   --color-text-muted: #3a5a7a;
-  --color-action: #e8910f; /* warm mid-orange — between gold and burnt */
+  --color-action: #e8910f; /* original brand orange, retained by owner request */
   --color-action-hover: #d97706;
   --color-action-text: #ffffff;
-  --color-link: var(--surf-blue);
+  --color-link: #165f99; /* readable on white, foam, and tinted cards */
   --color-accent: var(--navy);
   --color-footer-bg: var(--navy);
   --color-footer-text: #d6e4f0;

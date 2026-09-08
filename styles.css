@@ -96,7 +96,7 @@ a:hover {
 .eyebrow {
   text-align: center;
   margin: 0 0 0.35rem;
-  color: var(--deep-blue);
+  color: #165f99;
 }
 
 .script {
@@ -470,6 +470,11 @@ a.nav-cta-phone:hover,
 
 .tint-soft {
   background: #eef6fb;
+}
+
+/* Leave room for the sticky header when jumping to the booking section. */
+#book {
+  scroll-margin-top: calc(var(--header-h) + 1rem);
 }
 
 /* Hero */
@@ -1269,67 +1274,15 @@ a.nav-cta-phone:hover,
   padding-left: 0.85rem;
 }
 
-/* Motion.
-   Scroll reveals are gated behind html.js (set by an inline script in <head>)
-   so content is never invisible when JS is slow or blocked.
-   The hero never waits on JS: it renders instantly with a CSS-only staged fade. */
+/* Content is visible by default, including if scripts fail to load.
+   Only below-the-fold elements opt into the scroll fade after JS is ready. */
 .reveal {
   transition: opacity var(--dur) var(--ease);
 }
-
-html.js .reveal {
-  opacity: 0;
-}
-
-.reveal.is-in,
-html.js .reveal.is-in {
-  opacity: 1;
-}
-
-.hero .reveal {
-  opacity: 1;
-  animation: hero-fade 0.6s var(--ease) both;
-}
-
-html.js .hero .reveal {
-  opacity: 1;
-}
-
-.hero .reveal.eyebrow {
-  animation-delay: 0.05s;
-}
-.hero .reveal.display {
-  animation-delay: 0.12s;
-}
-.hero .reveal.lede {
-  animation-delay: 0.22s;
-}
-.hero .cta-row.reveal {
-  animation-delay: 0.32s;
-}
-.hero .risk-line.reveal {
-  animation-delay: 0.4s;
-}
-
-@keyframes hero-fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
+.reveal.reveal-pending { opacity: 0; }
+.reveal.is-in { opacity: 1; }
 @media (prefers-reduced-motion: reduce) {
-  .reveal,
-  html.js .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-  .hero .reveal {
-    animation: none;
-  }
+  .reveal, .reveal.reveal-pending { opacity: 1; transition: none; }
 }
 
 /* Desktop type bump */
@@ -2152,7 +2105,7 @@ textarea {
   font-family: var(--font-display);
   font-weight: 800;
   font-size: clamp(1.1rem, 2.4vw, 1.45rem);
-  color: rgba(13, 59, 102, 0.45);
+  color: var(--color-text-muted);
   white-space: nowrap;
   letter-spacing: 0.02em;
 }
