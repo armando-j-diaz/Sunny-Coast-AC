@@ -836,6 +836,14 @@ a.nav-cta-phone:hover,
 }
 
 /* Home FAQ + About split */
+.repair-note {
+  max-width: 34rem;
+  margin: 0 auto 1.75rem;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  text-align: center;
+}
+
 .home-faq .faq-list {
   margin-top: 1.25rem;
 }
