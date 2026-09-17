@@ -63,6 +63,7 @@
 .feedback-content input, .feedback-content textarea { width: 100%; }
 .feedback-preview { background: var(--foam); border-left: 3px solid var(--deep-blue); padding: .75rem 1rem; font-size: var(--text-sm); }
 .feedback-content .form-status { margin-top: 1rem; padding: 1rem; background: var(--foam); color: var(--navy); }
+.feedback-content #feedback-form [type="submit"] { display: flex; margin: 1.5rem auto 0; }
 .feedback-content .form-status.is-error { color: var(--sunset); border-left: 3px solid var(--sunset); }
 @media (max-width: 640px) {
   .review-invite { grid-template-columns: 1fr; margin-top: 1.75rem; }
