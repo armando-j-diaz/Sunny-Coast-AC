@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <script>document.documentElement.classList.add("js");</script>
+  <meta name="referrer" content="no-referrer" />
+  <script src="/reviews/context.js?v=20260917c"></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GSV3PL5R9E"></script>
   <script>
@@ -10,7 +12,7 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-GSV3PL5R9E');
+    gtag('config', 'G-GSV3PL5R9E', {page_location: location.origin + location.pathname});
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Leave a Review | Sunny Coast AC</title>
@@ -151,12 +153,13 @@
         <a class="review-back" href="/reviews/">← Back to reviews</a>
         <h1 id="experience-heading" class="display">How was your experience?</h1>
         <p class="lede">Your feedback helps your neighbors choose with confidence and helps us take better care of you.</p>
+        <p id="review-choice-status" class="form-status" role="status" hidden></p>
         <div class="experience-choices" aria-label="Tell us about your experience">
-          <a class="experience-choice" href="https://maps.app.goo.gl/6EwhpDbNQBNjCVNv5">
+          <a class="experience-choice" data-review-choice="good" href="https://maps.app.goo.gl/6EwhpDbNQBNjCVNv5">
             <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="24" cy="24" r="20"/><path d="M15 28c4 8 14 8 18 0" stroke-linecap="round"/><circle cx="17" cy="19" r="1"/><circle cx="31" cy="19" r="1"/></svg>
             <span>I had a good experience</span><span class="experience-detail">Tell us what went well.</span>
           </a>
-          <a class="experience-choice" href="/reviews/feedback/">
+          <a class="experience-choice" data-review-choice="bad" href="/reviews/feedback/">
             <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="24" cy="24" r="20"/><path d="M15 33c4-8 14-8 18 0" stroke-linecap="round"/><circle cx="17" cy="19" r="1"/><circle cx="31" cy="19" r="1"/></svg>
             <span>I had a bad experience</span><span class="experience-detail">Let's work to make it right.</span>
           </a>
@@ -207,5 +210,6 @@
     </div>
   </footer>
   <script src="/main.js" defer></script>
+  <script src="/reviews/choice.js?v=20260917c" defer></script>
 </body>
 </html>

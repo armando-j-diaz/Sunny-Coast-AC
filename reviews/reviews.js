@@ -82,6 +82,8 @@
       form_loaded_at: field("form_loaded_at")
     };
 
+    if (window.SC_REVIEW_TOKEN) payload.review_token = window.SC_REVIEW_TOKEN;
+
     sending = true;
     submit.disabled = true;
     submit.textContent = "Sending…";

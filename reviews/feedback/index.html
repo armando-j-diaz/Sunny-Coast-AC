@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <script>document.documentElement.classList.add("js");</script>
+  <meta name="referrer" content="no-referrer" />
+  <script src="/reviews/context.js?v=20260917c"></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GSV3PL5R9E"></script>
   <script>
@@ -10,7 +12,7 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-GSV3PL5R9E');
+    gtag('config', 'G-GSV3PL5R9E', {page_location: location.origin + location.pathname});
   </script>
   <meta name="robots" content="noindex, follow" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -211,6 +213,6 @@
     </div>
   </footer>
   <script src="/main.js" defer></script>
-  <script src="/reviews/reviews.js?v=20260916b" defer></script>
+  <script src="/reviews/reviews.js?v=20260917c" defer></script>
 </body>
 </html>

@@ -85,12 +85,19 @@ script uses a pinned esbuild version through npx (Node.js and network access on
 first run). The existing fonts are self-hosted under `assets/fonts/`, with their
 licenses. Keep the responsive logo and van image variants in the HTML when editing.
 
-## Review flow (live 2026-09-16)
+## Review flow (live 2026-09-17)
 
 `/reviews/leave/` contains two links: good experience opens the owner's supplied
 Google Maps profile; bad experience opens `/reviews/feedback/`, a separate private
 feedback form with the satisfaction message. Google still requires the visitor to
 choose Write a review on that profile. This is the owner's requested layout.
+
+The review link carries an opaque token. Opening the page alone does not end the
+reminder window. Choosing **Good experience** records the choice and opens Google;
+choosing **Bad experience** records the choice, stops later review reminders, and
+creates one service-follow-up card in Ops. If the customer submits details, those
+details update that same card. Generic visits without the token continue to work,
+but are not tied to a specific review request.
 
 Styling lives in `reviews/reviews.css`; only the feedback page loads `reviews/reviews.js`.
 
