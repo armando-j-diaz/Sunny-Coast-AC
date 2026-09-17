@@ -152,3 +152,66 @@ Restored the original action orange #e8910f and hover #d97706 with the original
 white text at Armando's request. This supersedes the darker action color above;
 the prior 100 accessibility result does not describe the restored color palette.
 Added sticky-header clearance plus 1rem to the #book anchor using scroll-margin-top.
+
+## 2026-09-16 — Review experience, LOCAL PREVIEW ONLY
+
+Armando requested Liberty Air's good/bad experience idea, a 100% satisfaction message,
+and Sunny Coast styling, with a Leave a review button replacing the reviews placeholder.
+
+- `/reviews/`: new navy promise panel, brand-orange Leave a review button, supplied
+  Google listing link; original quote form preserved. Mobile action points to review flow.
+- `/reviews/leave/`: good/bad choices, contextual response, private feedback form,
+  and an equally available Google link before and after either choice. Bad opens private
+  feedback; good keeps it optional. No sentiment hides or blocks Google.
+- Homepage: small "Already had a visit? Leave a review" line under FAQ for owner review.
+- Page-specific `reviews/reviews.css` / `reviews/reviews.js`; existing global bundle untouched.
+- Google link verified as Sunny Coast AC, matching website and phone:
+  https://maps.app.goo.gl/6EwhpDbNQBNjCVNv5. It opens the profile; user selects Write a review.
+- Promise explains listening and working to make things right; no refund, response-time,
+  or lifetime-warranty terms added.
+
+**Not deployed. Private feedback delivery is NOT connected.** The form explicitly says
+preview; localhost submission validates and shows a not-sent/not-saved message. Submit
+is disabled outside localhost. No feedback storage, outbound send, Worker/Make change,
+or customer outreach. Before launch, connect a dedicated feedback receiver and verify
+internal delivery; do not reuse the sales booking webhook for complaints.
+
+Checked in browser at desktop and 390px phone width: landing, both choices, retained
+Google access, required-field validation and successful local-only form test. No mobile
+horizontal overflow. JavaScript syntax, local asset/link targets, unique HTML IDs and
+unchanged existing quote form checked. Existing repository mode changes preserved.
+
+References: https://www.jumpem.review/libertyair/ (good → Google, bad → private form),
+https://support.google.com/contributionpolicy/answer/7400114 (no selective solicitation).
+
+
+### Owner revisions — 2026-09-16, supersedes the initial review preview above
+
+Reviews landing: removed eyebrow and reassurance sentence; moved the explanatory
+copy into the lede; enlarged and centered the card heading, action and Google link.
+Experience page: removed eyebrow, shared Google CTA, explanatory Google text,
+response panels and expandable form. Good is a direct link to the supplied Google
+Maps profile; bad links to new `/reviews/feedback/`. The new page says "We want you
+100% satisfied. Tell us what went wrong, and we'll work to make it right."
+
+The private form remains explicitly disconnected and local-only. Verified navigation,
+mobile rendering, form test and return link. No deployment or outbound submission.
+Earlier policy advice remains a recorded concern, not the behavior of this revised
+owner-directed local prototype. Google link opens profile, not the review composer.
+
+## 2026-09-16 — Review flow published; private feedback connected (supersedes "local only" notes above)
+
+Armando approved going live. The `/reviews/` landing, `/reviews/leave/` choices,
+`/reviews/feedback/` form and the homepage review link ship together.
+
+- `reviews/reviews.js` now posts to `https://quotes.sunnycoastac.com/api/feedback`
+  (Ops worker version `045042c0`, deployed first). Preview notice removed; button reads
+  "Send feedback". Success shows only after the worker confirms the save:
+  "Thank you for letting us know. Our team will review your message and follow up."
+- Safe modes: localhost never contacts production (opt-in `?feedback_api=` for a local
+  worker only); other hosts disable the form. Failures keep the typed text.
+- Worker side: saved in a Durable Object, red URGENT banner on every Ops page, Feedback tab,
+  `@channel` Slack alert with retries. No Jobber, lead, SMS or email to the customer.
+- Tested: desktop + 390px phone against a local worker (success, local no-send, network
+  failure keeps text). Live: one synthetic submission posted twice → one record, Slack
+  "sent", then marked handled.

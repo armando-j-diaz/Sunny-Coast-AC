@@ -84,3 +84,30 @@ combined, minified file directly; no hosting build or framework is needed. The
 script uses a pinned esbuild version through npx (Node.js and network access on
 first run). The existing fonts are self-hosted under `assets/fonts/`, with their
 licenses. Keep the responsive logo and van image variants in the HTML when editing.
+
+## Review flow (live 2026-09-16)
+
+`/reviews/leave/` contains two links: good experience opens the owner's supplied
+Google Maps profile; bad experience opens `/reviews/feedback/`, a separate private
+feedback form with the satisfaction message. Google still requires the visitor to
+choose Write a review on that profile. This is the owner's requested layout.
+
+Styling lives in `reviews/reviews.css`; only the feedback page loads `reviews/reviews.js`.
+
+**Private feedback is connected.** On `sunnycoastac.com` / `www` the form posts JSON to
+`https://quotes.sunnycoastac.com/api/feedback` (the Ops worker, `src/feedback.js` in the
+proposal-tool repo). The worker saves it first, shows a red URGENT banner on every Ops page
+plus the **Feedback** tab at `/apps#feedback`, and posts an `@channel` Slack alert. No Jobber
+record, lead, text, or email goes to the customer.
+
+- Local preview (`localhost` / `127.0.0.1`) **never** posts to production. It validates and says
+  nothing was sent. To test end to end, run `npx wrangler dev` in `proposal-tool/` with
+  `.dev.vars` containing `FEEDBACK_ALLOW_LOCAL=1` and `FEEDBACK_SLACK_MOCK=1`, then open
+  `/reviews/feedback/?feedback_api=http://127.0.0.1:8787`.
+- Any other host disables the form and shows the phone/email.
+- Each message carries a `submission_id`; a retry or double click never makes a duplicate.
+  Text stays in the form until the worker confirms it saved.
+- Never send complaint submissions into the quote-request (Make) webhook.
+
+The Google policy concern about routing by sentiment was explained to the owner; this
+layout is his choice, not a claim of policy compliance.
