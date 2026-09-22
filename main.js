@@ -308,22 +308,28 @@
   function postJSON(url, payload, form, status, okMsg, errMsg) {
     var btn = form.querySelector('[type="submit"]');
     if (btn) btn.disabled = true;
-    fetch(url, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    })
-      .then(function (res) {
-        if (!res.ok) throw new Error("bad status");
-        showStatus(status, okMsg, false);
-        form.reset();
+    var loadedAt = form.querySelector('[name="form_loaded_at"]');
+    var elapsed = loadedAt ? Date.now() - Number(loadedAt.value) : 2100;
+    var waitMs = form.classList.contains('book-form') ? Math.max(0, 2100 - elapsed) : 0;
+    showStatus(status, "Sending your request…", false);
+    setTimeout(function () {
+      fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       })
-      .catch(function () {
-        showStatus(status, errMsg, true);
-      })
-      .finally(function () {
-        if (btn) btn.disabled = false;
-      });
+        .then(function (res) {
+          if (!res.ok) throw new Error("bad status");
+          showStatus(status, okMsg, false);
+          form.reset();
+        })
+        .catch(function () {
+          showStatus(status, errMsg, true);
+        })
+        .finally(function () {
+          if (btn) btn.disabled = false;
+        });
+    }, waitMs);
   }
 
   function showStatus(status, msg, isErr) {
