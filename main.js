@@ -1,11 +1,12 @@
 /**
  * Sunny Coast AC — site behavior
- * Lead webhook wired to Make (admin@sunnycoastac.com)
+ * Visit requests go to the Worker, which saves them before notifying the team.
  * Phone set: 7868226861 / (786) 822-6861
  * Optional override:
  *   window.SUNNYCOAST = {
  *     phone: "7868226861",
  *     makeWebhook: "https://hook...",
+ *     visitWebhook: "https://quotes.sunnycoastac.com/api/visit",
  *     vslSrc: "/assets/vsl.mp4"
  *   }
  */
@@ -16,6 +17,7 @@
     {
       phone: "7868226861",
       makeWebhook: "https://hook.us2.make.com/63uin847wuepry4ayvilwkxf6wh9ok6s",
+      visitWebhook: "https://quotes.sunnycoastac.com/api/visit",
       vslSrc: "/assets/vsl.mp4",
     },
     window.SUNNYCOAST || {}
@@ -92,11 +94,12 @@
     });
   }
 
-  function webhookAction(form) {
+  function webhookAction(form, preferredUrl) {
     var action = form.getAttribute("action") || "";
-    if (cfg.makeWebhook && cfg.makeWebhook.indexOf("{{") === -1) {
-      form.setAttribute("action", cfg.makeWebhook);
-      return cfg.makeWebhook;
+    var selectedUrl = preferredUrl || cfg.makeWebhook;
+    if (selectedUrl && selectedUrl.indexOf("{{") === -1) {
+      form.setAttribute("action", selectedUrl);
+      return selectedUrl;
     }
     return action;
   }
@@ -190,7 +193,7 @@
     if (!form) return;
 
     var status = document.getElementById("book-status");
-    var action = webhookAction(form);
+    var action = webhookAction(form, cfg.visitWebhook);
     var serviceChoices = form.querySelectorAll('[name="service_type"]');
     var serviceDetail = form.querySelector(".service-choice-detail");
     var requestedService = new URLSearchParams(window.location.search).get("service");
