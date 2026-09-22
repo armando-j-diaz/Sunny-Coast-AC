@@ -57,7 +57,7 @@
         "email": "admin@sunnycoastac.com",
         "image": "https://sunnycoastac.com/assets/van-1200.webp",
         "logo": "https://sunnycoastac.com/assets/logo.webp",
-        "description": "Sunny Coast AC installs new air conditioning systems across South Florida. Licensed and insured (CAC1825130). Free in-home install visits with upfront pricing.",
+        "description": "Sunny Coast AC installs and repairs air conditioning systems across South Florida. Licensed and insured (CAC1825130). Free new-unit quotes and $99 repair diagnostics credited toward repairs.",
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
@@ -140,7 +140,7 @@
         <a href="/contact/">Contact</a>
         <a data-tel href="tel:+17868226861">Call (786) 822-6861</a>
         <a data-sms href="sms:+17868226861">Text (786) 822-6861</a>
-        <a href="/book/">Get a Free Quote</a>
+        <a href="/book/#book-form">Request a Visit</a>
         <a href="/legal/">Privacy &amp; Terms</a>
       </nav>
     </div>
@@ -168,8 +168,8 @@
     <section class="section book-form-section tint-soft" id="book-form" aria-labelledby="form-heading">
       <div class="container narrow">
         <div class="book-form-card">
-          <h2 id="form-heading" class="form-title">Request your free quote</h2>
-          <p class="form-lede">Share your details. We will call to schedule your free in-home visit.</p>
+          <h2 id="form-heading" class="form-title">How can we help?</h2>
+          <p class="form-lede">Choose what you need, then share your details. We will call to discuss the next step.</p>
           <form
             class="book-form"
             id="appointment-form"
@@ -177,6 +177,20 @@
             action="https://hook.us2.make.com/63uin847wuepry4ayvilwkxf6wh9ok6s"
             novalidate
           >
+            <fieldset class="service-choice">
+              <legend>I'm looking for <span class="req">*</span></legend>
+              <div class="service-choice-options">
+                <label class="service-choice-option">
+                  <input type="radio" name="service_type" value="new_unit" required />
+                  <span>New unit</span>
+                </label>
+                <label class="service-choice-option">
+                  <input type="radio" name="service_type" value="repair" required />
+                  <span>Repair</span>
+                </label>
+              </div>
+              <p class="service-choice-detail" aria-live="polite" hidden></p>
+            </fieldset>
             <div class="field-row">
               <div class="field">
                 <label for="first_name">First name <span class="req">*</span></label>
@@ -211,9 +225,9 @@
               recorded or handled by AI-assisted systems for quality and scheduling.
               See our <a href="/legal/">Terms &amp; Privacy</a>.</span>
             </label>
-            <button type="submit" class="btn btn-primary btn-lg btn-block">Request Free Quote</button>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Request a Visit</button>
             <p class="form-note">
-              We only use your number for your service request — scheduling, arrival updates, and your quote. Never for marketing.
+              We only use your number for your service request — scheduling, arrival updates, and follow-up. Never for marketing.
               See our <a href="/legal/">Privacy Policy &amp; SMS Terms</a>.
             </p>
             <p class="form-status" id="book-status" role="status" aria-live="polite" hidden></p>
@@ -229,7 +243,7 @@
           <img src="/assets/logo-56-optimized.webp" srcset="/assets/logo-56-optimized.webp 1x, /assets/logo-112-optimized.webp 2x, /assets/logo-168-optimized.webp 3x" alt="" width="48" height="48" decoding="async" />
           <span>Sunny Coast AC</span>
         </a>
-        <p class="footer-tagline">New AC installation across South Florida.</p>
+        <p class="footer-tagline">AC installation and repair across South Florida.</p>
         <p class="footer-pricing">Free replacement quotes · $99 repair diagnostics, credited to your repair</p>
         <p class="footer-blurb">Cool Now South Florida LLC DBA Sunny Coast AC. Licensed and insured (CAC1825130).</p>
       </div>
@@ -241,7 +255,7 @@
           <li><a href="/our-work/">Gallery</a></li>
           <li><a href="/reviews/">Reviews</a></li>
           <li><a href="/contact/">Contact</a></li>
-          <li><a href="/book/">Get a Free Quote</a></li>
+          <li><a href="/book/#book-form">Request a Visit</a></li>
           <li><a href="/legal/">Privacy &amp; Terms</a></li>
         </ul>
       </div>
@@ -268,6 +282,6 @@
     <a class="btn btn-primary" href="/reviews/leave/">Leave a review</a>
     <a class="btn btn-outline" data-tel href="tel:+17868226861">Call</a>
   </div>
-  <script src="/main.js" defer></script>
+  <script src="/main.js?v=visit-choice-2" defer></script>
 </body>
 </html>

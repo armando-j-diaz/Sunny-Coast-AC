@@ -13,8 +13,8 @@
     gtag('config', 'G-GSV3PL5R9E');
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Free In-Home AC Visit | Sunny Coast AC</title>
-  <meta name="description" content="Is your old AC costing you more than a new one would? Schedule a free in-home visit in South Florida. We inspect, then walk you through clear options." />
+  <title>Request an AC Visit | Sunny Coast AC</title>
+  <meta name="description" content="Request a new AC quote or repair visit in South Florida. New unit quotes are free; repair diagnostics are $99, prepaid when booked and credited toward your repair." />
   <meta name="theme-color" content="#0D3B66" />
   <link rel="canonical" href="https://sunnycoastac.com/book/" />
   <!-- open-graph -->
@@ -22,15 +22,15 @@
   <meta property="og:site_name" content="Sunny Coast AC" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:url" content="https://sunnycoastac.com/book/" />
-  <meta property="og:title" content="Free In-Home AC Visit | Sunny Coast AC" />
-  <meta property="og:description" content="Is your old AC costing you more than a new one would? Schedule a free in-home visit in South Florida. We inspect, then walk you through clear options." />
+  <meta property="og:title" content="Request an AC Visit | Sunny Coast AC" />
+  <meta property="og:description" content="Request a new AC quote or repair visit in South Florida. New unit quotes are free; repair diagnostics are $99, prepaid when booked and credited toward your repair." />
   <meta property="og:image" content="https://sunnycoastac.com/assets/van-1200.webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="800" />
   <meta property="og:image:alt" content="Sunny Coast AC" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Free In-Home AC Visit | Sunny Coast AC" />
-  <meta name="twitter:description" content="Is your old AC costing you more than a new one would? Schedule a free in-home visit in South Florida. We inspect, then walk you through clear options." />
+  <meta name="twitter:title" content="Request an AC Visit | Sunny Coast AC" />
+  <meta name="twitter:description" content="Request a new AC quote or repair visit in South Florida. New unit quotes are free; repair diagnostics are $99, prepaid when booked and credited toward your repair." />
   <meta name="twitter:image" content="https://sunnycoastac.com/assets/van-1200.webp" />
   <!-- /open-graph -->
   <link rel="icon" href="/favicon.ico" sizes="32x32" />
@@ -56,7 +56,7 @@
         "email": "admin@sunnycoastac.com",
         "image": "https://sunnycoastac.com/assets/van-1200.webp",
         "logo": "https://sunnycoastac.com/assets/logo.webp",
-        "description": "Sunny Coast AC installs new air conditioning systems across South Florida. Licensed and insured (CAC1825130). Free in-home install visits with upfront pricing.",
+        "description": "Sunny Coast AC installs and repairs air conditioning systems across South Florida. Licensed and insured (CAC1825130). Free new-unit quotes and $99 repair diagnostics credited toward repairs.",
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
@@ -140,7 +140,7 @@
         <a href="/contact/">Contact</a>
         <a data-tel href="tel:+17868226861">Call (786) 822-6861</a>
         <a data-sms href="sms:+17868226861">Text (786) 822-6861</a>
-        <a href="/book/">Get a Free Quote</a>
+        <a href="/book/#book-form">Request a Visit</a>
         <a href="/legal/">Privacy &amp; Terms</a>
       </nav>
     </div>
@@ -174,7 +174,7 @@
 
         <p class="vsl-pitch">One visit. Clear options. Your decision.</p>
         <div class="cta-row">
-          <a class="btn btn-primary btn-lg" href="#book-form">Get a Free Quote</a>
+          <a class="btn btn-primary btn-lg" href="#book-form">Request a Visit</a>
         </div>
       </div>
     </section>
@@ -332,7 +332,7 @@
           </article>
         </div>
         <div class="cta-row">
-          <a class="btn btn-primary btn-lg" href="#book-form">Get a Free Quote</a>
+          <a class="btn btn-primary btn-lg" href="#book-form">Request a Visit</a>
         </div>
       </div>
     </section>
@@ -340,9 +340,9 @@
     <section class="section book-form-section" id="book-form" aria-labelledby="form-heading">
       <div class="container narrow">
         <div class="book-form-card">
-          <h2 id="form-heading" class="form-title">Request your free quote</h2>
-          <p class="form-lede">Share your details and we will call to schedule your free in-home visit. It takes less than a minute.</p>
-          <p class="form-pricing-note">This form is for free replacement quotes. For a repair, call or text (786) 822-6861 — diagnostics are $99 and get credited to the repair.</p>
+          <h2 id="form-heading" class="form-title">How can we help?</h2>
+          <p class="form-lede">Choose what you need, then share your details. We will call to discuss the next step.</p>
+          <p class="form-pricing-note">Need help sooner? Call or text (786) 822-6861 directly.</p>
           <form
             class="book-form"
             id="appointment-form"
@@ -351,6 +351,20 @@
             data-source="sunnycoastac.com/book"
             novalidate
           >
+            <fieldset class="service-choice">
+              <legend>I'm looking for <span class="req">*</span></legend>
+              <div class="service-choice-options">
+                <label class="service-choice-option">
+                  <input type="radio" name="service_type" value="new_unit" required />
+                  <span>New unit</span>
+                </label>
+                <label class="service-choice-option">
+                  <input type="radio" name="service_type" value="repair" required />
+                  <span>Repair</span>
+                </label>
+              </div>
+              <p class="service-choice-detail" aria-live="polite" hidden></p>
+            </fieldset>
             <div class="field-row">
               <div class="field">
                 <label for="first_name">First name <span class="req">*</span></label>
@@ -385,9 +399,9 @@
               recorded or handled by AI-assisted systems for quality and scheduling.
               See our <a href="/legal/">Terms &amp; Privacy</a>.</span>
             </label>
-            <button type="submit" class="btn btn-primary btn-lg btn-block">Request Free Quote</button>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Request a Visit</button>
             <p class="form-note">
-              We only use your number for your service request — scheduling, arrival updates, and your quote. Never for marketing.
+              We only use your number for your service request — scheduling, arrival updates, and follow-up. Never for marketing.
               See our <a href="/legal/">Privacy Policy &amp; SMS Terms</a>.
             </p>
             <p class="form-status" id="book-status" role="status" aria-live="polite" hidden></p>
@@ -411,15 +425,15 @@
           <details>
             <summary>Do you do repairs?</summary>
             <div class="faq-pro-body">
-              <p>Yes. Repair calls are scheduled by phone so we can ask the right questions first — call or text (786) 822-6861. The diagnostic is $99, prepaid to book, and it comes off your repair bill.</p>
+              <p>Yes. <a href="#book-form">Choose Repair in the form above</a> and we will call to discuss a visit. You can also call or text (786) 822-6861 directly. The $99 diagnostic is prepaid when booked and credited toward your repair.</p>
               <p>If your system is at the end of its life, we'll tell you that instead of selling you a repair that won't hold.</p>
             </div>
           </details>
           <details>
             <summary>Is the visit free?</summary>
             <div class="faq-pro-body">
-              <p><strong>Yes — this page books the free replacement quote.</strong> We come out, inspect, and give you options. No trip fee, no obligation.</p>
-              <p>Repair diagnostics are different: those are $99, prepaid to book, credited toward your repair. Call or text (786) 822-6861 to schedule one.</p>
+              <p><strong>New unit quotes are free.</strong> We come out, inspect, and give you options. No trip fee, no obligation.</p>
+              <p>Repair diagnostics are $99, prepaid when booked and credited toward your repair. Use the form above or call or text (786) 822-6861.</p>
             </div>
           </details>
           <details>
@@ -456,7 +470,7 @@
         <h2 id="final-book-heading" class="display reveal">Ready to get started?</h2>
         <p class="lede reveal">One form. We call you to schedule.</p>
         <div class="cta-row reveal">
-          <a class="btn btn-primary btn-lg" href="#book-form">Get a Free Quote</a>
+          <a class="btn btn-primary btn-lg" href="#book-form">Request a Visit</a>
         </div>
       </div>
     </section>
@@ -469,7 +483,7 @@
           <img src="/assets/logo-56-optimized.webp" srcset="/assets/logo-56-optimized.webp 1x, /assets/logo-112-optimized.webp 2x, /assets/logo-168-optimized.webp 3x" alt="" width="48" height="48" decoding="async" />
           <span>Sunny Coast AC</span>
         </a>
-        <p class="footer-tagline">New AC installation across South Florida.</p>
+        <p class="footer-tagline">AC installation and repair across South Florida.</p>
         <p class="footer-pricing">Free replacement quotes · $99 repair diagnostics, credited to your repair</p>
         <p class="footer-blurb">Cool Now South Florida LLC DBA Sunny Coast AC. Licensed and insured (CAC1825130).</p>
       </div>
@@ -481,7 +495,7 @@
           <li><a href="/our-work/">Gallery</a></li>
           <li><a href="/reviews/">Reviews</a></li>
           <li><a href="/contact/">Contact</a></li>
-          <li><a href="/book/">Get a Free Quote</a></li>
+          <li><a href="/book/#book-form">Request a Visit</a></li>
           <li><a href="/legal/">Privacy &amp; Terms</a></li>
         </ul>
       </div>
@@ -505,6 +519,6 @@
     </div>
   </footer>
 
-  <script src="/main.js" defer></script>
+  <script src="/main.js?v=visit-choice-2" defer></script>
 </body>
 </html>

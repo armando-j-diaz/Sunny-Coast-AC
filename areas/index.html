@@ -14,7 +14,7 @@
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Areas We Serve | Sunny Coast AC</title>
-  <meta name="description" content="Sunny Coast AC installs new AC systems in homes across South Dade and the Upper Keys. Book a free in-home visit." />
+  <meta name="description" content="Sunny Coast AC installs and repairs home AC systems across South Dade and the Upper Keys. Request a visit online or call directly." />
   <meta name="theme-color" content="#0D3B66" />
   <link rel="canonical" href="https://sunnycoastac.com/areas/" />
   <!-- open-graph -->
@@ -23,14 +23,14 @@
   <meta property="og:locale" content="en_US" />
   <meta property="og:url" content="https://sunnycoastac.com/areas/" />
   <meta property="og:title" content="Areas We Serve | Sunny Coast AC" />
-  <meta property="og:description" content="Sunny Coast AC installs new AC systems in homes across South Dade and the Upper Keys. Book a free in-home visit." />
+  <meta property="og:description" content="Sunny Coast AC installs and repairs home AC systems across South Dade and the Upper Keys. Request a visit online or call directly." />
   <meta property="og:image" content="https://sunnycoastac.com/assets/van-1200.webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="800" />
   <meta property="og:image:alt" content="Sunny Coast AC" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Areas We Serve | Sunny Coast AC" />
-  <meta name="twitter:description" content="Sunny Coast AC installs new AC systems in homes across South Dade and the Upper Keys. Book a free in-home visit." />
+  <meta name="twitter:description" content="Sunny Coast AC installs and repairs home AC systems across South Dade and the Upper Keys. Request a visit online or call directly." />
   <meta name="twitter:image" content="https://sunnycoastac.com/assets/van-1200.webp" />
   <!-- /open-graph -->
   <link rel="icon" href="/favicon.ico" sizes="32x32" />
@@ -56,7 +56,7 @@
         "email": "admin@sunnycoastac.com",
         "image": "https://sunnycoastac.com/assets/van-1200.webp",
         "logo": "https://sunnycoastac.com/assets/logo.webp",
-        "description": "Sunny Coast AC installs new air conditioning systems across South Florida. Licensed and insured (CAC1825130). Free in-home install visits with upfront pricing.",
+        "description": "Sunny Coast AC installs and repairs air conditioning systems across South Florida. Licensed and insured (CAC1825130). Free new-unit quotes and $99 repair diagnostics credited toward repairs.",
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
@@ -154,7 +154,7 @@
         <a href="/contact/">Contact</a>
         <a data-tel href="tel:+17868226861">Call (786) 822-6861</a>
         <a data-sms href="sms:+17868226861">Text (786) 822-6861</a>
-        <a href="#book">Book My Free Visit</a>
+        <a href="#book">Request a Visit</a>
         <a href="/legal/">Privacy &amp; Terms</a>
       </nav>
     </div>
@@ -163,7 +163,7 @@
     <section class="section" aria-labelledby="areas-heading">
       <div class="container narrow">
         <h1 id="areas-heading" class="display">Areas we serve</h1>
-        <p class="lede">We install new AC systems in homes across South Dade and the Upper Keys. Choose your city. Book a free in-home visit. We come to you.</p>
+        <p class="lede">We install and repair home AC systems across South Dade and the Upper Keys. Choose your city and request a visit online, or call us directly.</p>
         <ul class="area-grid">
           <li><a class="area-card" href="/areas/homestead/">Homestead</a></li>
           <li><a class="area-card" href="/areas/cutler-bay/">Cutler Bay</a></li>
@@ -179,11 +179,11 @@
     </section>
     <section class="section book-form-section" id="book" aria-labelledby="book-heading">
       <div class="container narrow">
-        <h2 id="book-heading" class="display">Book your free in-home visit</h2>
-        <p class="lede">Enter your info and we will call to confirm a time. It takes less than a minute.</p>
+        <h2 id="book-heading" class="display">Request a visit</h2>
+        <p class="lede">Free new-unit quotes. $99 repair diagnostics, prepaid when booked and credited toward your repair.</p>
         <div class="book-form-card">
-          <h3 class="form-title">Book your free in-home visit</h3>
-          <p class="form-lede">Enter your info and we will call to confirm a time. It takes less than a minute.</p>
+          <h3 class="form-title">How can we help?</h3>
+          <p class="form-lede">Choose what you need, then share your details. We will call to discuss the next step.</p>
           <form
             class="book-form"
             id="appointment-form"
@@ -192,6 +192,20 @@
             data-source="sunnycoastac.com/areas"
             novalidate
           >
+            <fieldset class="service-choice">
+              <legend>I'm looking for <span class="req">*</span></legend>
+              <div class="service-choice-options">
+                <label class="service-choice-option">
+                  <input type="radio" name="service_type" value="new_unit" required />
+                  <span>New unit</span>
+                </label>
+                <label class="service-choice-option">
+                  <input type="radio" name="service_type" value="repair" required />
+                  <span>Repair</span>
+                </label>
+              </div>
+              <p class="service-choice-detail" aria-live="polite" hidden></p>
+            </fieldset>
             <div class="field-row">
               <div class="field">
                 <label for="first_name">First name <span class="req">*</span></label>
@@ -226,9 +240,9 @@
               recorded or handled by AI-assisted systems for quality and scheduling.
               See our <a href="/legal/">Terms &amp; Privacy</a>.</span>
             </label>
-            <button type="submit" class="btn btn-primary btn-lg btn-block">Book My Free Visit</button>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Request a Visit</button>
             <p class="form-note">
-              We only use your number for your service request — scheduling, arrival updates, and your quote. Never for marketing.
+              We only use your number for your service request — scheduling, arrival updates, and follow-up. Never for marketing.
               See our <a href="/legal/">Privacy Policy &amp; SMS Terms</a>.
             </p>
             <p class="form-status" id="book-status" role="status" aria-live="polite" hidden></p>
@@ -244,7 +258,7 @@
           <img src="/assets/logo-56-optimized.webp" srcset="/assets/logo-56-optimized.webp 1x, /assets/logo-112-optimized.webp 2x, /assets/logo-168-optimized.webp 3x" alt="" width="48" height="48" decoding="async" />
           <span>Sunny Coast AC</span>
         </a>
-        <p class="footer-tagline">New AC installation across South Florida.</p>
+        <p class="footer-tagline">AC installation and repair across South Florida.</p>
         <p class="footer-pricing">Free replacement quotes · $99 repair diagnostics, credited to your repair</p>
         <p class="footer-blurb">Cool Now South Florida LLC DBA Sunny Coast AC. Licensed and insured (CAC1825130).</p>
       </div>
@@ -256,7 +270,7 @@
           <li><a href="/our-work/">Gallery</a></li>
           <li><a href="/reviews/">Reviews</a></li>
           <li><a href="/contact/">Contact</a></li>
-          <li><a href="#book">Book My Free Visit</a></li>
+          <li><a href="#book">Request a Visit</a></li>
           <li><a href="/legal/">Privacy &amp; Terms</a></li>
         </ul>
       </div>
@@ -283,6 +297,6 @@
     <a class="btn btn-primary" href="#book">Book Visit</a>
     <a class="btn btn-outline" data-tel href="tel:+17868226861">Call</a>
   </div>
-  <script src="/main.js" defer></script>
+  <script src="/main.js?v=visit-choice-2" defer></script>
 </body>
 </html>

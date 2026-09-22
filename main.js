@@ -191,8 +191,43 @@
 
     var status = document.getElementById("book-status");
     var action = webhookAction(form);
+    var serviceChoices = form.querySelectorAll('[name="service_type"]');
+    var serviceDetail = form.querySelector(".service-choice-detail");
+    var requestedService = new URLSearchParams(window.location.search).get("service");
+    if (requestedService === "new_unit" || requestedService === "repair") {
+      var preset = form.querySelector('[name="service_type"][value="' + requestedService + '"]');
+      if (preset) preset.checked = true;
+    }
+
+    function updateServiceChoice() {
+      var selected = form.querySelector('[name="service_type"]:checked');
+      if (serviceDetail) {
+        serviceDetail.hidden = !selected;
+        if (selected) {
+          serviceDetail.textContent = selected.value === "repair"
+            ? "Repair diagnostics are $99, prepaid when booked and credited toward your repair."
+            : "New unit quotes start with a free in-home visit.";
+        }
+      }
+    }
+
+    serviceChoices.forEach(function (choice) {
+      choice.addEventListener("change", updateServiceChoice);
+    });
+    form.addEventListener("reset", function () {
+      window.setTimeout(updateServiceChoice, 0);
+    });
+    updateServiceChoice();
 
     form.addEventListener("submit", function (ev) {
+      var serviceType = form.querySelector('[name="service_type"]:checked');
+      if (!serviceType) {
+        ev.preventDefault();
+        showStatus(status, "Please choose new unit or repair to continue.", true);
+        serviceChoices[0].focus();
+        return;
+      }
+
       var consent = form.querySelector('[name="consent_contact"]');
       if (!consent || !consent.checked) {
         ev.preventDefault();
@@ -219,6 +254,7 @@
           last_name: last,
           email: email,
           project_info: projectInfo,
+          service_type: serviceType.value,
           consent_sms: !!(sms && sms.checked),
           consent_contact: true,
           source:
@@ -230,6 +266,12 @@
         },
         spamPayload(form)
       );
+
+      if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+        ev.preventDefault();
+        showStatus(status, "Local preview only. Nothing was sent.", false);
+        return;
+      }
 
       if (!action || action.indexOf("{{") !== -1) {
         ev.preventDefault();
@@ -254,8 +296,8 @@
         payload,
         form,
         status,
-        "Thank you. We will call soon to schedule your free in-home visit.",
-        "Something went wrong. Please call us and we will get you on the calendar."
+        "Thank you. We received your request and will call to discuss the next step.",
+        "Something went wrong. Please call us so we can help with your request."
       );
     });
   }
