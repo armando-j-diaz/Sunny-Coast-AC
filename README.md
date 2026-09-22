@@ -40,7 +40,7 @@ python3 -m http.server 8080
 # open http://localhost:8080
 ```
 
-Visit requests made on `localhost` or `127.0.0.1` display a preview confirmation and do not reach Make. Production forms send `service_type` as `new_unit` or `repair`.
+Visit requests made on `localhost` or `127.0.0.1` display a preview confirmation and are not sent. Production forms send `service_type` as `new_unit` or `repair` to the Worker `/api/visit`. The Worker saves Ops first and relays email/Slack through Make. The form waits briefly if someone submits faster than the two-second spam check.
 
 ## Placeholders (replace before launch)
 
@@ -48,7 +48,8 @@ Visit requests made on `localhost` or `127.0.0.1` display a preview confirmation
 |-------|--------|
 | `{{PHONE}}` | **(786) 822-6861** (set) |
 | ~~`{{LICENSE}}`~~ | **CAC1825130** (set) |
-| Make webhook | Live on visit and guide forms → email `admin@sunnycoastac.com`, Slack `#leads`, and Worker `/api/lead` for visits |
+| Visit intake | `https://quotes.sunnycoastac.com/api/visit` → Ops Leads → Make admin email and Slack `#leads` → Jobber attempt |
+| Make webhook | Guide form posts directly; visit requests are relayed by the Worker |
 | `{{OFFERS}}` | Offers section (hidden until real offers) |
 
 Optional runtime override (before `main.js`):
