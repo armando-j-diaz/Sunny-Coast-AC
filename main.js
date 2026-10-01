@@ -208,7 +208,7 @@
         serviceDetail.hidden = !selected;
         if (selected) {
           serviceDetail.textContent = selected.value === "repair"
-            ? "Repair diagnostics are $99, prepaid when booked and credited toward your repair."
+            ? "Repair diagnostics are $99, credited toward your repair."
             : "New unit quotes start with a free in-home visit.";
         }
       }

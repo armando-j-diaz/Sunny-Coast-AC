@@ -2,7 +2,7 @@
 
 Public site for **sunnycoastac.com**. Cool Now South Florida LLC DBA Sunny Coast AC.
 
-**Conversion goal:** request a new-unit quote or repair visit through the form (home, `/book/`, `/reviews/`, and area pages). Primary CTA: **Request a Visit**. New-unit quotes are free; repair diagnostics are $99, prepaid when booked and credited toward the repair.
+**Conversion goal:** request a new-unit quote or repair visit through the form (home, `/book/`, `/reviews/`, and area pages). Primary CTA: **Request a Visit**. New-unit quotes are free; repair diagnostics are $99, credited toward the repair.
 
 ## Stack
 
