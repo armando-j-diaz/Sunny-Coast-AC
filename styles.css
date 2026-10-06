@@ -2493,3 +2493,143 @@ body.apps-page {
   color: var(--color-text-muted);
   line-height: 1.45;
 }
+
+/* Gallery — real job photos.
+   The Sunny Coast wave + logo are baked into the BOTTOM of every photo,
+   so tiles crop from the top only (object-position bottom). Never crop the bottom. */
+.work-group {
+  margin-bottom: 2.75rem;
+}
+
+.work-group-head {
+  margin-bottom: 1rem;
+}
+
+.work-group-head h2 {
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  margin-bottom: 0.35rem;
+}
+
+.work-group-head p {
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.work-grid {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+}
+
+@media (min-width: 700px) {
+  .work-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1000px) {
+  .work-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.work-tile {
+  margin: 0;
+}
+
+.work-tile--wide {
+  grid-column: span 2;
+}
+
+.work-tile a {
+  display: block;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: #d5dbe3;
+}
+
+.work-tile a:focus-visible {
+  outline: 3px solid var(--color-action);
+  outline-offset: 3px;
+}
+
+.work-tile img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: 50% 100%;
+  transition: transform var(--dur) var(--ease);
+}
+
+.work-tile--wide img {
+  aspect-ratio: 3 / 2;
+}
+
+.work-tile a:hover img {
+  transform: scale(1.03);
+}
+
+.work-tile figcaption {
+  margin-top: 0.45rem;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--color-text);
+}
+
+.work-lightbox {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  max-width: min(94vw, 980px);
+  max-height: 96vh;
+  overflow: visible;
+}
+
+.work-lightbox::backdrop {
+  background: rgba(10, 22, 40, 0.94);
+}
+
+.work-lightbox img {
+  display: block;
+  max-width: 100%;
+  max-height: 78vh;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+}
+
+.work-lightbox p {
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  margin: 0.6rem 0 0;
+}
+
+.work-lightbox-close {
+  display: block;
+  margin: 0.6rem auto 0;
+  min-height: var(--tap);
+  padding: 0 1.4rem;
+  border: 2px solid #fff;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-tile img {
+    transition: none;
+  }
+
+  .work-tile a:hover img {
+    transform: none;
+  }
+}
