@@ -370,11 +370,14 @@
       }
     }
 
-    // Player stays visible at all times (poster shows until vsl.mp4 is uploaded).
-    // If the file is missing, just hide the dead "Tap for sound" button.
+    // Player stays hidden until the video file actually loads, so a missing
+    // vsl.mp4 never shows an empty player with a dead "Tap for sound" button.
     function onVideoError() {
-      if (tap) tap.hidden = true;
+      player.hidden = true;
     }
+    video.addEventListener("loadedmetadata", function () {
+      player.hidden = false;
+    });
     video.addEventListener("error", onVideoError, true);
     var srcEl = video.querySelector("source");
     if (srcEl) srcEl.addEventListener("error", onVideoError);
@@ -689,19 +692,33 @@
       root.setAttribute("data-reviews-ready", "");
 
       var index = 0;
+      var viewport = track.parentElement;
+
+      function gapPx() {
+        var style = window.getComputedStyle(track);
+        return parseFloat(style.columnGap || style.gap) || 0;
+      }
 
       function stride() {
-        var style = window.getComputedStyle(track);
-        var gap = parseFloat(style.columnGap || style.gap) || 0;
-        return slides[0].offsetWidth + gap;
+        return slides[0].offsetWidth + gapPx();
+      }
+
+      // Last index that still fills the view, so the track never slides into empty space.
+      function maxIndex() {
+        var visible = Math.max(1, Math.floor((viewport.clientWidth + gapPx() + 1) / stride()));
+        return Math.max(0, slides.length - visible);
       }
 
       function render() {
+        if (index > maxIndex()) index = maxIndex();
         track.style.transform = "translate3d(" + -index * stride() + "px, 0, 0)";
       }
 
       function go(delta) {
-        index = (index + delta + slides.length) % slides.length;
+        var max = maxIndex();
+        index += delta;
+        if (index > max) index = 0;
+        if (index < 0) index = max;
         render();
       }
 

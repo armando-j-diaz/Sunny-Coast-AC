@@ -24,14 +24,14 @@
   <meta property="og:url" content="https://sunnycoastac.com/book/" />
   <meta property="og:title" content="Request an AC Visit | Sunny Coast AC" />
   <meta property="og:description" content="Request a new AC quote or repair visit in South Florida. New unit quotes are free; repair diagnostics are $99, credited toward your repair." />
-  <meta property="og:image" content="https://sunnycoastac.com/assets/van-1200.webp" />
+  <meta property="og:image" content="https://sunnycoastac.com/assets/og/sunny-coast-ac-share.jpg" />
   <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="800" />
-  <meta property="og:image:alt" content="Sunny Coast AC" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Sunny Coast AC tech testing an outdoor AC unit" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Request an AC Visit | Sunny Coast AC" />
   <meta name="twitter:description" content="Request a new AC quote or repair visit in South Florida. New unit quotes are free; repair diagnostics are $99, credited toward your repair." />
-  <meta name="twitter:image" content="https://sunnycoastac.com/assets/van-1200.webp" />
+  <meta name="twitter:image" content="https://sunnycoastac.com/assets/og/sunny-coast-ac-share.jpg" />
   <!-- /open-graph -->
   <link rel="icon" href="/favicon.ico" sizes="32x32" />
   <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="32x32" />
@@ -39,7 +39,7 @@
   <link rel="preload" as="image" href="/assets/logo-56-optimized.webp" imagesrcset="/assets/logo-56-optimized.webp 1x, /assets/logo-112-optimized.webp 2x, /assets/logo-168-optimized.webp 3x" fetchpriority="high" />
   <link rel="preload" href="/assets/fonts/figtree-latin-variable.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/assets/fonts/poppins-latin-800.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="/site.min.css" />
+  <link rel="stylesheet" href="/site.min.css?v=audit-1008" />
   <!-- structured-data -->
   <script type="application/ld+json">
   {
@@ -54,7 +54,7 @@
         "url": "https://sunnycoastac.com/",
         "telephone": "+17868226861",
         "email": "admin@sunnycoastac.com",
-        "image": "https://sunnycoastac.com/assets/van-1200.webp",
+        "image": "https://sunnycoastac.com/assets/og/sunny-coast-ac-share.jpg",
         "logo": "https://sunnycoastac.com/assets/logo.webp",
         "description": "Sunny Coast AC installs and repairs air conditioning systems across South Florida. Licensed and insured (CAC1825130). Free new-unit quotes and $99 repair diagnostics credited toward repairs.",
         "openingHoursSpecification": [
@@ -65,10 +65,11 @@
               "Tuesday",
               "Wednesday",
               "Thursday",
-              "Friday"
+              "Friday",
+              "Saturday"
             ],
-            "opens": "09:00",
-            "closes": "17:00"
+            "opens": "07:00",
+            "closes": "19:00"
           }
         ],
         "areaServed": [
@@ -152,7 +153,7 @@
         <h1 id="vsl-heading" class="display display-light">Is your old AC costing you more than a new one would?</h1>
         <p class="vsl-sub" id="vsl-sub" data-video-copy="Watch this, then request an in-home visit.">Request an in-home visit. We inspect your system and walk you through your options. New-unit quotes are free; repair diagnostics are $99, credited toward your repair.</p>
 
-        <div class="vsl-player" id="vsl-player">
+        <div class="vsl-player" id="vsl-player" hidden>
           <video
             id="vsl-video"
             class="vsl-video"
@@ -161,12 +162,11 @@
             loop
             autoplay
             preload="metadata"
-            poster="/assets/van-800.webp"
             aria-label="Sunny Coast AC video sales letter"
           >
             <source src="/assets/vsl.mp4" type="video/mp4" />
           </video>
-          <button type="button" class="vsl-tap" id="vsl-tap" aria-label="Play video with sound from the start">
+          <button type="button" class="vsl-tap" id="vsl-tap" aria-label="Tap for sound: play the video with sound from the start">
             <span class="vsl-tap-icon" aria-hidden="true"></span>
             <span class="vsl-tap-label">Tap for sound</span>
           </button>
@@ -179,8 +179,7 @@
       </div>
     </section>
 
-    <!-- TODO: remove `hidden` once real job photos are in assets/installs (placeholder slides hurt trust with ad traffic) -->
-    <section class="section work-collage" aria-labelledby="collage-heading" hidden>
+    <section class="section work-collage" aria-labelledby="collage-heading">
       <div class="container narrow">
         <h2 id="collage-heading" class="display reveal">Recent installs</h2>
         <p class="lede reveal">Use the arrows or swipe to browse.</p>
@@ -192,27 +191,27 @@
           </button>
           <div class="album-viewport">
             <div class="album-track" data-album-track>
-              <figure class="album-slide is-active" data-album-slide data-caption="Sunny Coast on the road. Real vans, real crew.">
-                <img src="/assets/installs/01-van.webp" alt="Sunny Coast AC van" width="1200" height="800" decoding="async" />
+              <figure class="album-slide" data-album-slide data-caption="New air handler and duct work, installed by our team.">
+                <img src="/assets/home/home-39-new-air-handler-480.webp" srcset="/assets/home/home-39-new-air-handler-480.webp 480w, /assets/home/home-39-new-air-handler-960.webp 960w" width="480" height="640" sizes="18.5rem" alt="New air handler and duct work installed by Sunny Coast AC" decoding="async" />
               </figure>
-              <figure class="album-slide" data-album-slide data-caption="Install photo. Swap in a real job shot.">
-                <img src="/assets/installs/02-placeholder.webp" alt="Install photo placeholder 2" width="1200" height="800" loading="lazy" decoding="async" />
+              <figure class="album-slide" data-album-slide data-caption="New outdoor condenser on a fresh pad.">
+                <img src="/assets/home/home-16-new-condenser-480.webp" srcset="/assets/home/home-16-new-condenser-480.webp 480w, /assets/home/home-16-new-condenser-960.webp 960w" width="480" height="640" sizes="18.5rem" alt="New outdoor condenser installed by Sunny Coast AC" loading="lazy" decoding="async" />
               </figure>
-              <figure class="album-slide" data-album-slide data-caption="Install photo. Clean copper, level pad.">
-                <img src="/assets/installs/03-placeholder.webp" alt="Install photo placeholder 3" width="1200" height="800" loading="lazy" decoding="async" />
+              <figure class="album-slide is-active" data-album-slide data-caption="New air handler in a hall closet.">
+                <img src="/assets/home/home-45-new-air-handler-480.webp" srcset="/assets/home/home-45-new-air-handler-480.webp 480w, /assets/home/home-45-new-air-handler-960.webp 948w" width="480" height="841" sizes="18.5rem" alt="New air handler in a hall closet installed by Sunny Coast AC" loading="lazy" decoding="async" />
               </figure>
-              <figure class="album-slide" data-album-slide data-caption="Install photo. Before and after coming soon.">
-                <img src="/assets/installs/04-placeholder.webp" alt="Install photo placeholder 4" width="1200" height="800" loading="lazy" decoding="async" />
+              <figure class="album-slide" data-album-slide data-caption="New condenser, side yard install.">
+                <img src="/assets/home/home-35-new-condenser-480.webp" srcset="/assets/home/home-35-new-condenser-480.webp 480w, /assets/home/home-35-new-condenser-960.webp 960w" width="480" height="640" sizes="18.5rem" alt="New condenser installed by Sunny Coast AC" loading="lazy" decoding="async" />
               </figure>
-              <figure class="album-slide" data-album-slide data-caption="Install photo. South Florida homes.">
-                <img src="/assets/installs/05-placeholder.webp" alt="Install photo placeholder 5" width="1200" height="800" loading="lazy" decoding="async" />
+              <figure class="album-slide" data-album-slide data-caption="New air handler in a closet.">
+                <img src="/assets/gallery/sc-24-install-new-carrier-air-handler-new-480.webp" srcset="/assets/gallery/sc-24-install-new-carrier-air-handler-new-480.webp 480w, /assets/gallery/sc-24-install-new-carrier-air-handler-new-960.webp 960w" width="480" height="640" sizes="18.5rem" alt="New air handler installed by Sunny Coast AC" loading="lazy" decoding="async" />
               </figure>
             </div>
           </div>
           <button type="button" class="album-arrow album-next" data-album-next aria-label="Next photo">
             <span aria-hidden="true">›</span>
           </button>
-          <p class="album-caption" data-album-caption>Sunny Coast on the road. Real vans, real crew.</p>
+          <p class="album-caption" data-album-caption>New air handler and duct work, installed by our team.</p>
           <div class="album-dots" data-album-dots role="tablist" aria-label="Choose a photo"></div>
         </div>
     </section>
@@ -239,8 +238,7 @@
       </div>
     </section>
 
-    <!-- TODO: remove `hidden` and swap in real Google reviews once they exist (sample cards hurt trust with ad traffic) -->
-    <section class="section rapport" aria-labelledby="rapport-heading" hidden>
+    <section class="section rapport" aria-labelledby="rapport-heading">
       <div class="container">
         <h2 id="rapport-heading" class="section-label">What people are saying</h2>
 
@@ -250,67 +248,65 @@
             <div class="review-track" data-review-track>
             <article class="review-card" data-review-slide>
               <div class="review-card-top">
-                <span class="review-avatar" aria-hidden="true">M</span>
+                <span class="review-avatar" aria-hidden="true">O</span>
                 <div>
-                  <p class="review-name">Maria · Kendall</p>
-                  <p class="review-stars" aria-label="5 stars">★★★★★</p>
+                  <p class="review-name">Olga B.</p>
+                  <p class="review-stars" role="img" aria-label="5 out of 5 stars">★★★★★</p>
                 </div>
               </div>
-              <p class="review-body">They <mark>showed up when they said</mark>, explained every option without the scare talk, and the new system is <mark>actually quiet</mark>.</p>
-              <p class="review-draft">Sample layout. Swap for real Google reviews.</p>
+              <p class="review-body">We were very skeptical as we have not had good experience with past A/C companies' technicians. This time we were so thankful to have found Sunny Coast AC! … (the AC closet and area were left impeccable!)</p>
+              <p class="review-meta">AC replacement</p>
             </article>
             <article class="review-card" data-review-slide>
               <div class="review-card-top">
-                <span class="review-avatar review-avatar--teal" aria-hidden="true">J</span>
+                <span class="review-avatar review-avatar--teal" aria-hidden="true">D</span>
                 <div>
-                  <p class="review-name">James · Miramar</p>
-                  <p class="review-stars" aria-label="5 stars">★★★★★</p>
+                  <p class="review-name">Dianelys M.</p>
+                  <p class="review-stars" role="img" aria-label="5 out of 5 stars">★★★★★</p>
                 </div>
               </div>
-              <p class="review-body">Clean install. <mark>No mess left behind</mark>. Price matched what we talked about at the house.</p>
-              <p class="review-draft">Sample layout. Swap for real Google reviews.</p>
+              <p class="review-body">Excellent service! My air conditioner was leaking water and they came the same day and cleaned it; it's like new.</p>
+              <p class="review-meta">Repair · same day · Translated from Spanish</p>
             </article>
             <article class="review-card" data-review-slide>
               <div class="review-card-top">
-                <span class="review-avatar review-avatar--gold" aria-hidden="true">A</span>
+                <span class="review-avatar review-avatar--gold" aria-hidden="true">D</span>
                 <div>
-                  <p class="review-name">Ana · Homestead</p>
-                  <p class="review-stars" aria-label="5 stars">★★★★★</p>
+                  <p class="review-name">Dariel C.</p>
+                  <p class="review-stars" role="img" aria-label="5 out of 5 stars">★★★★★</p>
                 </div>
               </div>
-              <p class="review-body">Felt like neighbors, not a sales crew. <mark>Cold air the same day</mark> the install wrapped.</p>
-              <p class="review-draft">Sample layout. Swap for real Google reviews.</p>
+              <p class="review-body">The technicians arrived on time, protected the work area, and worked cleanly and efficiently. … The unit is cooling at 100%, and the difference in airflow is immediately noticeable.</p>
+              <p class="review-meta">New install · Translated from Spanish</p>
             </article>
             <article class="review-card" data-review-slide>
               <div class="review-card-top">
-                <span class="review-avatar" aria-hidden="true">R</span>
+                <span class="review-avatar" aria-hidden="true">D</span>
                 <div>
-                  <p class="review-name">Roberto · Hialeah</p>
-                  <p class="review-stars" aria-label="5 stars">★★★★★</p>
+                  <p class="review-name">Dilian T.</p>
+                  <p class="review-stars" role="img" aria-label="5 out of 5 stars">★★★★★</p>
                 </div>
               </div>
-              <p class="review-body">Clear pricing and a <mark>professional crew</mark>. The new unit runs quieter than we expected.</p>
-              <p class="review-draft">Sample layout. Swap for real Google reviews.</p>
+              <p class="review-body">They quickly identified the issue, clearly explained what needed to be done, and completed the work efficiently. … my AC is working perfectly now.</p>
+              <p class="review-meta">AC repair</p>
             </article>
             <article class="review-card" data-review-slide>
               <div class="review-card-top">
-                <span class="review-avatar review-avatar--teal" aria-hidden="true">L</span>
+                <span class="review-avatar review-avatar--teal" aria-hidden="true">Y</span>
                 <div>
-                  <p class="review-name">Lisa · Hollywood</p>
-                  <p class="review-stars" aria-label="5 stars">★★★★★</p>
+                  <p class="review-name">Yasiel C.</p>
+                  <p class="review-stars" role="img" aria-label="5 out of 5 stars">★★★★★</p>
                 </div>
               </div>
-              <p class="review-body">They walked us through options without pressure. <mark>Install finished on schedule</mark>.</p>
-              <p class="review-draft">Sample layout. Swap for real Google reviews.</p>
+              <p class="review-body">Excellent work and professionalism. Very good value for money; I highly recommend them.</p>
+              <p class="review-meta">Translated from Spanish</p>
             </article>
             </div>
           </div>
           <button type="button" class="review-arrow review-next" data-review-next aria-label="Next review">›</button>
         </div>
 
-        <p class="disclaimer-sm">
-          Sample review cards for layout only. Real names and quotes go live once you have them. We do not invent testimonials.
-        </p>
+        <p class="disclaimer-sm">Real Google reviews from our customers. <a href="https://maps.app.goo.gl/6EwhpDbNQBNjCVNv5" target="_blank" rel="noopener noreferrer">See them on Google ↗</a></p>
       </div>
     </section>
 
@@ -505,7 +501,7 @@
           <li><a data-tel href="tel:+17868226861">(786) 822-6861</a></li>
           <li><a data-sms href="sms:+17868226861">Text (786) 822-6861</a></li>
           <li><a href="mailto:admin@sunnycoastac.com">admin@sunnycoastac.com</a></li>
-          <li>Mon–Fri 9:00 AM – 5:00 PM</li>
+          <li>Mon–Sat 7:00 AM – 7:00 PM</li>
           <li>Serving Miami-Dade and South Florida</li>
         </ul>
       </div>
@@ -519,6 +515,6 @@
     </div>
   </footer>
 
-  <script src="/main.js?v=visit-choice-4" defer></script>
+  <script src="/main.js?v=audit-1008" defer></script>
 </body>
 </html>
