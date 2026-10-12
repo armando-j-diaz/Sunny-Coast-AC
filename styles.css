@@ -3168,3 +3168,6 @@ body.apps-page {
 .album-dot::before{content:"";position:absolute;left:50%;top:50%;width:.55rem;height:.55rem;margin:-.275rem 0 0 -.275rem;border-radius:50%;background:rgba(13,59,102,.28);transition:background .2s ease,transform .2s ease}
 .album-dot[aria-selected="true"]{background:none;transform:none}
 .album-dot[aria-selected="true"]::before{background:var(--navy);transform:scale(1.35)}
+
+/* Any in-page link target clears the sticky header */
+[id]{scroll-margin-top:calc(var(--header-h) + 1.25rem)}
