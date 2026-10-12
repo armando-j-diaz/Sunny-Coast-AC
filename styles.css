@@ -3193,3 +3193,9 @@ body.apps-page {
 @media(min-width:600px){.team-stats{grid-template-columns:repeat(3,1fr)}}
 .team-stats li{display:flex;flex-direction:column;align-items:center}
 .team-stats .team-label{margin-top:.35rem;font-size:.95rem}
+.team-card--compact{max-width:36rem;margin-top:1.5rem;padding:1.5rem 1rem 1.25rem}
+.team-card--compact .team-avatar{width:3.5rem;height:3.5rem;font-size:1.5rem}
+.team-card--compact .team-name{font-size:1.25rem}
+.team-card--compact .team-role{margin-bottom:.75rem}
+.team-card--compact .team-num{font-size:1.9rem}
+.team-card--compact .team-label{font-size:.85rem}
