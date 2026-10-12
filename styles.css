@@ -3171,3 +3171,17 @@ body.apps-page {
 
 /* Any in-page link target clears the sticky header */
 [id]{scroll-margin-top:calc(var(--header-h) + 1.25rem)}
+
+/* Meet the team (About) */
+.team{margin:3rem 0 1rem;text-align:center}
+.team-heading{font-size:clamp(1.75rem,4vw,2.25rem)}
+.team-sub{color:var(--color-text-muted,#4b5768);margin:.5rem 0 1.5rem}
+.team-grid{display:grid;gap:1rem;max-width:40rem;margin:0 auto}
+@media(min-width:600px){.team-grid{grid-template-columns:1fr 1fr}}
+.team-card{background:#fff;border-radius:1rem;padding:1.75rem 1.25rem 1.5rem;box-shadow:0 4px 18px rgba(13,59,102,.08);display:flex;flex-direction:column;align-items:center}
+.team-avatar{width:4.5rem;height:4.5rem;border-radius:50%;background:var(--navy,#0d3b66);color:#fff;display:grid;place-items:center;font-family:var(--font-display);font-weight:800;font-size:2rem;margin-bottom:.75rem}
+.team-name{font-family:var(--font-display);font-size:1.5rem;color:var(--navy,#0d3b66);margin:0}
+.team-role{margin:.15rem 0 1rem;font-weight:600;color:var(--color-text-muted,#4b5768)}
+.team-num{font-family:var(--font-display);font-weight:800;font-size:2.5rem;line-height:1;color:var(--sun-orange);margin:0}
+.team-label{margin:.35rem 0 0;font-size:.95rem}
+.team-note{font-size:.8rem;color:var(--color-text-muted,#4b5768);margin-top:1rem}
