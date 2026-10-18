@@ -215,3 +215,21 @@ Armando approved going live. The `/reviews/` landing, `/reviews/leave/` choices,
 - Tested: desktop + 390px phone against a local worker (success, local no-send, network
   failure keeps text). Live: one synthetic submission posted twice → one record, Slack
   "sent", then marked handled.
+
+## 2026-10-18 — /warranty/ page published
+
+Armando approved going live. New `/warranty/` page (limited warranty terms): 1-Year Labor
+Warranty + System Workmanship Warranty on new system installs, 90-Day Repair Warranty on
+repairs (specific repair only; separate or newly found problems are new service calls).
+These are Sunny Coast's own workmanship warranties, not home-warranty-company work, so the
+"never mention warranty work" brand rule above is not affected.
+
+- `warranty/index.html` (built from the legal page shell), `warranty.html` redirect,
+  sitemap + llms.txt entries, "Warranty" link added to the Quick links footer on every page.
+- Page styles moved into `styles.css`; `site.min.css` rebuilt (only appended rules);
+  stylesheet query bumped to `?v=warranty-1` on every page.
+- Matching staff tools (not on this site): certificate maker at
+  quotes.sunnycoastac.com/warranty-certificates and blank form at /warranty-certificates/blank.
+  Drafts + wording kit: OneDrive `sunnycoast/2026-10-17/warranty/`.
+- Checked: 14 pages at 1280px and 390px, footer link present, no horizontal overflow, no
+  page errors, `/warranty.html` redirects to `/warranty/`.

@@ -3199,3 +3199,26 @@ body.apps-page {
 .team-card--compact .team-role{margin-bottom:.75rem}
 .team-card--compact .team-num{font-size:1.9rem}
 .team-card--compact .team-label{font-size:.85rem}
+
+/* Warranty page (/warranty/) */
+.warranty-page .w-cards{display:grid;gap:1rem;margin:1.75rem 0 0.5rem}
+@media (min-width:760px){.warranty-page .w-cards{grid-template-columns:1fr 1fr}}@media (min-width:1000px){.warranty-page .w-cards{grid-template-columns:1fr 1fr 1fr;width:min(1080px,calc(100vw - 2.5rem));margin-left:50%;transform:translateX(-50%)}}
+.warranty-page .w-card{background:var(--white);border:1px solid rgba(13,59,102,.12);border-top:4px solid var(--navy);border-radius:0;padding:1.25rem 1.25rem 1rem}
+.warranty-page .w-card h2{margin:0 0 .25rem;font-size:1.3rem}
+.warranty-page .w-card .w-term{display:inline-block;font-weight:700;color:var(--navy);background:#eef2f7;border-radius:0;padding:.15rem .7rem;font-size:var(--text-sm);margin-bottom:.6rem}
+.warranty-page .w-card ul{margin:.25rem 0 0;padding-left:1.15rem}
+.warranty-page .w-card li{margin:.2rem 0}
+.warranty-page .w-two{display:grid;gap:1rem}
+@media (min-width:760px){.warranty-page .w-two{grid-template-columns:1fr 1fr}}
+.warranty-page .w-box{background:var(--white);border:1px solid rgba(13,59,102,.12);border-radius:0;padding:1rem 1.15rem}
+.warranty-page .w-box h3{font-family:var(--font-display);font-size:1.1rem;margin:0 0 .35rem;color:var(--navy)}
+.warranty-page .w-box.no{border-left:4px solid #b42318}
+.warranty-page .w-box.yes{border-left:4px solid #1b7a4b}
+.warranty-page .w-steps{counter-reset:s;list-style:none;padding:0}
+.warranty-page .w-steps li{counter-increment:s;position:relative;padding-left:2.4rem;margin:.75rem 0}
+.warranty-page .w-steps li::before{content:counter(s);position:absolute;left:0;top:0;width:1.7rem;height:1.7rem;border-radius:0;background:var(--navy);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:.95rem}
+.warranty-page .w-cta{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin:1rem 0 0}
+.warranty-page .w-fine{font-size:var(--text-sm)}
+.warranty-page .w-print{text-align:center;margin-top:.5rem}
+.warranty-page .w-print button{font:inherit;font-size:var(--text-sm);background:none;border:0;color:var(--color-link);text-decoration:underline;cursor:pointer}
+@media print{.site-header,.site-footer,.skip-link,.mobile-cta,.w-cta,.w-print,.wave{display:none!important}.warranty-page .w-two{grid-template-columns:1fr 1fr}.warranty-page{padding-top:0}.warranty-page .w-card{break-inside:avoid}html{font-size:12px}body{background:#fff;font-size:11pt}.warranty-page .container{max-width:none}.prose h2{break-after:avoid;margin:1.1rem 0 .4rem}.prose li{margin:.1rem 0}.prose p,.prose ul{line-height:1.4}}
