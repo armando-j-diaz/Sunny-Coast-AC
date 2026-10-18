@@ -233,3 +233,13 @@ These are Sunny Coast's own workmanship warranties, not home-warranty-company wo
   Drafts + wording kit: OneDrive `sunnycoast/2026-10-17/warranty/`.
 - Checked: 14 pages at 1280px and 390px, footer link present, no horizontal overflow, no
   page errors, `/warranty.html` redirects to `/warranty/`.
+
+## 2026-10-18 — Warranty links on key pages
+
+Armando approved. Links to `/warranty/` added in five spots:
+- Home FAQ and /book/ FAQ: new "Do you guarantee your work?" question (before financing).
+- Home "How it works" step 3: "Every job comes with our written warranty."
+- /book/ "Why trust us?" note: "And we put it in writing: see our warranties."
+- Services: install card ("Includes our 1-Year Labor + System Workmanship Warranty"),
+  repair card ("90-Day Repair Warranty on the repair we perform"), and the last repair step.
+Checked: 14 pages at 1280px and 390px, no overflow or page errors.
