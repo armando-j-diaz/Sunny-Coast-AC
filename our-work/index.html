@@ -49,6 +49,8 @@
         "@type": "HVACBusiness",
         "@id": "https://sunnycoastac.com/#business",
         "name": "Sunny Coast AC",
+        "hasMap": "https://maps.google.com/?cid=14595166541117624626",
+        "sameAs": ["https://maps.google.com/?cid=14595166541117624626"],
         "legalName": "Cool Now South Florida LLC",
         "alternateName": "Cool Now South Florida LLC d/b/a Sunny Coast AC",
         "url": "https://sunnycoastac.com/",
@@ -58,29 +60,20 @@
         "logo": "https://sunnycoastac.com/assets/logo.webp",
         "description": "Sunny Coast AC repairs and installs air conditioning systems across South Florida. Licensed and insured (CAC1825130). Free new-unit quotes and $99 repair diagnostics credited toward repairs.",
         "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-              "Saturday"
-            ],
-            "opens": "07:00",
-            "closes": "19:00"
-          }
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "21:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "07:00", "closes": "19:00" }
         ],
         "areaServed": [
-          {
-            "@type": "AdministrativeArea",
-            "name": "Miami-Dade County"
-          },
-          {
-            "@type": "State",
-            "name": "Florida"
-          }
+          { "@type": "AdministrativeArea", "name": "Miami-Dade County" },
+          { "@type": "City", "name": "Homestead, FL" },
+          { "@type": "City", "name": "Cutler Bay, FL" },
+          { "@type": "City", "name": "Palmetto Bay, FL" },
+          { "@type": "City", "name": "Kendall, FL" },
+          { "@type": "City", "name": "Pinecrest, FL" },
+          { "@type": "City", "name": "South Miami, FL" },
+          { "@type": "City", "name": "Coral Gables, FL" },
+          { "@type": "City", "name": "Miami, FL" },
+          { "@type": "Place", "name": "Upper Florida Keys" }
         ],
         "address": {
           "@type": "PostalAddress",
@@ -276,7 +269,8 @@
           <li><a data-tel href="tel:+17868226861">(786) 822-6861</a></li>
           <li><a data-sms href="sms:+17868226861">Text (786) 822-6861</a></li>
           <li><a href="mailto:admin@sunnycoastac.com">admin@sunnycoastac.com</a></li>
-          <li>Mon–Sat 7:00 AM – 7:00 PM</li>
+          <li>Mon–Fri 7:00 AM – 9:00 PM</li>
+          <li>Sat 7:00 AM – 7:00 PM · Sun closed</li>
           <li>Serving Miami-Dade and South Florida</li>
         </ul>
       </div>
