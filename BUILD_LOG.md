@@ -243,3 +243,13 @@ Armando approved. Links to `/warranty/` added in five spots:
 - Services: install card ("Includes our 1-Year Labor + System Workmanship Warranty"),
   repair card ("90-Day Repair Warranty on the repair we perform"), and the last repair step.
 Checked: 14 pages at 1280px and 390px, no overflow or page errors.
+
+## 2026-10-27 — /booked/ thank-you page (Housecall Pro booking redirect)
+
+Armando set up Housecall Pro online booking; its "booking redirect" points here after a
+successful booking. Page promises a confirmation call from (786) 822-6861 ("we may be out
+on a job"), then four next steps (call, arrival window, diagnosis, flat price first; $99
+repair credited / free new-unit estimates), a short prep list, and call/text buttons.
+`noindex`, not in sitemap or nav. GA4 tag included so bookings show as /booked/ page views.
+Own stylesheet `booked/booked.css` (site.min.css untouched). Checked 1280px + 390px, no
+overflow, no page errors.
