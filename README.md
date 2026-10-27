@@ -2,7 +2,7 @@
 
 Public site for **sunnycoastac.com**. Cool Now South Florida LLC DBA Sunny Coast AC.
 
-**Conversion goal:** request a new-unit quote or repair visit through the form (home, `/book/`, `/reviews/`, and area pages). Primary CTA: **Request a Visit**. New-unit quotes are free; repair diagnostics are $99, credited toward the repair.
+**Conversion goal (2026-10-27):** primary CTA **Book Online** opens Housecall Pro online booking in a pop-up (any link with `data-book-online`; built on click in `main.js`; after booking → `/booked/`). The visit form stays as the secondary path, **Request a Call Back** ("Rather we call you?"), on home, `/book/`, `/reviews/`, and area pages; other pages show a "Rather we call you?" link. Keep this format on every new page. Full spec: OneDrive `Agent/memory/hvac/sunnycoast_booking_format.md`. New-unit quotes are free; repair diagnostics are $99, credited toward the repair.
 
 ## Stack
 
@@ -19,6 +19,8 @@ Plain HTML + CSS + vanilla JS. No build step. GitHub Pages from `main` (repo roo
 | `/contact/` | Phone, email, hours, service area |
 | `/guide/` | Optional lead magnet |
 | `/legal/` | Privacy / consent |
+| `/booked/` | Thank-you page after a Housecall Pro booking (noindex) |
+| `/warranty/` | Warranty terms |
 
 Fill-in checklist: `project-memory/CONTENT_NEEDED.md`
 
