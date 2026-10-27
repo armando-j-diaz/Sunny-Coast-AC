@@ -879,3 +879,36 @@
   reviewBank();
   backToTop();
 })();
+
+/* Online booking: [data-book-online] links open the Housecall Pro pop-up.
+   Until the widget has loaded, the link itself opens the hosted booking page.
+   After a booking, Housecall Pro redirects to /booked/. */
+(function () {
+  "use strict";
+  var SRC = "https://online-booking.housecallpro.com/script.js?token=7ded0123547b443a8700ed0e6487db37&orgName=Sunny-Coast-AC";
+  if (!document.querySelector("[data-book-online]")) return;
+  var started = false;
+  function load() {
+    if (started || window.HCPWidget) return;
+    started = true;
+    var s = document.createElement("script");
+    s.src = SRC;
+    s.async = true;
+    document.body.appendChild(s);
+  }
+  if (/[?&]booking(=|&|$)/.test(location.search)) load();
+  else if (document.readyState === "complete") setTimeout(load, 1500);
+  else window.addEventListener("load", function () { setTimeout(load, 1500); });
+
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest ? e.target.closest("[data-book-online]") : null;
+    if (!a) return;
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "book_online_click", { link_text: a.textContent.trim() });
+    }
+    if (window.HCPWidget && typeof window.HCPWidget.openModal === "function") {
+      e.preventDefault();
+      window.HCPWidget.openModal();
+    }
+  });
+})();

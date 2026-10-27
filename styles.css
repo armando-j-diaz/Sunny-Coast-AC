@@ -3222,3 +3222,43 @@ body.apps-page {
 .warranty-page .w-print{text-align:center;margin-top:.5rem}
 .warranty-page .w-print button{font:inherit;font-size:var(--text-sm);background:none;border:0;color:var(--color-link);text-decoration:underline;cursor:pointer}
 @media print{.site-header,.site-footer,.skip-link,.mobile-cta,.w-cta,.w-print,.wave{display:none!important}.warranty-page .w-two{grid-template-columns:1fr 1fr}.warranty-page{padding-top:0}.warranty-page .w-card{break-inside:avoid}html{font-size:12px}body{background:#fff;font-size:11pt}.warranty-page .container{max-width:none}.prose h2{break-after:avoid;margin:1.1rem 0 .4rem}.prose li{margin:.1rem 0}.prose p,.prose ul{line-height:1.4}}
+
+/* Online booking (Housecall Pro pop-up) above the call-back form */
+.book-online-card {
+  background: var(--white);
+  border: 2px solid var(--color-action);
+  border-radius: 1rem;
+  padding: 1.75rem 1.35rem;
+  text-align: left;
+}
+
+.book-online-card .form-lede {
+  margin-bottom: 1.1rem;
+}
+
+.book-or {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.book-or::before,
+.book-or::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(13, 59, 102, 0.15);
+}
+
+/* "Book Online" is wider than the old "Text" button; below 1040px it would touch the centered nav. */
+@media (max-width: 1039.98px) {
+  .header-contact .header-text-btn {
+    display: none;
+  }
+}

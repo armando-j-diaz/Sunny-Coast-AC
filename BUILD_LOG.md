@@ -253,3 +253,22 @@ repair credited / free new-unit estimates), a short prep list, and call/text but
 `noindex`, not in sitemap or nav. GA4 tag included so bookings show as /booked/ page views.
 Own stylesheet `booked/booked.css` (site.min.css untouched). Checked 1280px + 390px, no
 overflow, no page errors.
+
+## 2026-10-27 — Housecall Pro online booking across the site
+
+Armando set up Housecall Pro online booking. Recommended and built (local first, his review
+before push): **Book Online** is the main action; the existing form stays as **Request a
+Call Back**.
+- Every orange "Request a Visit"/"Book Visit" button, drawer link, and the mobile bar now say
+  **Book Online** and carry `data-book-online`; services repair buttons say **Book a Repair**.
+  Footer Quick links: Book Online + Request a Call Back (old form link).
+- Header: the "Text" button became "Book Online" (hidden under 1040px so it never touches the
+  centered nav; Text stays in the drawer, footer and contact page).
+- Form sections: new "Pick a time online" card, an "or" divider, then the form retitled
+  "Rather we call you?"; submit reads "Request a Call Back". Worker `/api/visit` intake unchanged.
+- `main.js` (bottom block): loads the Housecall Pro widget script 1.5 s after page load (or at
+  once with `?booking`), opens `HCPWidget.openModal()` on click, sends GA4 `book_online_click`.
+  Before the widget loads, the link opens the hosted booking page instead.
+  Housecall Pro's booking redirect → `/booked/`.
+- New CSS appended to `styles.css`; `site.min.css` rebuilt; CSS/JS query bumped to `?v=book-1`.
+- Checked: pop-up opens on desktop and phone; header 900–1280px no overlap; no page errors.
