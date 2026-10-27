@@ -3262,3 +3262,32 @@ body.apps-page {
     display: none;
   }
 }
+
+/* Booking pop-up (main.js builds it on click). Housecall Pro draws its own dimmed backdrop. */
+.book-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  background: transparent;
+}
+
+.book-modal iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+}
+
+html.book-modal-open,
+html.book-modal-open body {
+  overflow: hidden;
+}
+
+/* "Rather we call you?" link under a Book Online button on pages without the form */
+.callback-line {
+  margin: 0.85rem 0 0;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-align: center;
+}

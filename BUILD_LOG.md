@@ -272,3 +272,18 @@ Call Back**.
   Housecall Pro's booking redirect → `/booked/`.
 - New CSS appended to `styles.css`; `site.min.css` rebuilt; CSS/JS query bumped to `?v=book-1`.
 - Checked: pop-up opens on desktop and phone; header 900–1280px no overlap; no page errors.
+
+### Same day — pop-up fix + call-back link on more pages
+- Armando saw the page sometimes look shrunken with a white edge when the pop-up opened.
+  Cause (most likely): Housecall Pro's widget script loads a *hidden* copy of the booking
+  window at page load (Chrome loads hidden iframes right away), and that copy can size its
+  dimmed backdrop to the wrong screen size. **Fix:** we no longer load their script.
+  `main.js` builds the pop-up itself (`.book-modal` + iframe) at click time, using the same
+  message protocol (`hcp:iframe-loaded` → we send `hcp:open`; `hcp:close` closes;
+  `hcp:redirect` → only to sunnycoastac.com, i.e. `/booked/`). A preconnect warms the
+  connection after page load. Ctrl/Cmd-click still opens the hosted page in a new tab.
+  Tested 390 / 1000 / 1600 px: opens full-screen, Housecall Pro's X closes it, scroll kept.
+- "Rather we call you? Request a call back" line (`.callback-line`) under the last Book
+  Online row on About, Contact, Services and Gallery (pages without the form).
+  Warranty keeps Call/Text (claims), Legal/Guide/review pages unchanged.
+- CSS/JS query bumped to `?v=book-2`.

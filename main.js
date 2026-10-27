@@ -880,25 +880,84 @@
   backToTop();
 })();
 
-/* Online booking: [data-book-online] links open the Housecall Pro pop-up.
-   Until the widget has loaded, the link itself opens the hosted booking page.
-   After a booking, Housecall Pro redirects to /booked/. */
+/* Online booking: [data-book-online] links open the Housecall Pro booking pop-up.
+   We build the pop-up ourselves instead of loading Housecall Pro's widget script:
+   their script loads a hidden copy of the booking window at page load, and that copy
+   can measure the wrong screen size (seen 10/27: shrunken page with a white edge).
+   Here a fresh window is created on each click, at the real screen size.
+   Messages from the booking window (same protocol as their widget):
+     "hcp:iframe-loaded" -> we reply "hcp:open"; "hcp:close" -> close;
+     {type:"hcp:redirect", url} -> go to the thank-you page (/booked/) after a booking.
+   If anything fails, the link itself opens the hosted booking page. */
 (function () {
   "use strict";
-  var SRC = "https://online-booking.housecallpro.com/script.js?token=7ded0123547b443a8700ed0e6487db37&orgName=Sunny-Coast-AC";
+  var BOOK_ORIGIN = "https://book.housecallpro.com";
+  var BOOK_URL = BOOK_ORIGIN + "/book/Sunny-Coast-AC/7ded0123547b443a8700ed0e6487db37?v2=true";
   if (!document.querySelector("[data-book-online]")) return;
-  var started = false;
-  function load() {
-    if (started || window.HCPWidget) return;
-    started = true;
-    var s = document.createElement("script");
-    s.src = SRC;
-    s.async = true;
-    document.body.appendChild(s);
+
+  var overlay = null;
+  var frame = null;
+  var lastFocus = null;
+
+  function warm() {
+    var l = document.createElement("link");
+    l.rel = "preconnect";
+    l.href = BOOK_ORIGIN;
+    document.head.appendChild(l);
   }
-  if (/[?&]booking(=|&|$)/.test(location.search)) load();
-  else if (document.readyState === "complete") setTimeout(load, 1500);
-  else window.addEventListener("load", function () { setTimeout(load, 1500); });
+  if (document.readyState === "complete") warm();
+  else window.addEventListener("load", warm);
+
+  function send() {
+    try { frame && frame.contentWindow && frame.contentWindow.postMessage("hcp:open", BOOK_ORIGIN); } catch (e) {}
+  }
+
+  function close() {
+    if (!overlay) return;
+    overlay.remove();
+    overlay = null;
+    frame = null;
+    document.documentElement.classList.remove("book-modal-open");
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  function onMessage(e) {
+    if (e.origin !== BOOK_ORIGIN || !overlay) return;
+    var d = e.data;
+    if (d === "hcp:iframe-loaded") send();
+    else if (d === "hcp:close") close();
+    else if (d && d.type === "hcp:redirect" && typeof d.url === "string") {
+      try {
+        var u = new URL(d.url, location.href);
+        if (u.protocol === "https:" && (u.hostname === "sunnycoastac.com" || u.hostname === location.hostname)) {
+          location.href = u.href;
+        }
+      } catch (err) {}
+    }
+  }
+  window.addEventListener("message", onMessage);
+
+  function open() {
+    if (overlay) return;
+    lastFocus = document.activeElement;
+    overlay = document.createElement("div");
+    overlay.className = "book-modal";
+    overlay.setAttribute("role", "dialog");
+    overlay.setAttribute("aria-modal", "true");
+    overlay.setAttribute("aria-label", "Book online");
+    frame = document.createElement("iframe");
+    frame.src = BOOK_URL;
+    frame.title = "Book online with Sunny Coast AC";
+    frame.addEventListener("load", send);
+    overlay.appendChild(frame);
+    document.body.appendChild(overlay);
+    document.documentElement.classList.add("book-modal-open");
+    frame.focus();
+  }
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && overlay) close();
+  });
 
   document.addEventListener("click", function (e) {
     var a = e.target.closest ? e.target.closest("[data-book-online]") : null;
@@ -906,9 +965,15 @@
     if (typeof window.gtag === "function") {
       window.gtag("event", "book_online_click", { link_text: a.textContent.trim() });
     }
-    if (window.HCPWidget && typeof window.HCPWidget.openModal === "function") {
-      e.preventDefault();
-      window.HCPWidget.openModal();
-    }
+    if (e.metaKey || e.ctrlKey || e.shiftKey) return; // new tab/window: let the link work
+    e.preventDefault();
+    var drawerToggle = document.querySelector('.nav-toggle[aria-expanded="true"]');
+    if (drawerToggle) drawerToggle.click();
+    open();
   });
+
+  if (/[?&]booking(=|&|$)/.test(location.search)) {
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", open);
+    else open();
+  }
 })();
