@@ -306,3 +306,11 @@ customer contact data, prices, or booking behavior added.
 Validation: Node VM regression verified bootstrap init, callback dispatch after
 SDK replacement, and booking event queueing. Live deployment and received-event
 verification are recorded below once completed.
+
+### Verification completed
+- Published repair commit b578e4c to main; fetched live script and verified loaded callback resolves window.oaiq.
+- OpenAI endpoint returned HTTP 202 for a batch containing lead_created and appointment_scheduled; both appeared in Ads Manager Event Stream at 2026-10-29 17:56:49 UTC (1:56:49 p.m. Eastern).
+- These were synthetic tracking-only checks, not customer conversions: event IDs sc_tracking_test_20261029_callback and sc_tracking_test_20261029_booking. No customer form, booking, contact information, or ad click attribution was submitted. They can appear in raw event totals; do not count them as business leads/bookings. Callback test invoked the deployed SunnyCoastAds.leadCreated helper. Booking test invoked the SDK event; full Housecall Pro booking flow was not exercised.
+- Reopened campaign edit settings and verified both Online Booking and Callback Request persisted. Campaign switch remained off; Clicks objective, $25/day budget, Miami–Fort Lauderdale targeting, and other settings preserved.
+- Overview totals still showed zero while Event Stream showed both events; do not confuse aggregate lag with failed transport. No CAPI implementation was added.
+- Ads Manager connector returned no accessible accounts; account setup and verification were completed in the already-authenticated Safari session.
