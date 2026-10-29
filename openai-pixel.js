@@ -9,10 +9,10 @@
   js.async = true;
   js.src = "https://bzrcdn.openai.com/sdk/oaiq.min.js";
   d.head.appendChild(js);
-  q("init", { pixelId: "XiU7RbsNqVnFPaqN72Y5vv" });
+  w.oaiq("init", { pixelId: "XiU7RbsNqVnFPaqN72Y5vv" });
 
   w.SunnyCoastAds = {
-    leadCreated: function () { q("measure", "lead_created", { type: "customer_action" }); }
+    leadCreated: function () { w.oaiq("measure", "lead_created", { type: "customer_action" }); }
   };
 
   if (w.location.pathname === "/booked/") {
@@ -22,7 +22,7 @@
     var last = Number(w.sessionStorage.getItem(key) || 0);
     if (!last || now - last > 30 * 60 * 1000) {
       w.sessionStorage.setItem(key, String(now));
-      q("measure", "appointment_scheduled", { type: "customer_action" });
+      w.oaiq("measure", "appointment_scheduled", { type: "customer_action" });
     }
   }
 })(window, document);

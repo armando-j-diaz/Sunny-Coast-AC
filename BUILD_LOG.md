@@ -287,3 +287,22 @@ Call Back**.
   Online row on About, Contact, Services and Gallery (pages without the form).
   Warranty keeps Call/Text (claims), Legal/Guide/review pages unchanged.
 - CSS/JS query bumped to `?v=book-2`.
+
+
+## 2026-10-29 — OpenAI conversion tracking repair
+
+Live browser verified SDK 0.1.97 loaded, pixel configuration HTTP 200, and SDK
+initialization/diagnostic events accepted with HTTP 202. Ads Manager initially
+had Pixel 1 but no configured conversion events. Created Callback Request
+(lead_created) and Online Booking (appointment_scheduled), both on Pixel 1.
+
+Fixed a confirmed stale queue reference: the SDK replaces window.oaiq after
+draining the bootstrap queue, so the old closure q silently stranded later
+callback events. All calls now resolve window.oaiq at invocation time. Callback
+tracking stays after the successful form response; booking tracking remains on
+/booked/ with its existing 30-minute session guard. No new page-view goal,
+customer contact data, prices, or booking behavior added.
+
+Validation: Node VM regression verified bootstrap init, callback dispatch after
+SDK replacement, and booking event queueing. Live deployment and received-event
+verification are recorded below once completed.
