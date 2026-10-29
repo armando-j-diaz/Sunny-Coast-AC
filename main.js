@@ -321,6 +321,9 @@
         .then(function (res) {
           if (!res.ok) throw new Error("bad status");
           showStatus(status, okMsg, false);
+          if (form.id === "appointment-form" && window.SunnyCoastAds) {
+            window.SunnyCoastAds.leadCreated();
+          }
           form.reset();
         })
         .catch(function () {
