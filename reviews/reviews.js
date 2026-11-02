@@ -63,6 +63,11 @@
       var el = form.elements.namedItem(name);
       el.setCustomValidity(el.value.trim() ? "" : "Please fill out this field.");
     });
+    // 2026-11-02: phone is required (the team follows up in the texts app). 10 US digits, a leading 1 is OK.
+    var phoneEl = form.elements.namedItem("phone");
+    var digits = phoneEl.value.replace(/\D/g, "");
+    if (digits.length === 11 && digits.charAt(0) === "1") digits = digits.slice(1);
+    phoneEl.setCustomValidity(digits.length === 10 ? "" : "Please enter a 10-digit phone number.");
     if (!form.reportValidity()) return;
 
     if (!endpoint) {
@@ -114,7 +119,7 @@
           return;
         }
         if (r.status === 400) {
-          show("Please check your name, email, and message, then try again.", true);
+          show("Please check your name, email, phone, and message, then try again.", true);
         } else if (r.status === 429) {
           show("We received several messages from this connection. Please call (786) 822-6861 or email admin@sunnycoastac.com.", true);
         } else {
