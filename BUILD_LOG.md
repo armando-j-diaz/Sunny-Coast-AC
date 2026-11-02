@@ -314,3 +314,9 @@ verification are recorded below once completed.
 - Reopened campaign edit settings and verified both Online Booking and Callback Request persisted. Campaign switch remained off; Clicks objective, $25/day budget, Miami–Fort Lauderdale targeting, and other settings preserved.
 - Overview totals still showed zero while Event Stream showed both events; do not confuse aggregate lag with failed transport. No CAPI implementation was added.
 - Ads Manager connector returned no accessible accounts; account setup and verification were completed in the already-authenticated Safari session.
+
+## 2026-11-02 — review buttons + required phone (commit 8a6adb2)
+
+- `/reviews/leave/` "I had a good experience" → `https://g.page/r/CTKR-wCkcozKEAE/review` (opens Google's write-a-review box). Other "Google" links (ratings, "See them on Google") still open the Maps listing.
+- `/reviews/feedback/` phone is required (10 digits, a leading 1 is OK). Submissions now also show in the SC texts app as a private note in that customer's chat (Worker `8ee366c9`).
+- Not live yet: thank-you card with a small "You may also share a public review on Google" line (Google's no-review-gating rule). Preview: `sunnycoast/2026-11-02/review-booking/preview/`.
