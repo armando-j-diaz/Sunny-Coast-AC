@@ -47,6 +47,24 @@
     return el ? String(el.value || "") : "";
   }
 
+
+  // 2026-11-02: thank-you card after the private form. (A small, low-key Google review line is
+  // ready in sunnycoast/2026-11-02/review-booking/preview/; Armando will say when to add it.)
+  function showDone(first) {
+    var card = form.closest(".feedback-card") || form.parentNode;
+    if (!document.getElementById("fb-done-css")) {
+      var st = document.createElement("style"); st.id = "fb-done-css";
+      st.textContent = ".fb-done{padding:1.75rem 1.5rem;text-align:left}.fb-done h2{margin:0 0 .5rem;color:var(--navy);font-size:1.5rem}" +
+        ".fb-done .fb-check{display:inline-flex;width:2.25rem;height:2.25rem;border-radius:50%;background:var(--navy);color:#fff;align-items:center;justify-content:center;font-weight:800;margin-bottom:.75rem}" +
+        ".fb-done p{margin:.5rem 0;line-height:1.5}.fb-done .fb-next{margin-top:1rem}";
+      document.head.appendChild(st);
+    }
+    card.innerHTML = '<div class="fb-done" role="status"><span class="fb-check" aria-hidden="true">&#10003;</span>' +
+      '<h2>Thank you' + (first ? ', ' + first.replace(/[<>&"]/g, "") : '') + '. We got your message.</h2>' +
+      '<p>Someone from our team will reach out soon to make this right. We read every message, and we want to fix this with you.</p>' +
+      '<p class="fb-next">If it is urgent, call or text us at <a href="tel:+17868226861">(786) 822-6861</a>.</p></div>';
+    window.scrollTo(0, Math.max(0, card.getBoundingClientRect().top + window.pageYOffset - 120)); // clear the sticky header
+  }
   if (!endpoint && !isLocal) {
     submit.disabled = true;
     submit.textContent = "Feedback form unavailable";
@@ -115,7 +133,7 @@
           submissionId = "";
           var loaded = form.elements.namedItem("form_loaded_at");
           if (loaded) loaded.value = String(Date.now());
-          show("Thank you for letting us know. Our team will review your message and follow up.");
+          showDone(String(payload.name || "").trim().split(/\s+/)[0]);
           return;
         }
         if (r.status === 400) {
