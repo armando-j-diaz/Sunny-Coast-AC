@@ -321,3 +321,12 @@ verification are recorded below once completed.
 - `/reviews/feedback/` phone is required (10 digits, a leading 1 is OK). Submissions now also show in the SC texts app as a private note in that customer's chat (Worker `8ee366c9`).
 - Not live yet: thank-you card with a small "You may also share a public review on Google" line (Google's no-review-gating rule). Preview: `sunnycoast/2026-11-02/review-booking/preview/`.
 - 2026-11-02 (evening): thank-you card after the private form is LIVE ("Thank you, <first name>. We got your message." + urgent call/text line), **without** the Google review line (Armando will say when to add it; ready in `sunnycoast/2026-11-02/review-booking/preview/`). `reviews.js?v=20261102b`. Tested in a browser with the site + API faked (short phone blocked, thank-you shows, no Google link).
+
+## 2026-11-05 — Site v2: service hubs, town pages, call-first
+
+- New service pages: /services/ac-repair/, /ac-replacement/, /ductless/, /maintenance/, /diagnostic-visit/ (useful info first, no CTA in hero). /services/ is now a hub.
+- New town pages: /areas/miami, fort-lauderdale, kendall, hollywood, miami-beach, pembroke-pines, miramar, homestead — local job counts (as of Nov 5, 2026), local know-how, captioned photos of our team's work, reviews, FAQ, Meet the team. /areas/ rebuilt as a town list; Upper Keys now redirects to /areas/.
+- Site-wide: Call is the main button, Get a Call Back second, online booking only on /contact/. "Areas" in the top menu; footer lists the 8 towns. Trust bar: 12,000+ AC jobs since 2020 · Licensed & insured · 4.9 stars from 65+ Google reviews · 12+ years. Rating fixed 5.0 -> 4.9. 9-point -> 18-point check. Brands strip and hero price line removed from home.
+- Homepage order: hero, trust bar, big numbers, reviews, recent work, What do you need? (repair vs new system), how it works, FAQ, form, about.
+- New sitemap entries, refreshed llms.txt. Built by scripts in OneDrive sunnycoast/2026-11-05/build/ from the git worktree ~/sc-build/site-v2 (kept off OneDrive).
+
