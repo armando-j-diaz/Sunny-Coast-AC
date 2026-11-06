@@ -3413,7 +3413,7 @@ html.book-modal-open body {
 }
 /* warranty: repairs vs new system installs */
 .w-paths{display:grid;gap:1.25rem;grid-template-columns:1fr;margin:1.5rem 0 1rem}
-@media (min-width:860px){.warranty-page .container.narrow{max-width:62rem}.w-paths{grid-template-columns:1fr 1fr;align-items:start}}
+@media (min-width:860px){.w-paths{grid-template-columns:1fr 1fr;align-items:start;width:min(62rem,calc(100vw - 3rem));position:relative;left:50%;transform:translateX(-50%)}}
 .w-path{background:var(--white);border:2px solid rgba(13,59,102,.12);border-top:8px solid var(--action);border-radius:1rem;padding:1.4rem 1.3rem;display:flex;flex-direction:column;gap:.6rem;scroll-margin-top:6rem}
 .w-path--install{border-top-color:var(--navy)}
 .w-tag{display:inline-block;align-self:flex-start;margin:0;padding:.25rem .7rem;border-radius:999px;font-size:var(--text-sm);font-weight:800;text-transform:uppercase;letter-spacing:.05em;background:var(--action);color:var(--white)}
@@ -3427,3 +3427,6 @@ html.book-modal-open body {
 .w-note{margin:.2rem 0 0;font-size:var(--text-sm)}
 .w-path .path-link{margin-top:.4rem}
 .warranty-page h2[id$="-details"]{scroll-margin-top:6rem}
+.warranty-page .prose .w-tag,.warranty-page .w-tag{color:#fff}
+.warranty-page .prose .w-sub h3{font-size:1.25rem;line-height:1.2;margin:0}
+.warranty-page .prose .w-path-h{font-size:clamp(1.45rem,4.2vw,1.9rem);line-height:1.15;margin:0}
