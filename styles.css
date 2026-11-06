@@ -3430,3 +3430,12 @@ html.book-modal-open body {
 .warranty-page .prose .w-tag,.warranty-page .w-tag{color:#fff}
 .warranty-page .prose .w-sub h3{font-size:1.25rem;line-height:1.2;margin:0}
 .warranty-page .prose .w-path-h{font-size:clamp(1.45rem,4.2vw,1.9rem);line-height:1.15;margin:0}
+/* warranty v2: same look as the What do you need? cards */
+.warranty-page .w-q-head{text-align:center;font-size:clamp(1.3rem,3.5vw,1.7rem);margin:2rem 0 0}
+@media (min-width:760px){.w-grid{width:min(60rem,calc(100vw - 3rem));position:relative;left:50%;transform:translateX(-50%);max-width:none}}
+.warranty-page .prose .path-q{margin:0;font-size:clamp(1.5rem,4.5vw,2rem);line-height:1.15}
+.warranty-page .prose .path-card p{margin:0}
+.warranty-page .prose .path-card .check-list{margin:.25rem 0 .5rem;padding-left:0}
+.warranty-page .prose .path-card .btn{color:var(--white);text-decoration:none}
+.warranty-page .w-fine{text-align:center;margin-top:1.25rem}
+.warranty-page [id$="-warranty"]{scroll-margin-top:6rem}
