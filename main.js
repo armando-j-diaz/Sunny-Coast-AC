@@ -980,3 +980,5 @@
     else open();
   }
 })();
+/* ba-slider */
+document.addEventListener('input',function(e){var t=e.target;if(t&&t.classList&&t.classList.contains('ba-range')){var f=t.closest('.ba-slider');if(f)f.style.setProperty('--pos',t.value+'%');}});

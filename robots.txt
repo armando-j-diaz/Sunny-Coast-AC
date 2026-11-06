@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /apps/
+Disallow: /_blog/
 
 Sitemap: https://sunnycoastac.com/sitemap.xml
