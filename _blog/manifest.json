@@ -1,1 +1,39 @@
-[]
+[
+ {
+  "slug": "ac-leaking-water-clogged-drain-line",
+  "title": "AC Leaking Water Inside? It’s Usually a Clogged Drain Line",
+  "seo_title": "AC Leaking Water Inside? It’s Usually a Clogged Drain Line | Sunny Coast AC",
+  "description": "Water around your indoor AC unit usually means a clogged drain line. Why it happens in Miami homes, what’s safe to do right now, and when to call.",
+  "date": "2026-11-05",
+  "author": "Sunny Coast AC team",
+  "og_image": "blog/ac-leaking-water-clogged-drain-line/share.jpg",
+  "og_alt": "Before and after: an AC drain pan full of sludge, then the same pan cleaned",
+  "card_text": "Why AC drain lines clog in Miami homes, the signs to watch for, and what’s safe to do before we get there.",
+  "images": [
+   "buckets.jpg",
+   "share.jpg",
+   "clog.jpg",
+   "before.jpg",
+   "after.jpg",
+   "pan-before-after.jpg"
+  ],
+  "learn_more": [
+   {
+    "page": "services/ac-repair",
+    "text": "AC leaking water inside? Why it’s usually a clogged drain line"
+   },
+   {
+    "page": "services/maintenance",
+    "text": "How a clogged drain line causes leaks, and how maintenance prevents it"
+   },
+   {
+    "page": "areas/miami",
+    "text": "AC leaking water inside? It’s usually a clogged drain line"
+   },
+   {
+    "page": "areas/kendall",
+    "text": "AC leaking water inside? It’s usually a clogged drain line"
+   }
+  ]
+ }
+]
