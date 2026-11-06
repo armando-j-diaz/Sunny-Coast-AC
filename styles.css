@@ -3387,3 +3387,8 @@ html.book-modal-open body {
 .town-work .lede{color:var(--navy);font-weight:600}
 .display--md{font-size:clamp(1.55rem,4.6vw,2.3rem)}
 .path-offer,.path-kicker,.town-card-num{color:var(--action)}
+.display--h1-sm{font-size:clamp(1.7rem,5vw,2.5rem)}
+.cta-row--center{justify-content:center;margin-top:1rem}
+.plan-callout{margin:1.5rem auto 0;max-width:34rem;text-align:center;background:var(--white);border:2px solid rgba(13,59,102,.12);border-radius:1rem;padding:1.25rem 1.1rem}
+.plan-callout-h{font-family:var(--font-display);font-weight:800;font-size:var(--text-lg);color:var(--navy);margin:0 0 .25rem}
+.plan-callout p{margin:0 0 .8rem}

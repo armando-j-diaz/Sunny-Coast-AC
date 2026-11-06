@@ -329,4 +329,3 @@ verification are recorded below once completed.
 - Site-wide: Call is the main button, Get a Call Back second, online booking only on /contact/. "Areas" in the top menu; footer lists the 8 towns. Trust bar: 12,000+ AC jobs since 2020 · Licensed & insured · 4.9 stars from 65+ Google reviews · 12+ years. Rating fixed 5.0 -> 4.9. 9-point -> 18-point check. Brands strip and hero price line removed from home.
 - Homepage order: hero, trust bar, big numbers, reviews, recent work, What do you need? (repair vs new system), how it works, FAQ, form, about.
 - New sitemap entries, refreshed llms.txt. Built by scripts in OneDrive sunnycoast/2026-11-05/build/ from the git worktree ~/sc-build/site-v2 (kept off OneDrive).
-
