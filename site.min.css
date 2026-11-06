@@ -149,3 +149,11 @@
 .warranty-page [id$="-warranty"]{scroll-margin-top:6rem}
 .warranty-page .prose .path-card .path-offer{color:var(--action);font-family:var(--font-display);font-weight:800;font-size:clamp(1.2rem,3.6vw,1.5rem);line-height:1.2;margin:0}
 .warranty-page .prose .path-card .path-q{font-size:clamp(1.65rem,5.5vw,2.1rem);line-height:1.12}
+/* warranty v3: plain, professional */
+.warranty-page .w-grid{margin-top:1.75rem}
+.warranty-page .prose .w-h{font-family:var(--font-display);font-weight:800;font-size:clamp(1.5rem,4.5vw,1.9rem);line-height:1.15;color:var(--navy);margin:0;text-transform:none;letter-spacing:0}
+.warranty-page .prose .w-term-line{margin:0 0 .35rem;font-weight:600;color:var(--navy);opacity:.75;padding-bottom:.75rem;border-bottom:1px solid rgba(13,59,102,.12)}
+.warranty-page .prose .w-covered{list-style:disc;margin:.5rem 0 .6rem;padding:.7rem .9rem .7rem 1.9rem;background:#f1f6fa;border-radius:.6rem;font-weight:600}
+.warranty-page .prose .w-covered li{margin:.15rem 0;padding:0}
+.warranty-page .prose .w-covered li::before{content:none;display:none}
+.warranty-page .prose .w-covered li::marker{color:var(--navy)}
