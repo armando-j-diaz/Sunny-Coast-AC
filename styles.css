@@ -3496,3 +3496,4 @@ html.book-modal-open body {
 .ba-tag--after{right:.6rem;background:#2e7d32}
 .ba-hint{display:block;text-align:center;font-size:var(--text-sm);color:var(--color-text-muted);margin-top:.4rem}
 .blog-list>li:only-child{grid-column:1/-1;max-width:24rem;margin:0 auto;width:100%}
+.blog-prose .blog-hook{font-size:1.2rem;line-height:1.5}
