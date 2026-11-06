@@ -119,3 +119,19 @@
  .trust-list{animation:none}
  .trust-bar .container{overflow-x:auto;-webkit-overflow-scrolling:touch}
 }
+/* warranty: repairs vs new system installs */
+.w-paths{display:grid;gap:1.25rem;grid-template-columns:1fr;margin:1.5rem 0 1rem}
+@media (min-width:860px){.warranty-page .container.narrow{max-width:62rem}.w-paths{grid-template-columns:1fr 1fr;align-items:start}}
+.w-path{background:var(--white);border:2px solid rgba(13,59,102,.12);border-top:8px solid var(--action);border-radius:1rem;padding:1.4rem 1.3rem;display:flex;flex-direction:column;gap:.6rem;scroll-margin-top:6rem}
+.w-path--install{border-top-color:var(--navy)}
+.w-tag{display:inline-block;align-self:flex-start;margin:0;padding:.25rem .7rem;border-radius:999px;font-size:var(--text-sm);font-weight:800;text-transform:uppercase;letter-spacing:.05em;background:var(--action);color:var(--white)}
+.w-path--install .w-tag{background:var(--navy)}
+.prose .w-path-h,.w-path-h{font-family:var(--font-display);font-weight:800;font-size:clamp(1.45rem,4.2vw,1.9rem);line-height:1.15;color:var(--navy);margin:0}
+.w-path-sub{margin:0;font-weight:600;color:var(--navy)}
+.w-path .check-list{margin:.2rem 0 0;padding-left:0}
+.w-sub{border-top:1px solid rgba(13,59,102,.12);padding-top:.8rem}
+.prose .w-sub h3,.w-sub h3{margin:0;font-size:var(--text-lg);color:var(--navy)}
+.w-sub .w-term{display:block;margin:.1rem 0 .3rem;font-weight:700;color:var(--action)}
+.w-note{margin:.2rem 0 0;font-size:var(--text-sm)}
+.w-path .path-link{margin-top:.4rem}
+.warranty-page h2[id$="-details"]{scroll-margin-top:6rem}
