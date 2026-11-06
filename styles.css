@@ -3451,3 +3451,4 @@ html.book-modal-open body {
 .warranty-page .prose .w-covered li::marker{color:var(--navy)}
 .warranty-page .prose .w-btn,.warranty-page .w-btn{background:var(--navy);color:#fff;border:2px solid var(--navy);text-decoration:none}
 .warranty-page .prose .w-btn:hover{background:#0a2e50;color:#fff}
+.warranty-page .prose .w-visit{background:#f1f6fa;border-radius:.6rem;padding:.6rem .7rem .6rem 2.3rem;background-position:.6rem .75rem}
