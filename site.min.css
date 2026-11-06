@@ -147,3 +147,5 @@
 .warranty-page .prose .path-card .btn{color:var(--white);text-decoration:none}
 .warranty-page .w-fine{text-align:center;margin-top:1.25rem}
 .warranty-page [id$="-warranty"]{scroll-margin-top:6rem}
+.warranty-page .prose .path-card .path-offer{color:var(--action);font-family:var(--font-display);font-weight:800;font-size:clamp(1.2rem,3.6vw,1.5rem);line-height:1.2;margin:0}
+.warranty-page .prose .path-card .path-q{font-size:clamp(1.65rem,5.5vw,2.1rem);line-height:1.12}
