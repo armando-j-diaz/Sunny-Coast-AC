@@ -205,3 +205,12 @@
 .ba-hint{display:block;text-align:center;font-size:var(--text-sm);color:var(--color-text-muted);margin-top:.4rem}
 .blog-list>li:only-child{grid-column:1/-1;max-width:24rem;margin:0 auto;width:100%}
 .blog-prose .blog-hook{font-size:1.2rem;line-height:1.5}
+/* blog photo borders: red = the problem, green = our fix (Armando 11/05) */
+.blog-prose figure.fig-problem img{box-shadow:0 0 0 4px #c62828}
+.blog-prose figure.fig-fixed img{box-shadow:0 0 0 4px #2e7d32}
+.ba-slider::before{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 5px #c62828;border-radius:inherit;pointer-events:none}
+.ba-slider .ba-after::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 5px #2e7d32;border-radius:1rem;pointer-events:none}
+.blog-prose figure.fig-problem figcaption::before{content:"The problem: ";font-weight:700;color:#c62828}
+.blog-prose figure.fig-fixed figcaption::before{content:"Our fix: ";font-weight:700;color:#2e7d32}
+.blog-prose ol{padding-left:1.4rem}
+.blog-prose ol li{margin:.4rem 0}
