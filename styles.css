@@ -3449,3 +3449,5 @@ html.book-modal-open body {
 .warranty-page .prose .w-covered li{margin:.15rem 0;padding:0}
 .warranty-page .prose .w-covered li::before{content:none;display:none}
 .warranty-page .prose .w-covered li::marker{color:var(--navy)}
+.warranty-page .prose .w-btn,.warranty-page .w-btn{background:var(--navy);color:#fff;border:2px solid var(--navy);text-decoration:none}
+.warranty-page .prose .w-btn:hover{background:#0a2e50;color:#fff}
