@@ -3392,3 +3392,22 @@ html.book-modal-open body {
 .plan-callout{margin:1.5rem auto 0;max-width:34rem;text-align:center;background:var(--white);border:2px solid rgba(13,59,102,.12);border-radius:1rem;padding:1.25rem 1.1rem}
 .plan-callout-h{font-family:var(--font-display);font-weight:800;font-size:var(--text-lg);color:var(--navy);margin:0 0 .25rem}
 .plan-callout p{margin:0 0 .8rem}
+/* trust bar: one row on desktop, sideways slider below 900px */
+.trust-bar{overflow:hidden}
+.trust-list li::after{content:"•";margin:0 .85rem;color:var(--surf-blue);font-weight:400}
+.trust-dup{display:none!important}
+@media (min-width:900px){.trust-list li:nth-child(4)::after{content:none}}
+@media (max-width:899px){
+ .trust-bar{padding:.7rem 0}
+ .trust-bar .container{max-width:none;padding:0}
+ .trust-list{flex-wrap:nowrap;justify-content:flex-start;width:max-content;gap:0;font-size:.875rem;animation:trust-slide 28s linear infinite}
+ .trust-list li:not(:last-child)::after,.trust-list li::after{content:"•";margin:0 1rem}
+ .trust-dup{display:inline-flex!important}
+ .trust-list:hover,.trust-list:active{animation-play-state:paused}
+ .trust-band .wave svg{height:34px}
+}
+@keyframes trust-slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (max-width:899px) and (prefers-reduced-motion:reduce){
+ .trust-list{animation:none}
+ .trust-bar .container{overflow-x:auto;-webkit-overflow-scrolling:touch}
+}
