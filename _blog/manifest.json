@@ -35,5 +35,43 @@
     "text": "AC leaking water inside? It’s usually a clogged drain line"
    }
   ]
+ },
+ {
+  "slug": "is-your-ac-really-broken-5-things-to-check",
+  "title": "Is Your AC Really Broken? 5 Things to Check Before You Call",
+  "seo_title": "Is Your AC Really Broken? 5 Things to Check Before You Call | Sunny Coast AC",
+  "description": "AC not cooling or won’t turn on? Try these 5 safe checks first: thermostat, batteries, air filter, airflow, and water. Then know when to call a pro.",
+  "date": "2026-11-09",
+  "author": "Sunny Coast AC team",
+  "og_image": "blog/is-your-ac-really-broken-5-things-to-check/share.jpg",
+  "og_alt": "Before and after: a clogged AC air filter, then a new clean filter in the same slot",
+  "card_text": "Five quick, safe checks to try before you call for AC repair, and the signs that mean it’s time to call a pro.",
+  "images": [
+   "thermostat.jpg",
+   "before.jpg",
+   "after.jpg",
+   "outdoor.jpg",
+   "floatswitch.jpg",
+   "vent.jpg",
+   "share.jpg"
+  ],
+  "learn_more": [
+   {
+    "page": "services/ac-repair",
+    "text": "Is your AC really broken? 5 things to check first"
+   },
+   {
+    "page": "services/diagnostic-visit",
+    "text": "5 safe things to check before you call for AC repair"
+   },
+   {
+    "page": "services/maintenance",
+    "text": "Simple checks that keep your AC cooling"
+   },
+   {
+    "page": "areas/miami",
+    "text": "AC not cooling? 5 things to check before you call"
+   }
+  ]
  }
 ]
