@@ -321,6 +321,7 @@
         .then(function (res) {
           if (!res.ok) throw new Error("bad status");
           showStatus(status, okMsg, false);
+          try { if (window.scLead) window.scLead(form, payload); } catch (e) {}
           if (form.id === "appointment-form" && window.SunnyCoastAds) {
             window.SunnyCoastAds.leadCreated();
           }
@@ -982,3 +983,21 @@
 })();
 /* ba-slider */
 document.addEventListener('input',function(e){var t=e.target;if(t&&t.classList&&t.classList.contains('ba-range')){var f=t.closest('.ba-slider');if(f)f.style.setProperty('--pos',t.value+'%');}});
+/* sc-track */
+(function () {
+  function ga(name, params) {
+    try { if (window.gtag) window.gtag("event", name, params || {}); } catch (e) {}
+  }
+  var path = location.pathname;
+  // Taps on call / text links, with the page they happened on.
+  document.addEventListener("click", function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href^="tel:"],a[href^="sms:"]') : null;
+    if (!a) return;
+    ga(a.getAttribute("href").indexOf("sms:") === 0 ? "click_to_text" : "click_to_call", { page_path: path });
+  }, true);
+  // A form lead went through (called from postJSON after the server said OK).
+  window.scLead = function (form, payload) {
+    var kind = (payload && (payload.service_type || payload.intent)) || "unknown";
+    ga("generate_lead", { form_id: (form && form.id) || "form", lead_type: String(kind).slice(0, 40), page_path: path });
+  };
+})();
