@@ -164,8 +164,8 @@
     <section class="hero section hero-tall hero-slides" aria-labelledby="hero-heading">
       <div class="hero-bg" aria-hidden="true">
         <div class="hero-col hero-col--1">
-          <img class="hero-bg-img is-active" src="/assets/home/hero-39-720.webp" srcset="/assets/home/hero-39-720.webp 720w, /assets/home/hero-39-1440.webp 1440w" sizes="(min-width: 700px) 34vw, 100vw" alt="" fetchpriority="high" decoding="async" />
-          <img class="hero-bg-img" data-src="/assets/home/hero-24-720.webp" data-srcset="/assets/home/hero-24-720.webp 720w, /assets/home/hero-24-1440.webp 1440w" sizes="(min-width: 700px) 34vw, 100vw" alt="" decoding="async" />
+          <picture class="hero-mobile-photo"><source media="(max-width: 699px)" srcset="/assets/home/hero-39-720.webp" /><img class="hero-bg-img is-active" src="/assets/home/hero-39-720.webp" srcset="/assets/home/hero-39-720.webp 720w, /assets/home/hero-39-1440.webp 1440w" sizes="(min-width: 700px) 34vw, 100vw" alt="" fetchpriority="high" decoding="async" /></picture>
+          <picture class="hero-mobile-photo"><source media="(max-width: 699px)" data-srcset="/assets/home/hero-24-720.webp" /><img class="hero-bg-img" data-src="/assets/home/hero-24-720.webp" data-srcset="/assets/home/hero-24-720.webp 720w, /assets/home/hero-24-1440.webp 1440w" sizes="(min-width: 700px) 34vw, 100vw" alt="" decoding="async" /></picture>
         </div>
         <div class="hero-col hero-col--2">
           <img class="hero-bg-img is-active" loading="lazy" src="/assets/home/hero-16-720.webp" srcset="/assets/home/hero-16-720.webp 720w, /assets/home/hero-16-1440.webp 1440w" sizes="(min-width: 700px) 34vw, 100vw" alt="" decoding="async" />
@@ -605,6 +605,8 @@
         cols.forEach(function (col, n) {
           if (getComputedStyle(col).display === "none") return;
           col.querySelectorAll(".hero-bg-img[data-src]").forEach(function (im) {
+            var source = im.parentElement.querySelector("source[data-srcset]");
+            if (source) source.srcset = source.dataset.srcset;
             im.srcset = im.dataset.srcset; im.src = im.dataset.src;
           });
           var imgs = col.querySelectorAll(".hero-bg-img"), i = 0;
