@@ -347,5 +347,11 @@ body[data-hs] main>.section{padding-block:clamp(2rem,6vw,3.75rem)}
 .hs-ico{width:28px;height:28px;fill:none;stroke:var(--color-action);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .hs-svc-h{font-family:var(--font-hero);font-weight:800;font-size:1.15rem;color:var(--navy)}
 .hs-svc-p{font-size:.98rem}
+.ck18{max-width:52rem;margin:0 auto 1.4rem;text-align:center}
+.ck18-line{display:flex;align-items:center;justify-content:center;gap:.6rem;margin:0 0 .35rem;font-size:1.05rem}
+.ck18-line svg{flex:0 0 24px;width:24px;height:24px;fill:none;stroke:#2e7d32;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.ck18-go{margin:0}.ck18-go a{font-weight:700;color:var(--navy)}
+.ck18-sec{padding:1.1rem 0 .4rem;background:#fff}
+.ck18-sec .ck18{margin-bottom:.4rem}
 body[data-hs] .path-split > .container > .display{font-size:var(--text-2xl)}
 
