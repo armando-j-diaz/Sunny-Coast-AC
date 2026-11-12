@@ -278,3 +278,7 @@ body .site-header,body .page-hero,body section,body footer{border-radius:0!impor
 .lb-call .btn-primary{background:var(--color-action);color:#fff;border:2px solid var(--color-action)}
 .lb-call .btn-outline{background:#fff;color:var(--navy);border:2px solid var(--navy)}
 @media (max-width:1000px){.lb{grid-template-columns:1fr;gap:0}.lb-side{display:none}}
+
+/* text dark 2026-11-12 */
+:root{--color-text-muted:#0e1a28;--color-text:#0e1a28}
+.lede{opacity:1}
