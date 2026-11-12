@@ -105,5 +105,37 @@
     "text": "Best AC brand for a Miami home? What matters more"
    }
   ]
+ },
+ {
+  "slug": "fpl-ac-rebate-how-it-works",
+  "title": "FPL’s AC Rebate: How It Works and Who Qualifies",
+  "seo_title": "FPL AC Rebate: How It Works and Who Qualifies | Sunny Coast AC",
+  "description": "FPL's instant rebate on new AC systems: who qualifies, why FPL offers it, how much a higher SEER2 can save, and brand vs SEER2.",
+  "date": "2026-11-12",
+  "author": "Sunny Coast AC team",
+  "og_image": "blog/fpl-ac-rebate-how-it-works/share.jpg",
+  "og_alt": "Before and after: an old indoor air handler, then a new one in the same closet",
+  "card_text": "How FPL's AC rebate works, why FPL offers it, how much a more efficient AC can save, and what matters more: brand or SEER2.",
+  "images": [
+   "share.jpg",
+   "outdoor.jpg",
+   "gauges.jpg",
+   "before.jpg",
+   "after.jpg"
+  ],
+  "learn_more": [
+   {
+    "page": "services/ac-replacement",
+    "text": "FPL’s AC rebate: how it works and who qualifies"
+   },
+   {
+    "page": "areas/homestead",
+    "text": "FPL’s AC rebate: how it works and who qualifies"
+   },
+   {
+    "page": "areas/kendall",
+    "text": "FPL’s AC rebate: how it works and who qualifies"
+   }
+  ]
  }
 ]
