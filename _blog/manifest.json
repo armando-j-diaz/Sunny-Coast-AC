@@ -73,5 +73,37 @@
     "text": "AC not cooling? 5 things to check before you call"
    }
   ]
+ },
+ {
+  "slug": "best-ac-brand-for-miami-homes",
+  "title": "Best AC Brand for a Miami Home? What Matters More Than the Name",
+  "seo_title": "Best AC Brand for Miami? Trane vs Carrier vs Lennox vs Goodman | Sunny Coast AC",
+  "description": "Trane, Carrier, Lennox or Goodman? What each brand aims for, how it handles Miami salt air, its warranty, and what matters more than the name.",
+  "date": "2026-11-12",
+  "author": "Sunny Coast AC team",
+  "og_image": "blog/best-ac-brand-for-miami-homes/share.jpg",
+  "og_alt": "Before and after: an old outdoor package AC unit, then a new Carrier unit in the same spot",
+  "card_text": "Trane, Carrier, Lennox, and Goodman compared: what each aims for, how each handles Miami salt air, the warranties, and what matters more than the name.",
+  "images": [
+   "share.jpg",
+   "carrier-air-handler.jpg",
+   "before.jpg",
+   "after.jpg",
+   "air-handler.jpg"
+  ],
+  "learn_more": [
+   {
+    "page": "services/ac-replacement",
+    "text": "Best AC brand for a Miami home? What matters more"
+   },
+   {
+    "page": "areas/miami-beach",
+    "text": "Best AC brand for a Miami home? What matters more than the name"
+   },
+   {
+    "page": "areas/miramar",
+    "text": "Best AC brand for a Miami home? What matters more"
+   }
+  ]
  }
 ]
