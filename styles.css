@@ -3520,3 +3520,10 @@ html.book-modal-open body {
   .nav-desktop{gap:.7rem;margin:0 .6rem}
   .nav-desktop a{font-size:.8125rem}
 }
+
+/* FPL rebate block (2026-11-11) */
+.fpl-rebate .check-list{margin:1rem 0}
+.fpl-proof{margin:1.25rem 0 .5rem}
+.fpl-proof img{display:block;width:100%;height:auto;border:1px solid #d6dde6;border-radius:12px;background:#fff}
+.fpl-proof figcaption{font-size:.85rem;opacity:.8;margin-top:.5rem}
+.fpl-links{font-size:.95rem}
