@@ -235,3 +235,14 @@
 .fpl-proof img{display:block;width:100%;height:auto;border:1px solid #d6dde6;border-radius:12px;background:#fff}
 .fpl-proof figcaption{font-size:.85rem;opacity:.8;margin-top:.5rem}
 .fpl-links{font-size:.95rem}
+
+/* style E 2026-11-12 */
+h1,h2,h3,h4,.display,.path-q,.team-name{font-family:var(--font-hero)!important;font-weight:800;letter-spacing:-.01em}
+body *,body *::before,body *::after{border-radius:3px!important}
+body .site-header,body .page-hero,body section,body footer{border-radius:0!important}
+.btn,button,.site-header a{box-shadow:none!important}
+.btn{font-weight:700;letter-spacing:.02em}
+.wave{display:none!important}
+:is(.path-card,.team-card,.sign-list li,.review-card,.town-photo){box-shadow:none!important;border:1px solid #d3dee8}
+.faq-list details,.faq-list summary{border-radius:0!important}
+.team-avatars .team-avatar+.team-avatar{margin-left:.5rem}
