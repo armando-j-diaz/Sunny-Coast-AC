@@ -208,8 +208,8 @@
         serviceDetail.hidden = !selected;
         if (selected) {
           serviceDetail.textContent = selected.value === "repair"
-            ? "$0 to come out. You only pay for the work you approve."
-            : "New systems start with a $0 in-home estimate.";
+            ? "Free repair estimate. You only pay for the work you approve."
+            : "New systems start with a free estimate.";
         }
       }
     }
