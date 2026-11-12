@@ -282,3 +282,7 @@ body .site-header,body .page-hero,body section,body footer{border-radius:0!impor
 /* text dark 2026-11-12 */
 :root{--color-text-muted:#0e1a28;--color-text:#0e1a28}
 .lede{opacity:1}
+
+/* blog img small 2026-11-12 */
+@media (min-width:700px){.blog-prose figure{max-width:420px;margin-left:auto;margin-right:auto}
+.blog-prose figure:has(img[width="1200"]){max-width:560px}}
