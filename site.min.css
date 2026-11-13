@@ -391,3 +391,25 @@ html[lang="es"] .hs-l2{font-size:clamp(1.3rem,5.8vw,3.7rem)}
 .path-split--ap .path-link{color:#0b5cad;text-align:left;text-decoration:none}
 .path-split--ap .path-link:hover{text-decoration:underline}
 .path-split--ap .callback-line{text-align:center;margin-top:1.75rem}
+
+/* look 2026-11-13 */
+:root main :is(h1,h2,h3,h4,.display,.path-q,.team-name){color:#0e1a28}
+:root :is(.page-hero--dark,.hs-hero,.lb-band--navy,.closing-box,.closing-cta,.vsl-hero,.final-cta,.bg-d) :is(h1,h2,h3,h4,.display,.path-q,.team-name){color:#fff}
+:root .bg-d :is(.review-card,.promise-strip,.path-card,.team-card,.big-stat,.town-photo,.rev-card,.check-group) :is(h1,h2,h3,h4,.display,.path-q,.team-name){color:#0e1a28}
+.bg-w,.bg-g,.bg-d{--bgx:#fff;background:var(--bgx)!important;box-shadow:0 0 0 100vmax var(--bgx)!important;clip-path:inset(0 -100vmax)}
+.bg-g{--bgx:#f3f5f8}
+.bg-d{--bgx:#0d1b2a;color:#e6ebf1}
+.bg-d :is(h1,h2,h3,h4,.display,p,li,summary,figcaption,strong,small,.lede,.section-note,.how-sub,.hs-svc-lead){color:inherit}
+.bg-d a:not(.btn){color:#8cc4ff}
+.bg-d :is(.review-card,.promise-strip,.path-card,.team-card,.big-stat,.town-photo,.rev-card,.check-group){color:#0e1a28}
+.bg-d :is(.review-card,.promise-strip,.path-card,.team-card,.big-stat,.town-photo,.rev-card,.check-group) a:not(.btn){color:#0b5cad}
+.bg-d details{border-color:rgba(255,255,255,.18)!important}
+.bg-d .btn-outline{color:#fff!important;border-color:#fff!important;background:transparent!important}
+.bg-d :is(.related-links,.blog-links) li a:not(.btn){color:#0b5cad}
+.bg-w :is(.review-card,.promise-strip,.path-card,.team-card,.big-stat,.town-photo,.rev-card,.check-group){background:#f3f5f8!important;border-color:transparent!important}
+.bg-g :is(.review-card,.promise-strip,.path-card,.team-card,.big-stat,.town-photo,.rev-card,.check-group),.bg-d :is(.review-card,.promise-strip,.path-card,.team-card,.big-stat,.town-photo,.rev-card,.check-group){background:#fff!important;border-color:transparent!important}
+body[data-hs]{background:#fff}
+body[data-hs] .closing-cta{background:#0d1b2a!important;box-shadow:0 0 0 100vmax #0d1b2a!important;clip-path:inset(0 -100vmax)}
+body[data-hs] .closing-box{background:transparent!important}
+body[data-hs] .site-footer{background:#0d1b2a!important}
+.hub-blog{padding-bottom:1rem}
