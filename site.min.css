@@ -367,3 +367,10 @@ body[data-hs] .path-split > .container > .display{font-size:var(--text-2xl)}
 .page-hero--dark :is(h1,.lede,.eyebrow,p,a){color:#fff!important;text-shadow:0 2px 10px rgba(0,0,0,.45)}
 .trust-dup{display:none!important}
 .trust-list{animation:none!important;transform:none!important;flex-wrap:wrap;justify-content:center;width:auto!important}
+
+/* fixes 2026-11-13 */
+html[lang="es"] .hs-l1{font-size:clamp(1.5rem,7vw,4.5rem)}
+html[lang="es"] .hs-l2{font-size:clamp(1.3rem,5.8vw,3.7rem)}
+.svc-hub-hero{text-align:center}
+.svc-hub-hero + .container{padding-top:2.5rem}
+.lb-main section:has(.check-list--big) .section-note{text-align:center;margin-left:auto!important;margin-right:auto!important}
