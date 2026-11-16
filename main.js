@@ -1001,6 +1001,8 @@ document.addEventListener('input',function(e){var t=e.target;if(t&&t.classList&&
     ga("generate_lead", { form_id: (form && form.id) || "form", lead_type: String(kind).slice(0, 40), page_path: path });
   };
 })();
+/* sc-clarity */
+if(/(^|\.)sunnycoastac\.com$/.test(location.hostname)){(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","zerhuksl3a");}
 
 /* sidebar-toc 2026-11-12 */
 (function(){var box=document.querySelector('.lb-toc');if(!box)return;var list=box.querySelector('.lb-toc-list');
