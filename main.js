@@ -256,7 +256,8 @@
           first_name: first,
           last_name: last,
           email: email,
-          project_info: projectInfo,
+          project_info: (function () { var h = form.querySelector('[name="heard_about"]'); var v = h && h.value ? h.value : ""; return v ? "How they heard about us: " + v + (projectInfo ? "\n\n" + projectInfo.slice(0, 1900) : "") : projectInfo; })(),
+          heard_about: (function () { var h = form.querySelector('[name="heard_about"]'); return h ? (h.value || "not_given") : undefined; })(),
           service_type: serviceType.value,
           consent_sms: !!(sms && sms.checked),
           consent_contact: true,
@@ -998,7 +999,10 @@ document.addEventListener('input',function(e){var t=e.target;if(t&&t.classList&&
   // A form lead went through (called from postJSON after the server said OK).
   window.scLead = function (form, payload) {
     var kind = (payload && (payload.service_type || payload.intent)) || "unknown";
-    ga("generate_lead", { form_id: (form && form.id) || "form", lead_type: String(kind).slice(0, 40), page_path: path });
+    var params = { form_id: (form && form.id) || "form", lead_type: String(kind).slice(0, 40), page_path: path };
+    // "How did you hear about us?" (2026-11-17): only forms with that dropdown send it ("not_given" = left blank).
+    if (payload && payload.heard_about) params.heard_about = String(payload.heard_about).slice(0, 40);
+    ga("generate_lead", params);
   };
 })();
 /* sc-clarity */
