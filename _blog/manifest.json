@@ -137,5 +137,43 @@
     "text": "AC not cooling? 5 things to check before you call"
    }
   ]
+ },
+ {
+  "slug": "repair-or-replace-ac-miami",
+  "title": "Repair or Replace Your AC? How to Decide in Miami",
+  "seo_title": "Repair or Replace AC? How to Decide in Miami | Sunny Coast AC",
+  "description": "Repair or replace your AC in Miami-Dade or Broward? The 50% rule, which repairs are worth it, R-22, savings, and signs it's time for a new system.",
+  "date": "2026-11-19",
+  "author": "Sunny Coast AC team",
+  "og_image": "blog/repair-or-replace-ac-miami/share.jpg",
+  "og_alt": "Before and after: an old indoor air handler in Kendall, then the new one in the same closet",
+  "card_text": "How to decide between fixing your AC and a new system: age, the 50% rule, big vs small repairs, R-22, savings, and Miami things to know.",
+  "images": [
+   "share.jpg",
+   "capacitor.jpg",
+   "rust.jpg",
+   "compressor.jpg",
+   "before.jpg",
+   "after.jpg",
+   "outdoor.jpg"
+  ],
+  "learn_more": [
+   {
+    "page": "services/ac-replacement",
+    "text": "Repair or replace your AC? How to decide"
+   },
+   {
+    "page": "services/ac-repair",
+    "text": "Repair or replace your AC? How to decide"
+   },
+   {
+    "page": "areas/kendall",
+    "text": "Repair or replace your AC? How to decide"
+   },
+   {
+    "page": "areas/coral-gables",
+    "text": "Repair or replace your AC? How to decide"
+   }
+  ]
  }
 ]
