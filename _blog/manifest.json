@@ -37,6 +37,40 @@
   ]
  },
  {
+  "slug": "best-ac-brand-for-miami-homes",
+  "title": "Best AC Brand for a Miami Home? 5 Brands Compared, and What Matters More",
+  "seo_title": "Best AC Brand for Miami & South Florida? 5 Brands Compared | Sunny Coast AC",
+  "description": "Trane, Carrier, Lennox, Goodman or Rheem for a Miami-Dade or Broward home? Prices, warranties, salt air, and what condo owners with water-source ACs should know.",
+  "date": "2026-11-12",
+  "author": "Sunny Coast AC team",
+  "og_image": "blog/best-ac-brand-for-miami-homes/share.jpg",
+  "og_alt": "Before and after: an old outdoor package AC unit, then a new Carrier unit in the same spot",
+  "card_text": "Trane, Carrier, Lennox, Goodman, and Rheem side by side: what each is known for, the warranties, how each handles Miami salt air, and what matters more than the name.",
+  "images": [
+   "share.jpg",
+   "carrier-air-handler.jpg",
+   "before.jpg",
+   "after.jpg",
+   "air-handler.jpg",
+   "water-source.jpg"
+  ],
+  "learn_more": [
+   {
+    "page": "services/ac-replacement",
+    "text": "Best AC brand for a Miami home? What matters more"
+   },
+   {
+    "page": "areas/miami-beach",
+    "text": "Best AC brand for a Miami home? What matters more than the name"
+   },
+   {
+    "page": "areas/miramar",
+    "text": "Best AC brand for a Miami home? What matters more"
+   }
+  ],
+  "updated": "2026-11-19"
+ },
+ {
   "slug": "fpl-ac-rebate-how-it-works",
   "title": "FPL’s AC Rebate: How It Works and Who Qualifies",
   "seo_title": "FPL AC Rebate: How It Works and Who Qualifies | Sunny Coast AC",
@@ -143,39 +177,5 @@
     "text": "Repair or replace your AC? How to decide"
    }
   ]
- },
- {
-  "slug": "best-ac-brand-for-miami-homes",
-  "title": "Best AC Brand for a Miami Home? 5 Brands Compared, and What Matters More",
-  "seo_title": "Best AC Brand for Miami & South Florida? 5 Brands Compared | Sunny Coast AC",
-  "description": "Trane, Carrier, Lennox, Goodman or Rheem for a Miami-Dade or Broward home? Prices, warranties, salt air, and what condo owners with water-source ACs should know.",
-  "date": "2026-11-12",
-  "author": "Sunny Coast AC team",
-  "og_image": "blog/best-ac-brand-for-miami-homes/share.jpg",
-  "og_alt": "Before and after: an old outdoor package AC unit, then a new Carrier unit in the same spot",
-  "card_text": "Trane, Carrier, Lennox, Goodman, and Rheem side by side: what each is known for, the warranties, how each handles Miami salt air, and what matters more than the name.",
-  "images": [
-   "share.jpg",
-   "carrier-air-handler.jpg",
-   "before.jpg",
-   "after.jpg",
-   "air-handler.jpg",
-   "water-source.jpg"
-  ],
-  "learn_more": [
-   {
-    "page": "services/ac-replacement",
-    "text": "Best AC brand for a Miami home? What matters more"
-   },
-   {
-    "page": "areas/miami-beach",
-    "text": "Best AC brand for a Miami home? What matters more than the name"
-   },
-   {
-    "page": "areas/miramar",
-    "text": "Best AC brand for a Miami home? What matters more"
-   }
-  ],
-  "updated": "2026-11-19"
  }
 ]
