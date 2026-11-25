@@ -504,3 +504,9 @@ body:has(main .bg-w,main .bg-d) :is(.ck18-sec,.big-stats){background:#fff!import
  .how-van-wrap .promise-list{margin:0;max-width:none}
  .how-van{display:block;max-width:560px;width:100%}
 }
+
+/* van how pad 2026-11-25 */
+@media(min-width:900px){
+ #how .container{width:min(100% - 7rem,1180px)!important}
+ .how-van-wrap{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr)!important;gap:clamp(2rem,4vw,3.5rem)!important}
+}
