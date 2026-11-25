@@ -989,12 +989,17 @@ document.addEventListener('input',function(e){var t=e.target;if(t&&t.classList&&
   function ga(name, params) {
     try { if (window.gtag) window.gtag("event", name, params || {}); } catch (e) {}
   }
+  // Meta Pixel (2026-11-25): same moments, Meta's standard event names. No contact details are sent.
+  function fb(name, params) {
+    try { if (window.fbq) window.fbq("track", name, params || {}); } catch (e) {}
+  }
   var path = location.pathname;
   // Taps on call / text links, with the page they happened on.
   document.addEventListener("click", function (e) {
     var a = e.target && e.target.closest ? e.target.closest('a[href^="tel:"],a[href^="sms:"]') : null;
     if (!a) return;
     ga(a.getAttribute("href").indexOf("sms:") === 0 ? "click_to_text" : "click_to_call", { page_path: path });
+    fb("Contact", { content_name: a.getAttribute("href").indexOf("sms:") === 0 ? "text" : "call" });
   }, true);
   // A form lead went through (called from postJSON after the server said OK).
   window.scLead = function (form, payload) {
@@ -1003,10 +1008,13 @@ document.addEventListener('input',function(e){var t=e.target;if(t&&t.classList&&
     // "How did you hear about us?" (2026-11-17): only forms with that dropdown send it ("not_given" = left blank).
     if (payload && payload.heard_about) params.heard_about = String(payload.heard_about).slice(0, 40);
     ga("generate_lead", params);
+    fb("Lead", { content_name: params.lead_type, content_category: params.form_id });
   };
 })();
 /* sc-clarity */
 if(/(^|\.)sunnycoastac\.com$/.test(location.hostname)){(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","zerhuksl3a");}
+/* sc-meta-pixel */
+if(/(^|\.)sunnycoastac\.com$/.test(location.hostname)){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1497920328925747');fbq('track','PageView');}
 
 /* sidebar-toc 2026-11-12 */
 (function(){var box=document.querySelector('.lb-toc');if(!box)return;var list=box.querySelector('.lb-toc-list');

@@ -395,6 +395,11 @@ html[lang="es"] .hs-l2{font-size:clamp(1.3rem,5.8vw,3.7rem)}
 .path-split--ap .path-link{color:#0b5cad;text-align:left;text-decoration:none}
 .path-split--ap .path-link:hover{text-decoration:underline}
 .path-split--ap .callback-line{text-align:center;margin-top:1.75rem}
+/* 2026-11-25 (Armando): call button + link side by side in every card (they stack only when there is no room, like phones) */
+.path-split--ap .path-actions{flex-wrap:wrap;gap:.75rem 1.25rem}
+.path-split--ap .path-card .btn{flex:0 1 auto}
+.path-split--ap .path-link{flex:1 1 8rem;min-width:0;line-height:1.3;text-wrap:balance}
+html[lang^=es] .path-split--ap .path-link{font-size:1rem}
 
 /* look 2026-11-13 */
 :root main :is(h1,h2,h3,h4,.display,.path-q,.team-name){color:#0e1a28}

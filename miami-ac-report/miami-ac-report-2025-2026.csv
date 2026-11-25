@@ -1,0 +1,245 @@
+section,group,problem,jobs_in_group,percent_of_jobs
+all,"Miami-Dade + Broward","Clogged drain line",3009,22.0
+all,"Miami-Dade + Broward","Refrigerant leak or low refrigerant",3009,9.5
+all,"Miami-Dade + Broward","Worn capacitor",3009,8.6
+all,"Miami-Dade + Broward","Nothing broken (no mechanical problem found)",3009,8.8
+all,"Miami-Dade + Broward","Dirty or clogged indoor coil",3009,8.5
+all,"Miami-Dade + Broward","Drain pan, float switch or pump",3009,9.7
+all,"Miami-Dade + Broward","Motor failed (indoor blower or outdoor fan)",3009,7.6
+all,"Miami-Dade + Broward","Water damage reached a ceiling, floor or closet",3009,2.5
+all,"Miami-Dade + Broward","Mold or growth inside the unit",3009,2.7
+all,"Miami-Dade + Broward","Thermostat problem",3009,4.5
+all,"Miami-Dade + Broward","Electrical: fuse, breaker, wiring, contactor, board",3009,8.5
+all,"Miami-Dade + Broward","Compressor failed or replaced",3009,3.3
+all,"Miami-Dade + Broward","Dirty outdoor coil",3009,2.7
+county,"Miami-Dade","Clogged drain line",1426,22.9
+county,"Miami-Dade","Refrigerant leak or low refrigerant",1426,9.0
+county,"Miami-Dade","Worn capacitor",1426,7.5
+county,"Miami-Dade","Nothing broken (no mechanical problem found)",1426,9.2
+county,"Miami-Dade","Dirty or clogged indoor coil",1426,8.1
+county,"Miami-Dade","Drain pan, float switch or pump",1426,10.7
+county,"Miami-Dade","Motor failed (indoor blower or outdoor fan)",1426,7.3
+county,"Miami-Dade","Water damage reached a ceiling, floor or closet",1426,2.2
+county,"Miami-Dade","Mold or growth inside the unit",1426,2.9
+county,"Miami-Dade","Thermostat problem",1426,5.5
+county,"Miami-Dade","Electrical: fuse, breaker, wiring, contactor, board",1426,9.0
+county,"Miami-Dade","Compressor failed or replaced",1426,2.9
+county,"Miami-Dade","Dirty outdoor coil",1426,2.2
+county,"Broward","Clogged drain line",1550,21.4
+county,"Broward","Refrigerant leak or low refrigerant",1550,10.1
+county,"Broward","Worn capacitor",1550,9.6
+county,"Broward","Nothing broken (no mechanical problem found)",1550,8.5
+county,"Broward","Dirty or clogged indoor coil",1550,8.8
+county,"Broward","Drain pan, float switch or pump",1550,8.6
+county,"Broward","Motor failed (indoor blower or outdoor fan)",1550,7.9
+county,"Broward","Water damage reached a ceiling, floor or closet",1550,2.9
+county,"Broward","Mold or growth inside the unit",1550,2.5
+county,"Broward","Thermostat problem",1550,3.7
+county,"Broward","Electrical: fuse, breaker, wiring, contactor, board",1550,7.9
+county,"Broward","Compressor failed or replaced",1550,3.6
+county,"Broward","Dirty outdoor coil",1550,3.2
+coast_vs_inland,"Coast","Clogged drain line",1030,22.7
+coast_vs_inland,"Coast","Refrigerant leak or low refrigerant",1030,7.8
+coast_vs_inland,"Coast","Worn capacitor",1030,7.5
+coast_vs_inland,"Coast","Nothing broken (no mechanical problem found)",1030,10.8
+coast_vs_inland,"Coast","Dirty or clogged indoor coil",1030,9.0
+coast_vs_inland,"Coast","Drain pan, float switch or pump",1030,10.3
+coast_vs_inland,"Coast","Motor failed (indoor blower or outdoor fan)",1030,7.5
+coast_vs_inland,"Coast","Water damage reached a ceiling, floor or closet",1030,3.2
+coast_vs_inland,"Coast","Mold or growth inside the unit",1030,3.2
+coast_vs_inland,"Coast","Thermostat problem",1030,4.4
+coast_vs_inland,"Coast","Electrical: fuse, breaker, wiring, contactor, board",1030,7.5
+coast_vs_inland,"Coast","Compressor failed or replaced",1030,3.6
+coast_vs_inland,"Coast","Dirty outdoor coil",1030,3.3
+coast_vs_inland,"Inland","Clogged drain line",1946,21.8
+coast_vs_inland,"Inland","Refrigerant leak or low refrigerant",1946,10.5
+coast_vs_inland,"Inland","Worn capacitor",1946,9.2
+coast_vs_inland,"Inland","Nothing broken (no mechanical problem found)",1946,7.8
+coast_vs_inland,"Inland","Dirty or clogged indoor coil",1946,8.1
+coast_vs_inland,"Inland","Drain pan, float switch or pump",1946,9.2
+coast_vs_inland,"Inland","Motor failed (indoor blower or outdoor fan)",1946,7.7
+coast_vs_inland,"Inland","Water damage reached a ceiling, floor or closet",1946,2.2
+coast_vs_inland,"Inland","Mold or growth inside the unit",1946,2.5
+coast_vs_inland,"Inland","Thermostat problem",1946,4.7
+coast_vs_inland,"Inland","Electrical: fuse, breaker, wiring, contactor, board",1946,9.0
+coast_vs_inland,"Inland","Compressor failed or replaced",1946,3.1
+coast_vs_inland,"Inland","Dirty outdoor coil",1946,2.4
+season,"Summer (Jun-Sep)","Clogged drain line",1395,20.9
+season,"Summer (Jun-Sep)","Refrigerant leak or low refrigerant",1395,8.6
+season,"Summer (Jun-Sep)","Worn capacitor",1395,8.8
+season,"Summer (Jun-Sep)","Nothing broken (no mechanical problem found)",1395,10.5
+season,"Summer (Jun-Sep)","Dirty or clogged indoor coil",1395,7.8
+season,"Summer (Jun-Sep)","Drain pan, float switch or pump",1395,9.5
+season,"Summer (Jun-Sep)","Motor failed (indoor blower or outdoor fan)",1395,6.7
+season,"Summer (Jun-Sep)","Water damage reached a ceiling, floor or closet",1395,2.5
+season,"Summer (Jun-Sep)","Mold or growth inside the unit",1395,3.0
+season,"Summer (Jun-Sep)","Thermostat problem",1395,3.1
+season,"Summer (Jun-Sep)","Electrical: fuse, breaker, wiring, contactor, board",1395,6.9
+season,"Summer (Jun-Sep)","Compressor failed or replaced",1395,3.7
+season,"Summer (Jun-Sep)","Dirty outdoor coil",1395,3.7
+season,"Winter (Dec-Mar)","Clogged drain line",581,20.1
+season,"Winter (Dec-Mar)","Refrigerant leak or low refrigerant",581,9.3
+season,"Winter (Dec-Mar)","Worn capacitor",581,6.9
+season,"Winter (Dec-Mar)","Nothing broken (no mechanical problem found)",581,7.7
+season,"Winter (Dec-Mar)","Dirty or clogged indoor coil",581,6.5
+season,"Winter (Dec-Mar)","Drain pan, float switch or pump",581,9.0
+season,"Winter (Dec-Mar)","Motor failed (indoor blower or outdoor fan)",581,9.5
+season,"Winter (Dec-Mar)","Water damage reached a ceiling, floor or closet",581,1.5
+season,"Winter (Dec-Mar)","Mold or growth inside the unit",581,1.7
+season,"Winter (Dec-Mar)","Thermostat problem",581,7.1
+season,"Winter (Dec-Mar)","Electrical: fuse, breaker, wiring, contactor, board",581,13.1
+season,"Winter (Dec-Mar)","Compressor failed or replaced",581,2.2
+season,"Winter (Dec-Mar)","Dirty outdoor coil",581,1.9
+area,"Miami (city)","Clogged drain line",565,26.4
+area,"Miami (city)","Refrigerant leak or low refrigerant",565,9.2
+area,"Miami (city)","Worn capacitor",565,7.8
+area,"Miami (city)","Nothing broken (no mechanical problem found)",565,8.1
+area,"Miami (city)","Dirty or clogged indoor coil",565,7.6
+area,"Miami (city)","Drain pan, float switch or pump",565,10.8
+area,"Miami (city)","Motor failed (indoor blower or outdoor fan)",565,6.7
+area,"Miami (city)","Water damage reached a ceiling, floor or closet",565,1.6
+area,"Miami (city)","Mold or growth inside the unit",565,2.5
+area,"Miami (city)","Thermostat problem",565,6.0
+area,"Miami (city)","Electrical: fuse, breaker, wiring, contactor, board",565,9.7
+area,"Miami (city)","Compressor failed or replaced",565,2.1
+area,"Miami (city)","Dirty outdoor coil",565,2.1
+area,"Fort Lauderdale","Clogged drain line",322,20.8
+area,"Fort Lauderdale","Refrigerant leak or low refrigerant",322,9.9
+area,"Fort Lauderdale","Worn capacitor",322,9.9
+area,"Fort Lauderdale","Nothing broken (no mechanical problem found)",322,9.3
+area,"Fort Lauderdale","Dirty or clogged indoor coil",322,10.6
+area,"Fort Lauderdale","Drain pan, float switch or pump",322,7.5
+area,"Fort Lauderdale","Motor failed (indoor blower or outdoor fan)",322,8.1
+area,"Fort Lauderdale","Water damage reached a ceiling, floor or closet",322,3.4
+area,"Fort Lauderdale","Mold or growth inside the unit",322,2.8
+area,"Fort Lauderdale","Thermostat problem",322,4.0
+area,"Fort Lauderdale","Electrical: fuse, breaker, wiring, contactor, board",322,5.3
+area,"Fort Lauderdale","Compressor failed or replaced",322,3.7
+area,"Fort Lauderdale","Dirty outdoor coil",322,2.8
+area,"Miami Beach","Clogged drain line",179,22.3
+area,"Miami Beach","Refrigerant leak or low refrigerant",179,8.4
+area,"Miami Beach","Worn capacitor",179,3.9
+area,"Miami Beach","Nothing broken (no mechanical problem found)",179,7.3
+area,"Miami Beach","Dirty or clogged indoor coil",179,10.1
+area,"Miami Beach","Drain pan, float switch or pump",179,14.5
+area,"Miami Beach","Motor failed (indoor blower or outdoor fan)",179,7.8
+area,"Miami Beach","Water damage reached a ceiling, floor or closet",179,3.9
+area,"Miami Beach","Mold or growth inside the unit",179,6.1
+area,"Miami Beach","Thermostat problem",179,8.4
+area,"Miami Beach","Electrical: fuse, breaker, wiring, contactor, board",179,7.8
+area,"Miami Beach","Compressor failed or replaced",179,2.8
+area,"Miami Beach","Dirty outdoor coil",179,1.7
+area,"Kendall","Clogged drain line",147,17.7
+area,"Kendall","Refrigerant leak or low refrigerant",147,10.9
+area,"Kendall","Worn capacitor",147,9.5
+area,"Kendall","Nothing broken (no mechanical problem found)",147,6.8
+area,"Kendall","Dirty or clogged indoor coil",147,6.8
+area,"Kendall","Drain pan, float switch or pump",147,5.4
+area,"Kendall","Motor failed (indoor blower or outdoor fan)",147,8.2
+area,"Kendall","Water damage reached a ceiling, floor or closet",147,0.0
+area,"Kendall","Mold or growth inside the unit",147,2.7
+area,"Kendall","Thermostat problem",147,4.8
+area,"Kendall","Electrical: fuse, breaker, wiring, contactor, board",147,6.1
+area,"Kendall","Compressor failed or replaced",147,3.4
+area,"Kendall","Dirty outdoor coil",147,2.7
+area,"Coral Gables, South Miami & Pinecrest","Clogged drain line",133,26.3
+area,"Coral Gables, South Miami & Pinecrest","Refrigerant leak or low refrigerant",133,5.3
+area,"Coral Gables, South Miami & Pinecrest","Worn capacitor",133,9.0
+area,"Coral Gables, South Miami & Pinecrest","Nothing broken (no mechanical problem found)",133,9.0
+area,"Coral Gables, South Miami & Pinecrest","Dirty or clogged indoor coil",133,7.5
+area,"Coral Gables, South Miami & Pinecrest","Drain pan, float switch or pump",133,14.3
+area,"Coral Gables, South Miami & Pinecrest","Motor failed (indoor blower or outdoor fan)",133,7.5
+area,"Coral Gables, South Miami & Pinecrest","Water damage reached a ceiling, floor or closet",133,1.5
+area,"Coral Gables, South Miami & Pinecrest","Mold or growth inside the unit",133,2.3
+area,"Coral Gables, South Miami & Pinecrest","Thermostat problem",133,2.3
+area,"Coral Gables, South Miami & Pinecrest","Electrical: fuse, breaker, wiring, contactor, board",133,11.3
+area,"Coral Gables, South Miami & Pinecrest","Compressor failed or replaced",133,1.5
+area,"Coral Gables, South Miami & Pinecrest","Dirty outdoor coil",133,0.8
+area,"Hollywood","Clogged drain line",133,23.3
+area,"Hollywood","Refrigerant leak or low refrigerant",133,7.5
+area,"Hollywood","Worn capacitor",133,6.0
+area,"Hollywood","Nothing broken (no mechanical problem found)",133,12.8
+area,"Hollywood","Dirty or clogged indoor coil",133,12.0
+area,"Hollywood","Drain pan, float switch or pump",133,9.8
+area,"Hollywood","Motor failed (indoor blower or outdoor fan)",133,7.5
+area,"Hollywood","Water damage reached a ceiling, floor or closet",133,3.0
+area,"Hollywood","Mold or growth inside the unit",133,4.5
+area,"Hollywood","Thermostat problem",133,3.0
+area,"Hollywood","Electrical: fuse, breaker, wiring, contactor, board",133,8.3
+area,"Hollywood","Compressor failed or replaced",133,3.8
+area,"Hollywood","Dirty outdoor coil",133,5.3
+area,"Pompano Beach","Clogged drain line",125,24.8
+area,"Pompano Beach","Refrigerant leak or low refrigerant",125,6.4
+area,"Pompano Beach","Worn capacitor",125,8.8
+area,"Pompano Beach","Nothing broken (no mechanical problem found)",125,12.0
+area,"Pompano Beach","Dirty or clogged indoor coil",125,6.4
+area,"Pompano Beach","Drain pan, float switch or pump",125,12.8
+area,"Pompano Beach","Motor failed (indoor blower or outdoor fan)",125,6.4
+area,"Pompano Beach","Water damage reached a ceiling, floor or closet",125,5.6
+area,"Pompano Beach","Mold or growth inside the unit",125,0.8
+area,"Pompano Beach","Thermostat problem",125,3.2
+area,"Pompano Beach","Electrical: fuse, breaker, wiring, contactor, board",125,7.2
+area,"Pompano Beach","Compressor failed or replaced",125,4.0
+area,"Pompano Beach","Dirty outdoor coil",125,2.4
+area,"Pembroke Pines","Clogged drain line",113,24.8
+area,"Pembroke Pines","Refrigerant leak or low refrigerant",113,15.9
+area,"Pembroke Pines","Worn capacitor",113,7.1
+area,"Pembroke Pines","Nothing broken (no mechanical problem found)",113,2.7
+area,"Pembroke Pines","Dirty or clogged indoor coil",113,12.4
+area,"Pembroke Pines","Drain pan, float switch or pump",113,8.8
+area,"Pembroke Pines","Motor failed (indoor blower or outdoor fan)",113,8.8
+area,"Pembroke Pines","Water damage reached a ceiling, floor or closet",113,2.7
+area,"Pembroke Pines","Mold or growth inside the unit",113,2.7
+area,"Pembroke Pines","Thermostat problem",113,5.3
+area,"Pembroke Pines","Electrical: fuse, breaker, wiring, contactor, board",113,13.3
+area,"Pembroke Pines","Compressor failed or replaced",113,2.7
+area,"Pembroke Pines","Dirty outdoor coil",113,4.4
+area,"Miramar","Clogged drain line",102,21.6
+area,"Miramar","Refrigerant leak or low refrigerant",102,8.8
+area,"Miramar","Worn capacitor",102,18.6
+area,"Miramar","Nothing broken (no mechanical problem found)",102,3.9
+area,"Miramar","Dirty or clogged indoor coil",102,5.9
+area,"Miramar","Drain pan, float switch or pump",102,7.8
+area,"Miramar","Motor failed (indoor blower or outdoor fan)",102,4.9
+area,"Miramar","Water damage reached a ceiling, floor or closet",102,3.9
+area,"Miramar","Mold or growth inside the unit",102,1.0
+area,"Miramar","Thermostat problem",102,2.9
+area,"Miramar","Electrical: fuse, breaker, wiring, contactor, board",102,8.8
+area,"Miramar","Compressor failed or replaced",102,2.0
+area,"Miramar","Dirty outdoor coil",102,2.9
+jobs_by_month,"2025-01","all AC jobs",48,
+jobs_by_month,"2025-02","all AC jobs",56,
+jobs_by_month,"2025-03","all AC jobs",41,
+jobs_by_month,"2025-04","all AC jobs",94,
+jobs_by_month,"2025-05","all AC jobs",77,
+jobs_by_month,"2025-06","all AC jobs",139,
+jobs_by_month,"2025-07","all AC jobs",179,
+jobs_by_month,"2025-08","all AC jobs",166,
+jobs_by_month,"2025-09","all AC jobs",144,
+jobs_by_month,"2025-10","all AC jobs",227,
+jobs_by_month,"2025-11","all AC jobs",129,
+jobs_by_month,"2025-12","all AC jobs",119,
+jobs_by_month,"2026-01","all AC jobs",101,
+jobs_by_month,"2026-02","all AC jobs",106,
+jobs_by_month,"2026-03","all AC jobs",114,
+jobs_by_month,"2026-04","all AC jobs",117,
+jobs_by_month,"2026-05","all AC jobs",188,
+jobs_by_month,"2026-06","all AC jobs",164,
+jobs_by_month,"2026-07","all AC jobs",194,
+jobs_by_month,"2026-08","all AC jobs",238,
+jobs_by_month,"2026-09","all AC jobs",180,
+jobs_by_month,"2026-10","all AC jobs",187,
+jobs_by_month,"2026-11","all AC jobs",19,
+brands,"jobs with brand visible in photos","trane",408,33.8
+brands,"jobs with brand visible in photos","rheem",408,27.5
+brands,"jobs with brand visible in photos","goodman",408,13.2
+brands,"jobs with brand visible in photos","carrier",408,12.3
+brands,"jobs with brand visible in photos","lennox",408,7.4
+brands,"jobs with brand visible in photos","ruud",408,2.7
+brands,"jobs with brand visible in photos","american standard",408,2.5
+brands,"jobs with brand visible in photos","daikin",408,1.2
+brands,"jobs with brand visible in photos","york",408,1.0
+brands,"jobs with brand visible in photos","bryant",408,0.7
+brands,"jobs with brand visible in photos","mitsubishi",408,0.5
+brands,"jobs with brand visible in photos","gree",408,0.2
+# Source: Sunny Coast AC, Miami AC Report, https://sunnycoastac.com/miami-ac-report/. Data January 2025 to November 5, 2026. License: CC BY 4.0 (credit + link).
