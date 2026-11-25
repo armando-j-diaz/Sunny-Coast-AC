@@ -467,3 +467,30 @@ body:has(main .bg-w,main .bg-d) :is(.ck18-sec,.big-stats){background:#fff!import
 /* owners 1117 */
 .team-promise{margin:1.25rem 0 0;padding-top:1rem;border-top:1px solid #d3dee8;color:var(--navy);line-height:1.5;text-align:left}
 .team-promise strong{display:block;margin-bottom:.25rem}
+
+/* van 2026-11-25 */
+.team-van{margin:0 auto 1.25rem;max-width:520px}
+.team-van img{display:block;width:100%;height:auto}
+.van-cta-wrap{display:flex;flex-direction:column;align-items:center;gap:1.5rem}
+.van-cta-img{display:block;width:82%;max-width:400px;height:auto;margin:.5rem auto 0}
+@media(min-width:1000px){
+ .van-cta-wrap{flex-direction:row;align-items:center;justify-content:center;max-width:1100px;margin:0 auto;gap:3rem;padding:0 2rem}
+ .van-cta-wrap .closing-box{flex:1 1 52%;margin:0}
+ .van-cta-wrap .closing-box,.van-cta-wrap .closing-box *{text-align:left!important}
+ .van-cta-wrap .cta-row{justify-content:flex-start}
+ .van-cta-img{flex:0 1 44%;width:44%;max-width:480px;margin:0}
+}
+.contact-van-top{display:block}
+.contact-van{max-width:520px;margin:1rem auto 1.5rem}
+.contact-van img{display:block;width:100%;height:auto}
+@media(min-width:900px){
+ #contact .container{max-width:1150px}
+ .contact-van-top{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center;text-align:left}
+ .contact-van-top .display,.contact-van-top .lede{text-align:left;margin-left:0}
+ .contact-van{margin:0}
+}
+.look-van{display:grid;gap:1.25rem;align-items:center;margin:2rem auto;max-width:900px;text-align:left}
+.look-van img{width:100%;height:auto;display:block}
+.look-van h2{margin:0 0 .4rem;font-size:1.5rem}
+.look-van p{margin:0}
+@media(min-width:760px){.look-van{grid-template-columns:1.2fr 1fr}}
